@@ -1,0 +1,23 @@
+.main-button {
+  background-color: $color-tertiary;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  width: max-content;
+  padding: 3.5rem 6.5rem 3rem 6.5rem;
+  color: $white;
+  text-decoration: none;
+  font-family: $font-secondary;
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+
+  &:active,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.5);
+  }
+}

@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:wght@400;600;800&display=swap");
+
+body {
+  //HEADERS
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $title-font;
+    font-weight: $bold;
+  }
+  //BODY
+  font-family: $basic-font;
+  font-size: $basic-font-size;
+  font-weight: $regular;
+  line-height: 1.7;
+  color: $black;
+}

@@ -1,0 +1,17 @@
+.footer {
+  background-color: $color-secondary;
+  color: $white;
+  height: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__content {
+    width: $container-width;
+    margin: 0.5rem auto 0 auto;
+  }
+
+  &__divider {
+    margin: 0 2rem;
+  }
+}

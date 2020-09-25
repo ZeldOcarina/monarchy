@@ -1,0 +1,27 @@
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  &__line {
+    width: calc(40% - 3% - 4rem);
+    height: 2px;
+    //background-color: linear-gradient(to right, red, yellow);
+    border: none;
+
+    &--left {
+      background-image: linear-gradient(to right, #00eff6, #ff5005);
+    }
+
+    &--right {
+      background-image: linear-gradient(to right, #ff5005, #00eff6);
+    }
+  }
+
+  &__icon {
+    width: 3%;
+    margin: 0 2rem;
+    width: 5rem;
+  }
+}

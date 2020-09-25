@@ -1,0 +1,36 @@
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 70rem);
+  justify-content: center;
+  grid-auto-rows: 70rem;
+  gap: 1.5rem;
+  margin: 6rem 0;
+}
+
+.team-section {
+  margin: 6rem auto 3rem auto;
+  width: 100%;
+  background-image: url("/assets/home/team.png");
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__content {
+    width: 30%;
+    margin-right: 18%;
+  }
+
+  &__title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+
+  &__paragraph {
+    margin-bottom: 4.5rem;
+  }
+}

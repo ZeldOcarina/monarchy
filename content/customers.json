@@ -1,0 +1,32 @@
+[
+  {
+    "logo": "/assets/home/customers/body-contourz/logo.png",
+    "image": "/assets/home/customers/body-contourz/background.png",
+    "sentence": "Using social media to give the brand a wider reach",
+    "height": "8rem",
+    "white": true
+  },
+  {
+    "logo": "/assets/home/customers/apg/logo.png",
+    "image": "/assets/home/customers/apg/background.jpg",
+    "sentence": "Campaign strategies that give back to communities",
+    "white": true
+  },
+  {
+    "logo": "/assets/home/customers/galaxy/logo.png",
+    "image": "/assets/home/customers/galaxy/background.png",
+    "sentence": "Informing associates through email marketing and newsletters",
+    "white": true
+  },
+  {
+    "logo": "/assets/home/customers/angel-longevity/logo.svg",
+    "image": "/assets/home/customers/angel-longevity/background.jpg",
+    "sentence": "Creating content that presents alternative health treatments in a new way"
+  },
+  {
+    "logo": "/assets/home/customers/upliffs/logo.svg",
+    "image": "/assets/home/customers/upliffs/background.png",
+    "sentence": "eCommerce that boosts sales for your online shop",
+    "white": true
+  }
+]

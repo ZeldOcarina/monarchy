@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<section class="header">
+    <div class="header__video-container">
+        <span class="header__video-height"></span>
+        <iframe class=""src="https://player.vimeo.com/video/427151570" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</section>
+<section class="press">
+    <div class="press__container">
+        <span class="press__text press__text--1">Our team and campaigns have been featured in:</span>
+        <img class="press__logo" src="/assets/home/press/vanity-fair.png" alt="Vanity Fair">
+        <img class="press__logo" src="/assets/home/press/glamour.png" alt="Glamour">
+        <img class="press__logo" src="/assets/home/press/la-stampa.png" alt="La Stampa">
+        <img class="press__logo" src="/assets/home/press/forbes.png" alt="Forbes">
+        <span class="press__text">…and  more.</span>
+    </div>
+</section>
+<%- include('components/divider'); %>
+<section class="customers-grid">
+    <% for(let { logo, sentence, image, white, height } of customers) { %>
+    <div class="customer-box" style="background-image: url(<%- image %>)">
+        <div class="customer-box__content-box">
+            <img class="customer-box__logo" src="<%= logo %>" <%- height && 'style=height:' %><%- height %> />
+            <p<%- white && ' class="white"' %>><%= sentence %></p>
+        </div>
+    </div>
+    <% } %>
+</section>
+<%- include('components/divider'); %>
+<section class="team-section">
+    <div class="team-section__content">
+        <h2 class="team-section__title">Get to Know the Team</h2>
+        <p class="team-section__paragraph">Get to know the members of #TeamMonarchy. We all bring something unique that helps us flourish at Monarchy.</p>
+        <a class="main-button" href="/team">Learn More</a>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

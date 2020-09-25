@@ -1,0 +1,30 @@
+.header {
+  height: calc(100vh - 15rem);
+  background-color: seashell;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(#ffcf95, 0.9), rgba(#ffcf95, 0.9)),
+    url("/assets/home/header.jpg");
+  background-size: cover;
+  background-position: center;
+
+  &__video-height {
+    padding-top: 100%;
+    display: block;
+  }
+
+  &__video-container {
+    width: 65%;
+    position: relative;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

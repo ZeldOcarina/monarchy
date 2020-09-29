@@ -1,0 +1,23 @@
+.video-player {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__close {
+    position: absolute;
+    top: 5rem;
+    right: 10rem;
+    width: 4rem;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+}

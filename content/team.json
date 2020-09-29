@@ -1,0 +1,106 @@
+{
+  "leadership": [
+    {
+      "name": "Nicole D",
+      "position": "Founder and CEO",
+      "image": "/assets/about/team/leadership/nicole.png"
+    },
+    {
+      "name": "Fabio A",
+      "position": "President - Monarchy Media Italia",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Ivonne D",
+      "position": "Chief Creative Officer",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Alessandro L",
+      "position": "Chief Programs Officer",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Mattia R",
+      "position": "Founder and CEO",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    }
+  ],
+  "team": [
+    {
+      "name": "Alberto E",
+      "position": "Video Director",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Sven H",
+      "position": "Video Director",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Emma L",
+      "position": "Social Media Director",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Bari G",
+      "position": "Lead Designer",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Roger T",
+      "position": "Products Director",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Kemi O",
+      "position": "Copywriter",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Marco M",
+      "position": "Copywriter",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Itzel V",
+      "position": "Social Media Manager",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Erika S",
+      "position": "Content Creator",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Valentina D",
+      "position": "Content Creator",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Laura A",
+      "position": "Projects Manager",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Eunice A",
+      "position": "Executive Assistant",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Randy P",
+      "position": "Graphic Designer",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Henry P",
+      "position": "Web Developer",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
+    {
+      "name": "Yamir S",
+      "position": "Graphic Designer",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    }
+  ]
+}

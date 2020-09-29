@@ -1,0 +1,33 @@
+.team-card {
+  background-color: #f8f8f8;
+  width: 100%;
+  border-radius: 13px;
+  transition: all 0.3s ease-in-out;
+  width: 30rem;
+
+  &:hover {
+    background-color: $white;
+    transform: translateY(-2rem);
+    box-shadow: 10px 10px 12px -6px rgba(184, 184, 184, 1);
+  }
+
+  &__image {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__bottom {
+    padding: 1rem 0 2rem 3rem;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+  }
+
+  &__post {
+    color: #000;
+    font-size: 1.5rem;
+  }
+}

@@ -1,7 +1,7 @@
 const path = require("path");
 require("dotenv").config();
 const express = require("express");
-//const favicon = require("serve-favicon");
+const favicon = require("serve-favicon");
 const helmet = require("helmet");
 let reloadify;
 if (process.env.NODE_ENV !== "production")
@@ -23,7 +23,7 @@ const app = express();
 app.use(morgan(appState === "development" ? "dev" : "combined"));
 
 if (appState !== "production") app.use(reloadify);
-//app.use(favicon(path.join(__dirname, "public", "assets/favicon.png")));
+app.use(favicon(path.join(__dirname, "public", "assets/favicon.svg")));
 if (appState === "production") app.use(helmet());
 if (appState === "production") app.use(limiter);
 app.set("view engine", "ejs");
@@ -36,6 +36,7 @@ app.locals = {
   publicKey: process.env.RECAPTCHA_PUBLIC_KEY,
   title: "",
   subtitle: "",
+  videoUrl: "",
 };
 
 //TEST MIDDLEWARE

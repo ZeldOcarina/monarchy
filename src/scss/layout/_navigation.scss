@@ -6,12 +6,18 @@
   flex-direction: column;
   padding: 0 15rem;
 
+  &__brand {
+    text-decoration: none;
+    margin-top: 5px;
+  }
+
   &__top {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: $navbar-height;
+    margin-top: 5px;
   }
 
   &__button {
@@ -54,8 +60,31 @@
     color: $white;
   }
 
-  &__title,
+  &__title {
+    font-size: 8rem;
+    background: linear-gradient(to right, $color-secondary, $color-tertiary);
+    background: -webkit-linear-gradient(
+      to right,
+      $color-secondary,
+      $color-tertiary
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
   &__subtitle {
     color: $white;
+    font-weight: 200;
+    font-size: 2.5rem;
+  }
+
+  &__titles-container {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 8rem;
   }
 }

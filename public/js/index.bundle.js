@@ -3553,6 +3553,28 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
+/***/ "./src/js/_navigation.js":
+/*!*******************************!*\
+  !*** ./src/js/_navigation.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var overlay = document.querySelector(\".overlay\");\nvar closeButton = document.querySelector(\".overlay__close\");\nvar openButton = document.querySelector(\".navigation__button\");\nif (openButton) openButton.addEventListener(\"click\", function () {\n  overlay.classList.remove(\"hidden\");\n  document.body.style.overflow = \"hidden\";\n});\nif (closeButton) closeButton.addEventListener(\"click\", function () {\n  overlay.classList.add(\"hidden\");\n  document.body.style.overflow = \"auto\";\n});\n\n//# sourceURL=webpack:///./src/js/_navigation.js?");
+
+/***/ }),
+
+/***/ "./src/js/_video-player.js":
+/*!*********************************!*\
+  !*** ./src/js/_video-player.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var videoIcon = document.querySelector(\".about-video__play-icon\");\n  var overlays = document.querySelectorAll(\".video-player\");\n  var closeIcons = document.querySelectorAll(\".video-player__close\");\n  videoIcon.addEventListener(\"click\", function () {\n    var _iteratorNormalCompletion = true;\n    var _didIteratorError = false;\n    var _iteratorError = undefined;\n\n    try {\n      for (var _iterator = overlays[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {\n        var overlay = _step.value;\n        overlay.classList.remove(\"hidden\");\n      }\n    } catch (err) {\n      _didIteratorError = true;\n      _iteratorError = err;\n    } finally {\n      try {\n        if (!_iteratorNormalCompletion && _iterator[\"return\"] != null) {\n          _iterator[\"return\"]();\n        }\n      } finally {\n        if (_didIteratorError) {\n          throw _iteratorError;\n        }\n      }\n    }\n  });\n  var _iteratorNormalCompletion2 = true;\n  var _didIteratorError2 = false;\n  var _iteratorError2 = undefined;\n\n  try {\n    for (var _iterator2 = closeIcons[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {\n      var closeIcon = _step2.value;\n      closeIcon.addEventListener(\"click\", function () {\n        var _iteratorNormalCompletion3 = true;\n        var _didIteratorError3 = false;\n        var _iteratorError3 = undefined;\n\n        try {\n          for (var _iterator3 = overlays[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {\n            var overlay = _step3.value;\n            overlay.classList.add(\"hidden\");\n          }\n        } catch (err) {\n          _didIteratorError3 = true;\n          _iteratorError3 = err;\n        } finally {\n          try {\n            if (!_iteratorNormalCompletion3 && _iterator3[\"return\"] != null) {\n              _iterator3[\"return\"]();\n            }\n          } finally {\n            if (_didIteratorError3) {\n              throw _iteratorError3;\n            }\n          }\n        }\n      });\n    }\n  } catch (err) {\n    _didIteratorError2 = true;\n    _iteratorError2 = err;\n  } finally {\n    try {\n      if (!_iteratorNormalCompletion2 && _iterator2[\"return\"] != null) {\n        _iterator2[\"return\"]();\n      }\n    } finally {\n      if (_didIteratorError2) {\n        throw _iteratorError2;\n      }\n    }\n  }\n});\n\n//# sourceURL=webpack:///./src/js/_video-player.js?");
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -3561,18 +3583,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ \"./src/js/navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
-
-/***/ }),
-
-/***/ "./src/js/navigation.js":
-/*!******************************!*\
-  !*** ./src/js/navigation.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("var overlay = document.querySelector(\".overlay\");\nvar closeButton = document.querySelector(\".overlay__close\");\nvar openButton = document.querySelector(\".navigation__button\");\nopenButton.addEventListener(\"click\", function () {\n  overlay.classList.remove(\"hidden\");\n  document.body.style.overflow = \"hidden\";\n});\ncloseButton.addEventListener(\"click\", function () {\n  overlay.classList.add(\"hidden\");\n  document.body.style.overflow = \"auto\";\n});\n\n//# sourceURL=webpack:///./src/js/navigation.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 

@@ -10,3 +10,12 @@ const customers = JSON.parse(
 exports.getHomePage = (req, res) => {
   res.status(200).render("index", { customers });
 };
+
+exports.getAboutPage = (req, res) => {
+  res
+    .status(200)
+    .render("about", {
+      title: "We are Monarchy",
+      subtitle: "A full-service creative agency that turns brands into media.",
+    });
+};

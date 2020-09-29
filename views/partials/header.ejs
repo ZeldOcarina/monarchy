@@ -10,10 +10,10 @@
 <nav class="overlay hidden">
     <img class="overlay__close" src="/assets/navigation-icons/close.svg" alt="close the menu button">
     <div class="overlay__link-container">
-        <a class="overlay__item" href="#">We are Monarchy</a>
-        <a class="overlay__item" href="#">Our Expertise</a>
-        <a class="overlay__item" href="#">Our Partners</a>
-        <a class="overlay__item" href="#">We are Social</a>
+        <a class="overlay__item" href="#">Who We Are</a>
+        <a class="overlay__item" href="#">What We Do</a>
+        <a class="overlay__item" href="#">Our Clients</a>
+        <a class="overlay__item" href="#">Contact Us</a>
     </div>
     <div class="overlay__footer">
         <%- include('footer'); %>
@@ -27,11 +27,11 @@
 <header class="navigation">
     <img class="navigation__icon" src="assets/monarchy-word-logo.svg" />
     <div class="navigation__button">
-    <img class="navigation__icon navigation__icon--butterfly" src="assets/monarchy-butterfly-circle.svg" />
-    <span class="navigation__button-text">MENU</span>
+        <img class="navigation__icon navigation__icon--butterfly" src="assets/monarchy-butterfly.svg" />
+        <span class="navigation__button-text">MENU</span>
     </div>
     <% if(title && subtitle) { %>
-    <h1><%= title %></h1>
-    <h2><%= subtitle %></h2>
+    <h1 class="navigation__title"><%= title %></h1>
+    <h2 class="navigation__subtitle"><%= subtitle %></h2>
     <% } %>
 </header>

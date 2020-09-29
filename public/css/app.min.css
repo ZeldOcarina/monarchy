@@ -252,7 +252,7 @@ body {
 
 .navigation {
   background-color: #000;
-  height: 15rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,11 +270,11 @@ body {
       transform: scale(1.2);
       cursor: pointer; }
   .navigation__icon {
-    width: 25rem;
+    width: 20rem;
     transition: transform 0.5s ease;
     margin-bottom: 0.5rem; }
     .navigation__icon--butterfly {
-      width: 7rem; }
+      width: 4rem; }
       .navigation__icon--butterfly:hover {
         cursor: pointer;
         transform: rotate(360deg) !important; }
@@ -282,6 +282,8 @@ body {
       cursor: pointer;
       transform: scale(1.05); }
   .navigation__button-text {
+    color: #fff; }
+  .navigation__title, .navigation__subtitle {
     color: #fff; }
 
 .overlay {
@@ -340,90 +342,18 @@ body {
     margin-left: 4rem; }
 
 .bg-video {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center; }
-  .bg-video__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
-    opacity: 1;
-    overflow: hidden; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden; }
   .bg-video__content {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    z-index: 1000; }
-  .bg-video__title {
-    text-align: center;
-    color: #fff;
-    font-weight: 400;
-    font-size: 4.0rem;
-    padding: 0 20%;
-    margin-top: 5rem;
-    z-index: 0; }
-    @media only screen and (max-width: 106.25em) {
-      .bg-video__title {
-        font-size: 3rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .bg-video__title {
-        padding: 0 10%; } }
-    @media only screen and (max-width: 56.25em) {
-      .bg-video__title {
-        margin-top: 5rem; } }
-    @media only screen and (max-width: 43.75em) {
-      .bg-video__title {
-        font-size: 2.3rem; } }
-    @media only screen and (max-width: 23.45em) {
-      .bg-video__title {
-        font-size: 2rem; } }
-  .bg-video__logo {
-    width: 40rem;
-    position: relative;
-    z-index: 50; }
-    @media only screen and (max-width: 106.25em) {
-      .bg-video__logo {
-        width: 25rem; } }
-    @media only screen and (max-width: 62.5em) {
-      .bg-video__logo {
-        width: 24rem; } }
-    @media only screen and (max-width: 43.75em) {
-      .bg-video__logo {
-        width: 18rem; } }
-  .bg-video__btn {
-    position: relative;
-    display: inline-block;
-    width: 36rem;
-    min-width: max-content;
-    min-height: max-content;
-    height: 5.5rem;
-    z-index: 50;
-    margin-top: 5rem; }
-    @media only screen and (max-width: 43.75em) {
-      .bg-video__btn {
-        width: 35rem;
-        height: 5rem;
-        font-size: 1.5rem !important; } }
-    @media only screen and (max-width: 23.45em) {
-      .bg-video__btn {
-        width: 80%;
-        height: min-content;
-        font-size: 1.3rem !important; } }
-  .bg-video:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 50;
-    background: linear-gradient(to right, rgba(0, 30, 54, 0.1), rgba(255, 80, 5, 0.1)); }
+    object-position: center; }
 
 .customer-box {
   width: 100%;
@@ -463,27 +393,8 @@ body {
     width: 5rem; }
 
 .header {
-  height: calc(100vh - 15rem);
-  background-color: seashell;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgba(255, 207, 149, 0.9), rgba(255, 207, 149, 0.9)), url("/assets/home/header.jpg");
-  background-size: cover;
-  background-position: center; }
-  .header__video-height {
-    padding-top: 100%;
-    display: block; }
-  .header__video-container {
-    width: 65%;
-    position: relative; }
-    .header__video-container iframe {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0; }
+  position: relative;
+  height: 89vh; }
 
 .main-button {
   background-color: #00bbc0;

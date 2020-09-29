@@ -23,12 +23,12 @@
   }
 
   &__icon {
-    width: 25rem;
+    width: 20rem;
     transition: transform 0.5s ease;
     margin-bottom: 0.5rem;
 
     &--butterfly {
-      width: 7rem;
+      width: 4rem;
 
       &:hover {
         cursor: pointer;
@@ -43,6 +43,11 @@
   }
 
   &__button-text {
+    color: $white;
+  }
+
+  &__title,
+  &__subtitle {
     color: $white;
   }
 }

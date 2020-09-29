@@ -1,10 +1,14 @@
 <%- include('partials/header') %>
 
 <section class="header">
-    <div class="header__video-container">
-        <span class="header__video-height"></span>
-        <iframe class=""src="https://player.vimeo.com/video/462169205" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+            <source src="/assets/video/top-bg-video.mp4" type="video/mp4">
+            <source src="/assets/video/top-bg-video.webm" type="video/webm">
+            Your browser is not supported! Please use Google Chrome or Firefox.
+        </video>
     </div>
+        <!--<iframe class=""src="https://player.vimeo.com/video/462169205" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
 </section>
 <section class="press">
     <div class="press__container">

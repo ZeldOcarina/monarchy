@@ -22,10 +22,10 @@
 </section>
 <%- include('components/divider'); %>
 <section class="customers-grid">
-    <% for(let { logo, sentence, image, white, height } of customers) { %>
+    <% for(let { logo, sentence, image, white, logoHeight } of customers) { %>
     <div class="customer-box" style="background-image: url(<%- image %>)">
         <div class="customer-box__content-box">
-            <img class="customer-box__logo" src="<%= logo %>" <%- height && 'style=height:' %><%- height %> />
+            <img class="customer-box__logo" src="<%= logo %>" <%- logoHeight && 'style=height:' %><%- logoHeight %> />
             <p<%- white && ' class="white"' %>><%= sentence %></p>
         </div>
     </div>

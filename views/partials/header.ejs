@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Monarchy | The Marketing Engine</title>
     <link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
 <nav class="overlay hidden">
     <img class="overlay__close" src="/assets/navigation-icons/close.svg" alt="close the menu button">
     <div class="overlay__link-container">
-        <a class="overlay__item" href="#">Who We Are</a>
+        <a class="overlay__item" href="/about">Who We Are</a>
         <a class="overlay__item" href="#">What We Do</a>
         <a class="overlay__item" href="#">Our Clients</a>
         <a class="overlay__item" href="#">Contact Us</a>
@@ -25,13 +25,17 @@
     </div>
 </nav>
 <header class="navigation">
-    <img class="navigation__icon" src="assets/monarchy-word-logo.svg" />
-    <div class="navigation__button">
-        <img class="navigation__icon navigation__icon--butterfly" src="assets/monarchy-butterfly.svg" />
-        <span class="navigation__button-text">MENU</span>
+    <div class="navigation__top">
+        <img class="navigation__icon" src="assets/monarchy-word-logo.svg" />
+        <div class="navigation__button">
+            <img class="navigation__icon navigation__icon--butterfly" src="assets/monarchy-butterfly.svg" />
+            <span class="navigation__button-text">MENU</span>
+        </div>
     </div>
     <% if(title && subtitle) { %>
-    <h1 class="navigation__title"><%= title %></h1>
-    <h2 class="navigation__subtitle"><%= subtitle %></h2>
+        <div class="navigation__titles-container">
+            <h1 class="navigation__title"><%= title %></h1>
+            <h2 class="navigation__subtitle"><%= subtitle %></h2>
+        </div>
     <% } %>
 </header>

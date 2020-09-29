@@ -1,10 +1,18 @@
 .navigation {
   background-color: #000;
-  height: $navbar-height;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 15rem;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $navbar-height;
+  }
 
   &__button {
     margin-left: auto;

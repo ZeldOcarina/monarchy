@@ -12,7 +12,7 @@
   margin: 10rem auto;
 
   &__text {
-    width: 45%;
+    width: 40%;
     margin-right: 5%;
   }
 
@@ -34,18 +34,18 @@
   }
 
   &__image-container {
-    width: 40%;
+    width: 35%;
+    margin-top: 12rem;
     position: relative;
   }
 
   &__image-caption {
     display: flex;
     flex-direction: column;
-    color: $white;
-    position: absolute;
+    color: $black;
+    position: static;
     top: 18%;
     right: 3rem;
-    font-family: $font-secondary;
     font-size: 1.8rem;
 
     &--title {

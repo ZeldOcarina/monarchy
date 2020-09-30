@@ -462,7 +462,8 @@ body {
   width: 100%;
   border-radius: 13px;
   transition: all 0.3s ease-in-out;
-  width: 30rem; }
+  width: 30rem;
+  overflow: hidden; }
   .team-card:hover {
     background-color: #fff;
     transform: translateY(-2rem);
@@ -511,7 +512,7 @@ body {
   width: 75%;
   margin: 10rem auto; }
   .founder__text {
-    width: 45%;
+    width: 40%;
     margin-right: 5%; }
   .founder__title {
     margin-bottom: 5rem;
@@ -524,16 +525,16 @@ body {
     border-radius: 10px;
     width: 100%; }
   .founder__image-container {
-    width: 40%;
+    width: 35%;
+    margin-top: 12rem;
     position: relative; }
   .founder__image-caption {
     display: flex;
     flex-direction: column;
-    color: #fff;
-    position: absolute;
+    color: rgba(0, 0, 0, 0.7);
+    position: static;
     top: 18%;
     right: 3rem;
-    font-family: "Crimson Text", serif;
     font-size: 1.8rem; }
     .founder__image-caption--title {
       font-style: italic; }

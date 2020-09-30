@@ -3560,7 +3560,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var overlay = document.querySelector(\".overlay\");\nvar closeButton = document.querySelector(\".overlay__close\");\nvar openButton = document.querySelector(\".navigation__button\");\nif (openButton) openButton.addEventListener(\"click\", function () {\n  overlay.classList.remove(\"hidden\");\n  document.body.style.overflow = \"hidden\";\n});\nif (closeButton) closeButton.addEventListener(\"click\", function () {\n  overlay.classList.add(\"hidden\");\n  document.body.style.overflow = \"auto\";\n});\n\n//# sourceURL=webpack:///./src/js/_navigation.js?");
+eval("var overlay = document.querySelector(\".overlay\");\nvar closeButton = document.querySelector(\".overlay__close\");\nvar openButton = document.querySelector(\".navigation__button\");\nvar navbar = document.querySelector(\".navigation\");\n\nif (window.location.pathname !== \"/\") {\n  navbar.style.backgroundColor = \"#000000\";\n  navbar.style.position = \"static\";\n}\n\nif (openButton) openButton.addEventListener(\"click\", function () {\n  overlay.classList.remove(\"hidden\");\n  document.body.style.overflow = \"hidden\";\n});\nif (closeButton) closeButton.addEventListener(\"click\", function () {\n  overlay.classList.add(\"hidden\");\n  document.body.style.overflow = \"auto\";\n});\n\n//# sourceURL=webpack:///./src/js/_navigation.js?");
 
 /***/ }),
 

@@ -251,7 +251,10 @@ body {
     margin: 0 2rem; }
 
 .navigation {
-  background-color: #000;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -319,7 +322,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 5;
+  z-index: 15;
   transition: all 0.5s ease-in-out; }
   .overlay__close {
     position: absolute;
@@ -420,7 +423,8 @@ body {
 
 .header {
   position: relative;
-  height: 89vh; }
+  height: 100vh;
+  margin-bottom: 8rem; }
 
 .main-button {
   background-color: #00bbc0;
@@ -442,16 +446,22 @@ body {
     box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.5); }
 
 .press {
-  width: 75%;
-  margin: 0 auto; }
-  .press__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 18rem; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 18rem;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  width: 100vw;
+  background-color: transparent; }
   .press__logo {
     margin-right: 4rem;
-    height: 3.3rem; }
+    height: 3.3rem;
+    filter: brightness(0) invert(1); }
   .press__text {
     font-family: "Crimson Text", serif; }
     .press__text--1 {

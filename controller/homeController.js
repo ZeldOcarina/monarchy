@@ -14,7 +14,7 @@ exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
     title: "We are Monarchy",
     subtitle: "A full-service creative agency that turns brands into media.",
-    videoUrl: "https://player.vimeo.com/video/462169205",
+    videoUrl: "https://player.vimeo.com/video/463782484",
     team,
   });
 };

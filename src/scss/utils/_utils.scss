@@ -6,3 +6,18 @@
   transform: translateY(-100vw);
   opacity: 0;
 }
+
+.secondary-header {
+  color: $color-secondary;
+  text-transform: uppercase;
+  font-size: $about-title;
+  text-align: center;
+}
+
+.text-left {
+  text-align: start;
+}
+
+.text-right {
+  text-align: end;
+}

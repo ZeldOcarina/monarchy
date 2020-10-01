@@ -1,17 +1,4 @@
-const fs = require("fs");
-const path = require("path");
-
-const customers = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../content/customers.json"), {
-    encoding: "utf-8",
-  })
-);
-
-const team = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../content/team.json"), {
-    encoding: "utf-8",
-  })
-);
+const { customers, team, services, isOdd } = require("../helpers/helpers");
 
 exports.getHomePage = (req, res) => {
   res.status(200).render("index", { customers });
@@ -23,5 +10,15 @@ exports.getAboutPage = (req, res) => {
     subtitle: "A full-service creative agency that turns brands into media.",
     videoUrl: "https://player.vimeo.com/video/462169205",
     team,
+  });
+};
+
+exports.getServicesPage = (req, res) => {
+  res.status(200).render("service", {
+    title: "Full Service Marketing Engine",
+    subtitle:
+      "We are built for the now. Delivering retention, leads, and sales.",
+    services,
+    isOdd,
   });
 };

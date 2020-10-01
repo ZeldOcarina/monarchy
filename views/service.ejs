@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<section class="services">
+    <h2 class="services__title secondary-header">Services</h2>
+    <p class="services__paragraph mb-3">We believe that fusing art and business creates a masterpiece that will take your brand to the next level. We know what to do, and we do it well. Look at what we can offer to get you there.</p>
+    <div class="services__container">
+        <% for(let i = 0; i < services.length; i++) { %>
+        <% const { title, subtitle } = services[i] %>
+            <%- include('components/service', { title, subtitle, direction: isOdd(i) ? 'left' : 'right' }) %>
+        <% } %>
+    </div>
+</section>
+<%- include('components/divider') %>
+<section class="customers">
+    <div class="customers__text-container">
+        <h2 class="customers__title secondary-header">Who our team has worked with</h2>
+        <p class="customers__paragraph">We have an amazing team. Our leadership came from incredible experiences and worked with some of the most innovative brands in the world. Together we have pushed these brands beyond their limits, bringing dynamic growth by combining art and business. That's the Monarchy way.</p>
+    </div>
+    <img class="customers__image" src="/assets/services/clients.jpg" />
+</section>
+<%- include('partials/footer') %>

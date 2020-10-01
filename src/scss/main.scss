@@ -5,7 +5,6 @@
 @import "./base/animations";
 @import "./base/base";
 @import "./base/typography";
-@import "./base/utilities";
 
 @import "./layout/footer";
 @import "./layout/navigation";
@@ -17,10 +16,13 @@
 @import "./components/header";
 @import "./components/main-button";
 @import "./components/press";
+@import "./components/service-box";
 @import "./components/team-card";
 @import "./components/video-player";
 
 @import "./pages/about";
 @import "./pages/home";
+@import "./pages/services";
 
 @import "./utils/utils";
+@import "./utils/utilities";

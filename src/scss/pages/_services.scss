@@ -1,0 +1,42 @@
+.services {
+  width: 45%;
+  margin: 0 auto;
+  padding: 6rem 0;
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__paragraph {
+    text-align: center;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+.customers {
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__text-container {
+    width: 80%;
+    margin: 0 auto 2rem auto;
+  }
+
+  &__title {
+    margin: 4rem 0 2rem 0;
+  }
+
+  &__paragraph {
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+}

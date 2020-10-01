@@ -1,0 +1,22 @@
+.clients {
+  width: $container-width;
+  margin: 0 auto;
+  text-align: center;
+
+  &__title {
+    margin: 6rem 0 2rem 0;
+  }
+
+  &__paragraph {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 6rem 0;
+  }
+}

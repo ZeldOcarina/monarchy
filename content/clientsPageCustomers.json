@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Serendipity",
+    "subtitle": "Producing films that awaken the imagination",
+    "image": "/assets/clients/serendipity.png"
+  },
+  {
+    "name": "Viva Concepts",
+    "subtitle": "Connecting new patients through referral marketing",
+    "image": "/assets/clients/viva.png"
+  },
+  {
+    "name": "Body Contourz",
+    "subtitle": "Body Image Center offering non-surgical treatments using cutting-edge technology",
+    "image": "/assets/clients/body-contourz.png"
+  },
+  {
+    "name": "Galaxy",
+    "subtitle": "A network marketing redefining the crypto industry",
+    "image": "/assets/clients/galaxy.png"
+  },
+  {
+    "name": "5-15 Global Energy",
+    "subtitle": "Renewable energy company providing opportunities for self-sufficiency",
+    "image": "/assets/clients/5-15.png"
+  },
+  {
+    "name": "Angel Longevity",
+    "subtitle": "Wellness clinic with a holistic approach",
+    "image": "/assets/clients/angel-longevity.png"
+  },
+  {
+    "name": "American Power and Gas",
+    "subtitle": "Green energy and clean gas provider serving American households and businesses",
+    "image": "/assets/clients/apg.png"
+  },
+  {
+    "name": "Giansante",
+    "subtitle": "Artisan jewelry line bringing luxury and creativity together",
+    "image": "/assets/clients/giansante.png"
+  },
+  {
+    "name": "ANDA",
+    "subtitle": "Live shows that bring entrepreneurs together to share business ideas",
+    "image": "/assets/clients/anda.png"
+  },
+  {
+    "name": "Upliffs",
+    "subtitle": "Exercise tools that bring sweetness to your workout routines",
+    "image": "/assets/clients/upliffs.png"
+  },
+  {
+    "name": "Sephora",
+    "subtitle": "Pioneers in the beauty industry creating trendy products",
+    "image": "/assets/clients/sephora.png"
+  }
+]

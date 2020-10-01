@@ -214,6 +214,22 @@ body {
     height: 5rem;
     margin-bottom: 2.5rem; }
 
+.customer-card {
+  position: relative;
+  height: max-content; }
+  .customer-card__text {
+    width: 40rem;
+    text-align: left;
+    color: #fff;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem; }
+  .customer-card__subtitle {
+    font-size: 1.5rem;
+    line-height: 0.5; }
+  .customer-card__image {
+    width: 50rem; }
+
 .divider {
   display: flex;
   align-items: center;
@@ -416,6 +432,22 @@ body {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 4rem; }
+
+.clients {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center; }
+  .clients__title {
+    margin: 6rem 0 2rem 0; }
+  .clients__paragraph {
+    width: 50%;
+    margin: 0 auto; }
+  .clients__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 6rem 0; }
 
 .customers-grid {
   display: grid;

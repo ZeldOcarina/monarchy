@@ -1,0 +1,25 @@
+.customer-card {
+  position: relative;
+  height: max-content;
+
+  &__text {
+    width: 40rem;
+    text-align: left;
+    color: $white;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+  }
+
+  &__name {
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    line-height: 0.5;
+  }
+
+  &__image {
+    width: 50rem;
+  }
+}

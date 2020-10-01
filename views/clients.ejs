@@ -1,0 +1,12 @@
+<%- include('partials/header'); %>
+<section class="clients">
+    <h2 class="clients__title secondary-header">Clients</h2>
+    <p class="clients__paragraph">We know how important growth is for all brands. That's why we blend creativity and entrepreneurship to get substantial results. </p>
+    <div class="clients__cards-container">
+    <% for(let { name, subtitle, image } of clientsPageCustomers) { %>
+        <%- include('components/customer-card', { name, subtitle, image }); %>
+    <% } %>
+    </div>
+</section>
+
+<%- include('partials/footer'); %>

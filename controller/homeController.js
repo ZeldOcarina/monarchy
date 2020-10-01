@@ -1,4 +1,10 @@
-const { customers, team, services, isOdd } = require("../helpers/helpers");
+const {
+  customers,
+  team,
+  services,
+  clientsPageCustomers,
+  isOdd,
+} = require("../helpers/helpers");
 
 exports.getHomePage = (req, res) => {
   res.status(200).render("index", { customers });
@@ -20,5 +26,13 @@ exports.getServicesPage = (req, res) => {
       "We are built for the now. Delivering retention, leads, and sales.",
     services,
     isOdd,
+  });
+};
+
+exports.getClientsPage = (req, res) => {
+  res.status(200).render("clients", {
+    title: "Our Partners",
+    subtitle: "We help  clients grow beyond what they thought was possible.",
+    clientsPageCustomers,
   });
 };

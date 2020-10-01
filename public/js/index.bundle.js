@@ -3553,6 +3553,17 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
+/***/ "./src/js/_form.js":
+/*!*************************!*\
+  !*** ./src/js/_form.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var checkboxes = document.querySelectorAll(\".form__checkbox\");\ncheckboxes.forEach(function (checkbox) {\n  checkbox.addEventListener(\"change\", function () {\n    if (checkbox.checked) {\n      checkbox.parentElement.querySelector(\".form__checkbox--span--fill\").style.opacity = 1;\n    } else {\n      checkbox.parentElement.querySelector(\".form__checkbox--span--fill\").style.opacity = 0;\n    }\n  });\n});\n\n//# sourceURL=webpack:///./src/js/_form.js?");
+
+/***/ }),
+
 /***/ "./src/js/_navigation.js":
 /*!*******************************!*\
   !*** ./src/js/_navigation.js ***!
@@ -3560,7 +3571,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var overlay = document.querySelector(\".overlay\");\nvar closeButton = document.querySelector(\".overlay__close\");\nvar openButton = document.querySelector(\".navigation__button\");\nvar navbar = document.querySelector(\".navigation\");\n\nif (window.location.pathname !== \"/\") {\n  navbar.style.backgroundColor = \"#000000\";\n  navbar.style.position = \"static\";\n}\n\nif (openButton) openButton.addEventListener(\"click\", function () {\n  overlay.classList.remove(\"hidden\");\n  document.body.style.overflow = \"hidden\";\n});\nif (closeButton) closeButton.addEventListener(\"click\", function () {\n  overlay.classList.add(\"hidden\");\n  document.body.style.overflow = \"auto\";\n});\n\n//# sourceURL=webpack:///./src/js/_navigation.js?");
+eval("var overlay = document.querySelector(\".overlay\");\nvar closeButton = document.querySelector(\".overlay__close\");\nvar openButton = document.querySelector(\".navigation__button\");\nvar navbar = document.querySelector(\".navigation\");\n\nif (window.location.pathname !== \"/\") {\n  if (navbar) {\n    navbar.style.backgroundColor = \"#000000\";\n    navbar.style.position = \"static\";\n  }\n}\n\nif (openButton) openButton.addEventListener(\"click\", function () {\n  overlay.classList.remove(\"hidden\");\n  document.body.style.overflow = \"hidden\";\n});\nif (closeButton) closeButton.addEventListener(\"click\", function () {\n  overlay.classList.add(\"hidden\");\n  document.body.style.overflow = \"auto\";\n});\n\n//# sourceURL=webpack:///./src/js/_navigation.js?");
 
 /***/ }),
 
@@ -3583,7 +3594,7 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var video
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_form */ \"./src/js/_form.js\");\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 

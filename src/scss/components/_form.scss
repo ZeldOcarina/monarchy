@@ -1,0 +1,124 @@
+.form {
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-input,
+  &__textarea {
+    padding: 1.5rem 1.8rem;
+    font-size: 1.6rem;
+    background-color: #fafafa;
+    border: none;
+    outline: none;
+    font-family: $basic-font;
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+      font-family: $basic-font;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $color-secondary;
+      outline: none;
+    }
+  }
+
+  &__label {
+    margin: 0 0 0.3rem 1.8rem;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__top-container {
+    display: grid;
+    grid-template-columns: repeat(2, 35rem);
+    gap: 4rem;
+  }
+
+  &__subtitle {
+    margin: 4rem 0;
+  }
+
+  &__checkbox-top-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__checkbox-container {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &--privacy {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+    &-label {
+      cursor: pointer;
+      position: relative;
+      padding-left: 4rem;
+
+      &--privacy {
+        font-size: 1.2rem;
+        min-width: max-content;
+        width: max-content;
+
+        .form__checkbox--span {
+          display: block;
+        }
+      }
+    }
+
+    &--span {
+      height: 3rem;
+      width: 3rem;
+      border: 2px solid #c4c4c4;
+      border-radius: 5px;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: -0.5rem;
+
+      &--fill {
+        display: block;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translate(0, -50%);
+        background-color: rgba($color-tertiary, 0.5);
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    }
+  }
+
+  &__bottom-container {
+    margin-top: 4rem;
+    width: 60%;
+
+    &--input {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 3rem;
+
+      .form__input-container {
+        width: 50%;
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 3rem;
+    outline: none;
+    border: none;
+    padding: 3rem 10rem 3rem 10rem !important;
+  }
+}

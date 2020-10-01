@@ -4,8 +4,10 @@ const openButton = document.querySelector(".navigation__button");
 const navbar = document.querySelector(".navigation");
 
 if (window.location.pathname !== "/") {
-  navbar.style.backgroundColor = "#000000";
-  navbar.style.position = "static";
+  if (navbar) {
+    navbar.style.backgroundColor = "#000000";
+    navbar.style.position = "static";
+  }
 }
 
 if (openButton)

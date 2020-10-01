@@ -36,3 +36,10 @@ exports.getClientsPage = (req, res) => {
     clientsPageCustomers,
   });
 };
+
+exports.getContactsPage = (req, res) => {
+  res.status(200).render("contacts", {
+    title: "Get in Touch",
+    subtitle: "Tell us more about yourself and let's connect!",
+  });
+};

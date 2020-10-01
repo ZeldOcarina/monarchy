@@ -248,6 +248,97 @@ body {
     margin: 0 2rem;
     width: 5rem; }
 
+.form__input-container {
+  display: flex;
+  flex-direction: column; }
+
+.form__text-input, .form__textarea {
+  padding: 1.5rem 1.8rem;
+  font-size: 1.6rem;
+  background-color: #fafafa;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif; }
+  .form__text-input::placeholder, .form__textarea::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Montserrat", sans-serif; }
+  .form__text-input:focus, .form__text-input:active, .form__textarea:focus, .form__textarea:active {
+    border: 1px solid #ff5005;
+    outline: none; }
+
+.form__label {
+  margin: 0 0 0.3rem 1.8rem;
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8); }
+
+.form__top-container {
+  display: grid;
+  grid-template-columns: repeat(2, 35rem);
+  gap: 4rem; }
+
+.form__subtitle {
+  margin: 4rem 0; }
+
+.form__checkbox-top-container {
+  display: flex;
+  flex-direction: column; }
+
+.form__checkbox-container:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__checkbox-container--privacy {
+  margin-top: 1.5rem; }
+
+.form__checkbox {
+  display: none; }
+  .form__checkbox-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 4rem; }
+    .form__checkbox-label--privacy {
+      font-size: 1.2rem;
+      min-width: max-content;
+      width: max-content; }
+      .form__checkbox-label--privacy .form__checkbox--span {
+        display: block; }
+  .form__checkbox--span {
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid #c4c4c4;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -0.5rem; }
+    .form__checkbox--span--fill {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 5px;
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translate(0, -50%);
+      background-color: rgba(0, 187, 192, 0.5);
+      opacity: 0;
+      transition: opacity 0.2s; }
+
+.form__bottom-container {
+  margin-top: 4rem;
+  width: 60%; }
+  .form__bottom-container--input {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem; }
+    .form__bottom-container--input .form__input-container {
+      width: 50%; }
+
+.form__submit {
+  margin-top: 3rem;
+  outline: none;
+  border: none;
+  padding: 3rem 10rem 3rem 10rem !important; }
+
 .header {
   position: relative;
   height: 100vh;
@@ -391,7 +482,8 @@ body {
     width: 65%;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 5rem; }
+    margin-bottom: 5rem;
+    font-size: 1.8rem; }
   .about-video__thumb-container {
     position: relative;
     margin-bottom: 5rem; }
@@ -431,7 +523,8 @@ body {
   width: 40%;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  font-size: 1.8rem; }
 
 .clients {
   width: 75%;
@@ -448,6 +541,13 @@ body {
     gap: 3rem;
     justify-content: center;
     margin: 6rem 0; }
+
+.contacts {
+  width: 75%;
+  margin: 6rem auto; }
+  .contacts__paragraph {
+    text-align: center;
+    margin: 2rem 0 4rem 0; }
 
 .customers-grid {
   display: grid;

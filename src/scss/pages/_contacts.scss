@@ -1,0 +1,9 @@
+.contacts {
+  width: $container-width;
+  margin: 6rem auto;
+
+  &__paragraph {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+  }
+}

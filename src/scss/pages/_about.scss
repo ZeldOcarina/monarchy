@@ -16,6 +16,7 @@
 
   &__paragraph {
     font-size: 1.8rem;
+
     &:not(:last-child) {
       margin-bottom: 3rem;
     }
@@ -66,6 +67,7 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 5rem;
+    font-size: 1.8rem;
   }
 
   &__thumb-container {
@@ -123,5 +125,6 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 4rem;
+    font-size: 1.8rem;
   }
 }

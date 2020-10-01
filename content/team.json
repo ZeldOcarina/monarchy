@@ -6,11 +6,6 @@
       "image": "/assets/about/team/leadership/nicole.png"
     },
     {
-      "name": "Fabio A",
-      "position": "President - Monarchy Media Italia",
-      "image": "/assets/about/team/leadership/fabio.jpg"
-    },
-    {
       "name": "Ivonne D",
       "position": "Chief Creative Officer",
       "image": "/assets/about/team/leadership/ivonne.png"
@@ -27,6 +22,11 @@
     }
   ],
   "team": [
+    {
+      "name": "Fabio A",
+      "position": "President - Monarchy Media Italia",
+      "image": "/assets/about/team/leadership/fabio.jpg"
+    },
     {
       "name": "Alberto E",
       "position": "Video Director",

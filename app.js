@@ -1,8 +1,10 @@
-const path = require("path");
 require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const favicon = require("serve-favicon");
 const helmet = require("helmet");
+const bodyParser = require("body-parser");
+
 let reloadify;
 if (process.env.NODE_ENV !== "production")
   reloadify = require("reloadify")(__dirname + "/public");
@@ -29,6 +31,8 @@ if (appState === "production") app.use(limiter);
 app.set("view engine", "ejs");
 app.use("/uploads", express.static("uploads"));
 app.use(express.static("public"));
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //GLOBAL TEMPLATES VARIABLES
 app.locals = {
@@ -37,6 +41,7 @@ app.locals = {
   title: "",
   subtitle: "",
   videoUrl: "",
+  message: {},
 };
 
 //TEST MIDDLEWARE

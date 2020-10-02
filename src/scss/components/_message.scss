@@ -1,0 +1,18 @@
+.message {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: max-content;
+  margin: 5rem 10rem 0 auto;
+  padding: 2rem 4rem;
+  color: white;
+  border-radius: 5px;
+
+  &--success {
+    background-color: green;
+  }
+
+  &--error {
+    background-color: #ff6666;
+  }
+}

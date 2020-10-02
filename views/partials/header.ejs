@@ -48,3 +48,7 @@
         </div>
     <% } %>
 </header>
+<% if(message && message.message) { %>
+<div class="message message--<%= message.type %>"><%= message.message %></div>
+<% } %>
+

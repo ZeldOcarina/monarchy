@@ -373,6 +373,20 @@ body {
     transform: translateY(-0.5rem);
     box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.5); }
 
+.message {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: max-content;
+  margin: 5rem 10rem 0 auto;
+  padding: 2rem 4rem;
+  color: white;
+  border-radius: 5px; }
+  .message--success {
+    background-color: green; }
+  .message--error {
+    background-color: #ff6666; }
+
 .press {
   display: flex;
   justify-content: center;

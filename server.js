@@ -1,4 +1,23 @@
+const mongoose = require("mongoose");
 const { app, appState } = require("./app");
+
+mongoose
+  .connect(
+    `mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@adyproduction.5cosb.mongodb.net/monarchy-db?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => {
+    console.log("DB Connection successful");
+  })
+  .catch((err) => {
+    console.error(err);
+    throw err;
+  });
 
 process.on("uncaughtException", (err) => {
   console.error(err.name, err.message, err.stack);

@@ -297,10 +297,11 @@ body {
     padding-left: 4rem; }
     .form__checkbox-label--privacy {
       font-size: 1.2rem;
-      min-width: max-content;
-      width: max-content; }
+      width: 100%;
+      display: flex; }
       .form__checkbox-label--privacy .form__checkbox--span {
-        display: block; }
+        display: block;
+        margin-top: 1rem; }
   .form__checkbox--span {
     height: 3rem;
     width: 3rem;
@@ -317,8 +318,8 @@ body {
       border-radius: 5px;
       position: absolute;
       top: 50%;
-      left: 5px;
-      transform: translate(0, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
       background-color: rgba(0, 187, 192, 0.5);
       opacity: 0;
       transition: opacity 0.2s; }

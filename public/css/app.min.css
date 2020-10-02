@@ -250,7 +250,7 @@ body {
 
 .form__input-container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column-reverse; }
 
 .form__text-input, .form__textarea {
   padding: 1.5rem 1.8rem;
@@ -266,10 +266,17 @@ body {
     border: 1px solid #ff5005;
     outline: none; }
 
+.form__text-input:placeholder-shown + .form__label,
+.form__textarea:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4rem); }
+
 .form__label {
   margin: 0 0 0.3rem 1.8rem;
   font-size: 1.2rem;
-  color: rgba(0, 0, 0, 0.8); }
+  color: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s; }
 
 .form__top-container {
   display: grid;
@@ -339,6 +346,8 @@ body {
   outline: none;
   border: none;
   padding: 3rem 10rem 3rem 10rem !important; }
+  .form__submit:hover {
+    cursor: pointer; }
 
 .header {
   position: relative;

@@ -18,6 +18,7 @@ exports.clientsPageCustomers = parseJSON(
 exports.logos = parseJSON(
   path.join(__dirname, "../content/customers-logos.json")
 );
+exports.homeGrid = parseJSON(path.join(__dirname, "../content/home-grid.json"));
 
 exports.isOdd = function (number) {
   return number % 2 !== 0;

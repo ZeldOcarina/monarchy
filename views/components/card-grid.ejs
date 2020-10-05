@@ -1,0 +1,9 @@
+<% for(let { title, text, image } of homeGrid) { %>
+    <div class="card-grid">
+        <div class="card-grid__image-container">
+            <img class="card-grid__image" src="<%= image %>" alt="<%= title %>">
+        </div>
+        <h2 class="card-grid__title"><%= title %></h2>
+        <p class="card-grid__text"><%= text %></p>
+    </div>
+<% } %>

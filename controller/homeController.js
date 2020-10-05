@@ -5,11 +5,12 @@ const {
   services,
   clientsPageCustomers,
   logos,
+  homeGrid,
   isOdd,
 } = require("../helpers/helpers");
 
 exports.getHomePage = (req, res) => {
-  res.status(200).render("index", { customers });
+  res.status(200).render("index", { customers, homeGrid });
 };
 
 exports.getAboutPage = (req, res) => {

@@ -195,6 +195,23 @@ body {
     object-fit: cover;
     object-position: center; }
 
+.card-grid {
+  width: 32rem;
+  text-align: center; }
+  .card-grid__image-container {
+    width: 20rem;
+    height: 20rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .card-grid__image {
+    width: 18rem;
+    height: auto;
+    margin-bottom: 2rem;
+    object-fit: cover;
+    object-position: center; }
+
 .customer-box {
   width: 100%;
   height: 100%;
@@ -595,24 +612,35 @@ body {
     margin: 2rem 0 4rem 0; }
 
 .customers-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 70rem);
-  justify-content: center;
-  grid-auto-rows: 70rem;
-  gap: 1.5rem;
   margin: 6rem 0; }
+  .customers-grid__title {
+    margin-bottom: 5rem; }
+  .customers-grid__container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 70rem);
+    justify-content: center;
+    grid-auto-rows: 70rem;
+    gap: 1.5rem; }
+
+.home-services {
+  width: 80%;
+  margin: 4rem auto 0 auto; }
+  .home-services__container {
+    margin: 6rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem; }
 
 .team-section {
   margin: 6rem auto 3rem auto;
-  width: 100%;
-  background-image: url("/assets/home/team.png");
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; }
+  text-align: center; }
+  .team-section .main-button {
+    margin: 6rem auto 8rem auto; }
+  .team-section__image {
+    width: 100%;
+    height: auto; }
   .team-section__content {
     width: 30%;
     margin-right: 18%; }
@@ -621,7 +649,9 @@ body {
     text-transform: uppercase;
     margin-bottom: 3rem; }
   .team-section__paragraph {
-    margin-bottom: 4.5rem; }
+    margin-bottom: 4.5rem;
+    width: 33%;
+    margin: 0 auto; }
 
 .services {
   width: 45%;

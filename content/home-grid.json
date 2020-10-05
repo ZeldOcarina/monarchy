@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Strategy",
+    "text": "Our unique ability to collect and analyze data allows us to generate tailored campaigns to predict customers and sales.",
+    "image": "/assets/home/services/1.svg"
+  },
+  {
+    "title": "Creative",
+    "text": "Our creative team is comprised of copywriters, video makers, editors and designers adding art to our analysis and strategies.",
+    "image": "/assets/home/services/2.svg"
+  },
+  {
+    "title": "Advertising & Promotion",
+    "text": "Generating sales and results through our paid media campaigns and our unique mix of data analysis, AI and creativity.",
+    "image": "/assets/home/services/3.svg"
+  },
+  {
+    "title": "Influencers",
+    "text": "Our network of influencers brings life, experience and vitality to our campaigns. We find powerful voices and personalities to forward your brand culture and engage your targets.",
+    "image": "/assets/home/services/4.svg"
+  },
+  {
+    "title": "Training",
+    "text": "We train your team to become a better version of itself, use technology and learn from our experience.",
+    "image": "/assets/home/services/5.svg"
+  },
+  {
+    "title": "Production",
+    "text": "With internal movie production (Serendipity Film Group) we’re able to handle any scale of content creation. We are currently launching our first TV series with ABC. Wanna know more?",
+    "image": "/assets/home/services/6.svg"
+  },
+  {
+    "title": "Technology",
+    "text": "Our proprietary marketing platform (SalesJet) and software team allows us to really handle our client’s business from beginning to end.",
+    "image": "/assets/home/services/7.png"
+  }
+]

@@ -2,41 +2,28 @@
   {
     "logo": "/assets/home/customers/body-contourz/logo.png",
     "image": "/assets/home/customers/body-contourz/background.png",
-    "sentence": "Using social media to give the brand a wider reach",
+    "sentence": "7X the business in 6 months, now partnering to open the next 10 new locations",
     "logoHeight": "8rem",
     "white": true
   },
   {
-    "logo": "/assets/home/customers/apg/logo.png",
-    "image": "/assets/home/customers/apg/background.png",
-    "sentence": "Campaign strategies that give back to communities",
+    "logo": "/assets/home/customers/serendipity/logo.png",
+    "image": "/assets/home/customers/serendipity/background.png",
+    "sentence": "Co-producing the new ABC series WOTM, currently casting. Shooting starts Jan 2020.",
     "logoHeight": "4rem",
     "white": true
   },
   {
     "logo": "/assets/home/customers/galaxy/logo.png",
     "image": "/assets/home/customers/galaxy/background.png",
-    "sentence": "Informing associates through email marketing and newsletters",
+    "sentence": "Launching the new era of home business with some of the brightest minds in the industry.",
     "logoHeight": "4rem",
     "white": true
   },
   {
-    "logo": "/assets/home/customers/angel-longevity/logo.svg",
-    "image": "/assets/home/customers/angel-longevity/background.jpg",
-    "sentence": "Creating content that presents alternative health treatments in a new way"
-  },
-  {
-    "logo": "/assets/home/customers/giansante/logo.png",
-    "image": "/assets/home/customers/giansante/background.png",
-    "sentence": "Brand strategy that puts artisan jewelry on the map",
-    "logoHeight": "6rem",
-    "white": false
-  },
-  {
-    "logo": "/assets/home/customers/upliffs/logo.svg",
-    "image": "/assets/home/customers/upliffs/background.png",
-    "sentence": "eCommerce that boosts sales for your online shop",
-    "logoHeight": "4rem",
+    "logo": "/assets/home/customers/515/logo.png",
+    "image": "/assets/home/customers/515/background.png",
+    "sentence": "Building the new frontier of Green Energy in italy",
     "white": true
   }
 ]

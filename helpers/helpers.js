@@ -15,6 +15,9 @@ exports.services = parseJSON(path.join(__dirname, "../content/services.json"));
 exports.clientsPageCustomers = parseJSON(
   path.join(__dirname, "../content/clientsPageCustomers.json")
 );
+exports.logos = parseJSON(
+  path.join(__dirname, "../content/customers-logos.json")
+);
 
 exports.isOdd = function (number) {
   return number % 2 !== 0;

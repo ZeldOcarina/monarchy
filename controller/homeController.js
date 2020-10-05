@@ -4,6 +4,7 @@ const {
   team,
   services,
   clientsPageCustomers,
+  logos,
   isOdd,
 } = require("../helpers/helpers");
 
@@ -28,6 +29,7 @@ exports.getServicesPage = (req, res) => {
       "We partner with innovative businesses to generate attention, leads and sales.",
     services,
     isOdd,
+    logos,
   });
 };
 

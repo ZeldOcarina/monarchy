@@ -15,6 +15,10 @@
         <h2 class="customers__title secondary-header">Here are Some of the Brands Our Founders Have Worked With</h2>
         <p class="customers__paragraph">We have an amazing team. Here are some of the brands we have worked with in the past, as well as some that we are still building and growing.</p>
     </div>
-    <img class="customers__image" src="/assets/services/clients.jpg" />
+    <div class="customers__logos-container">
+        <% for(let logo of logos) { %>
+            <img class="customers__image" src="<%= logo %>" />
+        <% } %>
+    </div>
 </section>
 <%- include('partials/footer') %>

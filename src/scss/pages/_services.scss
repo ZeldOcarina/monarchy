@@ -35,8 +35,16 @@
     margin-bottom: 2rem;
   }
 
+  &__logos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+  }
+
   &__image {
-    width: 100%;
+    width: 23rem;
     margin-bottom: 5rem;
   }
 }

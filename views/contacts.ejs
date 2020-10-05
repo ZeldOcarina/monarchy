@@ -1,7 +1,5 @@
 <%- include('partials/header'); %>
 <section class="contacts">
-    <h2 class="contacts__title secondary-header">CONNECT</h2>
-    <p class="contacts__paragraph">Get in touch with us and let's discuss together your needs!</p>
     <div class="contacts__form-container">
         <form method="POST" action="/contacts" class="form">
             <div class="form__top-container">
@@ -25,68 +23,60 @@
             <div class="form__checkbox-top-container">
                 <h3 class="form__subtitle">I’M REACHING OUT ON BEHALF OF A COMPANY (CHECK ALL THAT APPLY)</h3>
                 <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="new_agency" id="new_agency" />
-                    <label class="form__checkbox-label" for="new_agency"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m exploring new agency partners</label>
+                    <input class="form__checkbox" type="checkbox" name="company" id="company" />
+                    <label class="form__checkbox-label" for="company"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m a company!</label>
                 </div>
                 <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="media_agency" id="media_agency" />
-                    <label class="form__checkbox-label" for="media_agency"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m looking for a partner for creative, media, production, or integrated services</label>
+                    <input class="form__checkbox" type="checkbox" name="needs_marketing" id="needs_marketing" />
+                    <label class="form__checkbox-label" for="needs_marketing"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>Need more results from my marketing.</label>
                 </div>
                 <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="production_services" id="production_services" />
-                    <label class="form__checkbox-label" for="production_services"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m looking for production services</label>
+                    <input class="form__checkbox" type="checkbox" name="needs_sales" id="needs_sales" />
+                    <label class="form__checkbox-label" for="needs_sales"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>Need Sales.</label>
                 </div>
                 <div class="form__checkbox-container">
                     <input class="form__checkbox" type="checkbox" name="consulting" id="consulting" />
-                    <label class="form__checkbox-label" for="consulting"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m looking for consultative services</label>
+                    <label class="form__checkbox-label" for="consulting"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>Need guidance, better understanding our market.</label>
                 </div>
                 <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="e_commerce" id="e_commerce" />
-                    <label class="form__checkbox-label" for="e_commerce"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m looking for eCommerce support</label>
+                    <input class="form__checkbox" type="checkbox" name="branding" id="branding" />
+                    <label class="form__checkbox-label" for="branding"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>Need to grow my branding across the channels.</label>
                 </div>
             </div>
             <div class="form__checkbox-top-container">
-                <h3 class="form__subtitle">I’M AN INDIVIDUAL (CHECK ALL THAT APPLY)</h3>
+                <h3 class="form__subtitle">I AM A PERSON</h3>
                 <div class="form__checkbox-container">
                     <input class="form__checkbox" type="checkbox" name="job_applier" id="job_applier" />
-                    <label class="form__checkbox-label" for="job_applier"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I want to apply for a job</label>
-                </div>
-                <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="press_member" id="press_member" />
-                    <label class="form__checkbox-label" for="press_member"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m a member of the press looking to connect with your Communications team</label>
-                </div>
-                <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="personal_branding" id="personal_branding" />
-                    <label class="form__checkbox-label" for="personal_branding"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m looking for personal branding</label>
+                    <label class="form__checkbox-label" for="job_applier"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I want to become part of the team.</label>
                 </div>
                 <div class="form__checkbox-container">
                     <input class="form__checkbox" type="checkbox" name="influencer" id="influencer" />
                     <label class="form__checkbox-label" for="influencer"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I’m an influencer</label>
                 </div>
                 <div class="form__checkbox-container">
-                    <input class="form__checkbox" type="checkbox" name="follower" id="follower" />
-                    <label class="form__checkbox-label" for="follower"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I follow Monarchy on social media</label>
+                    <input class="form__checkbox" type="checkbox" name="press_member" id="press_member" />
+                    <label class="form__checkbox-label" for="press_member"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span>I am part of the media and want to talk to you.</label>
                 </div>
             </div>
             <div class="form__bottom-container">
                 <div class="form__bottom-container--input">
                     <div class="form__input-container">
-                        <input name="company_size" placeholder="Approximate size of your business" type="text" id="company_size" class="form__text-input" />
-                        <label class="form__label" for="company_size">Approximate size of your business</label>
+                        <input name="company_size" placeholder="How many staff do you have?" type="text" id="company_size" class="form__text-input" />
+                        <label class="form__label" for="company_size">How many staff do you have?</label>
                     </div>
                     <div class="form__input-container">
-                        <input name="marketing_spent" placeholder="How much you spend on marketing yearly" type="text" id="marketing_spent" class="form__text-input" />
-                        <label class="form__label" for="marketing_spent">How much you spend on marketing yearly</label>
+                        <input name="marketing_spent" placeholder="Yearly marketing budget" type="text" id="marketing_spent" class="form__text-input" />
+                        <label class="form__label" for="marketing_spent">Yearly marketing budget</label>
                     </div>
                 </div>
                 <div class="form__input-container">
-                    <textarea name="message" id="message" cols="30" rows="10" class="form__textarea" placeholder="How can we help you?"></textarea>
-                    <label class="form__label" for="message">How can we help you?</label>
+                    <textarea name="Leave us your message! :)" id="Leave us your message! :)" cols="30" rows="10" class="form__textarea" placeholder="How can we help you?"></textarea>
+                    <label class="form__label" for="Leave us your message! :)">How can we help you?</label>
                 </div>
                 <div class="form__checkbox-container form__checkbox-container--privacy">
                     <input class="form__checkbox" type="checkbox" name="privacy_consent" id="privacy_consent" />
                     <div class="">
-                        <label class="form__checkbox-label form__checkbox-label--privacy" for="privacy_consent"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span><span class="form__privacy-label--text">Yes, i'd also like to receive information about additional products or services that may be of interest to me. Information submitted through this form is subject to our privacy policy.</span></label>
+                        <label class="form__checkbox-label form__checkbox-label--privacy" for="privacy_consent"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span><span class="form__privacy-label--text">I agree to the privacy policies and i'd also like to receive information about additional products or services that may be of interest to me.</span></label>
                     </div>
                 </div>
             </div>

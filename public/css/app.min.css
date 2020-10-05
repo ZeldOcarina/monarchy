@@ -307,8 +307,7 @@ body {
       width: 100%;
       display: flex; }
       .form__checkbox-label--privacy .form__checkbox--span {
-        display: block;
-        margin-top: 1rem; }
+        display: block; }
   .form__checkbox--span {
     height: 3rem;
     width: 3rem;

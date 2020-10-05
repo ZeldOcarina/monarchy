@@ -78,7 +78,10 @@
 
         .form__checkbox--span {
           display: block;
-          margin-top: 1rem;
+
+          @include respond(tab-land) {
+            margin-top: 1rem;
+          }
         }
       }
     }

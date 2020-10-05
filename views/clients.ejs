@@ -1,7 +1,7 @@
 <%- include('partials/header'); %>
 <section class="clients">
     <h2 class="clients__title secondary-header">Clients</h2>
-    <p class="clients__paragraph">We know how important growth is for all brands. That's why we blend creativity and entrepreneurship to get substantial results. </p>
+    <p class="clients__paragraph">We choose businesses carefully, establishing long term partnerships, steep goals and great rewards. We open our network of contacts and opportunities to bold brands with a strong and ethical management and product.</p>
     <div class="clients__cards-container">
     <% for(let { name, subtitle, image } of clientsPageCustomers) { %>
         <%- include('components/customer-card', { name, subtitle, image }); %>

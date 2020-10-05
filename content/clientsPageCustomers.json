@@ -1,57 +1,58 @@
 [
   {
     "name": "Serendipity Film Group",
-    "subtitle": "Producing films that awaken the imagination",
+    "subtitle": "Co-producing the new ABC series WOTM in partnership with Will Smith and Jay-Z’s production companies.",
     "image": "/assets/clients/serendipity.png"
   },
   {
     "name": "Viva Concepts",
-    "subtitle": "Connecting new patients through referral marketing",
+    "subtitle": "Partnering with the largest direct marketing firm, specializing in the dental space to create a unique set of tools and services to offer digital growth, lead generation and retention.",
     "image": "/assets/clients/viva.png"
   },
   {
     "name": "Body Contourz",
-    "subtitle": "Body Image Center offering non-surgical treatments using cutting-edge technology",
+    "subtitle": "7X the business in 6 months, now partnering to open the next 10 new locations and offer affiliate services to over 300 locations.",
     "image": "/assets/clients/body-contourz.png"
   },
   {
     "name": "Galaxy",
-    "subtitle": "A network marketing redefining the crypto industry",
+    "subtitle": "Launching the new era of home businesses with some of the brightest minds in the industry.",
     "image": "/assets/clients/galaxy.png"
   },
   {
-    "name": "5-15 Global Energy",
-    "subtitle": "Renewable energy company providing opportunities for self-sufficiency",
-    "image": "/assets/clients/5-15.png"
-  },
-  {
     "name": "Angel Longevity",
-    "subtitle": "Wellness clinic with a holistic approach",
+    "subtitle": "Launching the ground-breaking book of one of the most interesting alternative approaches to health and longevity.",
     "image": "/assets/clients/angel-longevity.png"
   },
   {
-    "name": "American Power and Gas",
-    "subtitle": "Green energy and clean gas provider serving American households and businesses",
-    "image": "/assets/clients/apg.png"
-  },
-  {
-    "name": "Giansante",
-    "subtitle": "Artisan jewelry line bringing luxury and creativity together",
-    "image": "/assets/clients/giansante.png"
-  },
-  {
-    "name": "ANDA",
-    "subtitle": "Live shows that bring entrepreneurs together to share business ideas",
-    "image": "/assets/clients/anda.png"
-  },
-  {
     "name": "Upliffs",
-    "subtitle": "Exercise tools that bring sweetness to your workout routines",
+    "subtitle": "A brand acquired in its initial stages to become the testing ground for Monarchy’s technology and strategies.",
     "image": "/assets/clients/upliffs.png"
   },
   {
-    "name": "Sephora",
-    "subtitle": "Pioneers in the beauty industry creating trendy products",
-    "image": "/assets/clients/sephora.png"
+    "name": "Sales Jet",
+    "subtitle": "The ultimate marketing platform, SalesJet is an amazing tech start up we grew to over 30 million transactions per year.",
+    "image": "/assets/clients/upliffs.png"
+  },
+  {
+    "name": "Rebate Rewards",
+    "subtitle": "Monarchy’s very own rewards platform and Amazon marketing booster.",
+    "image": "/assets/clients/upliffs.png"
+  },
+  {
+    "name": "American Power and Gas",
+    "subtitle": "One of the fastest growing energy companies, working hard to make the world greener, grossing over 300 million dollars per year.",
+    "image": "/assets/clients/apg.png"
+  },
+  {
+    "name": "5-15 Global Energy / IGL",
+    "subtitle": "Monarchy works with the Italian brand to propel the green evolution through network marketing channels.",
+    "image": "/assets/clients/5-15.png"
+  },
+
+  {
+    "name": "Giansante",
+    "subtitle": "One of the most exclusive and elite Italian jewelry brands.",
+    "image": "/assets/clients/giansante.png"
   }
 ]

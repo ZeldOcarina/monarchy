@@ -14,7 +14,8 @@ exports.getHomePage = (req, res) => {
 exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
     title: "We are Monarchy",
-    subtitle: "A full-service creative agency that turns brands into media.",
+    subtitle:
+      "A full service marketing engine that generate attention, leads and sales.",
     videoUrl: "https://player.vimeo.com/video/463782484",
     team,
   });
@@ -22,9 +23,9 @@ exports.getAboutPage = (req, res) => {
 
 exports.getServicesPage = (req, res) => {
   res.status(200).render("service", {
-    title: "Full Service Marketing Engine",
+    title: "A Full Service Marketing Engine",
     subtitle:
-      "We are built for the now. Delivering retention, leads, and sales.",
+      "We partner with innovative businesses to generate attention, leads and sales.",
     services,
     isOdd,
   });
@@ -32,8 +33,9 @@ exports.getServicesPage = (req, res) => {
 
 exports.getClientsPage = (req, res) => {
   res.status(200).render("clients", {
-    title: "Our Partners",
-    subtitle: "We help  clients grow beyond what they thought was possible.",
+    title: "Our Partnerships",
+    subtitle:
+      "We strive to surpass business goals and targets. We are selective in the businesses we take on and look forward to growing together.",
     clientsPageCustomers,
   });
 };

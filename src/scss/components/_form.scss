@@ -137,4 +137,28 @@
       cursor: pointer;
     }
   }
+
+  &__promotion-label {
+    transform: translateY(-1rem);
+  }
+}
+
+.mini-form {
+  margin: 4rem 0;
+
+  .form__bottom-container {
+    width: 74rem;
+  }
+
+  .form__checkbox--span {
+    top: 0.5rem;
+  }
+
+  .form__privacy-label--text {
+    transform: translateY(1rem);
+  }
+
+  .form__privacy-label--promotion {
+    transform: translateY(0);
+  }
 }

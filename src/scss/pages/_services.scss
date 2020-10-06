@@ -1,7 +1,7 @@
 .services {
-  width: 45%;
-  margin: 0 auto;
   padding: 6rem 0;
+  width: 70%;
+  margin: 4rem auto 0 auto;
 
   &__title {
     margin-bottom: 2rem;
@@ -12,8 +12,15 @@
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
+    margin: 6rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
+  .card-grid__image {
+    width: 16rem;
   }
 }
 

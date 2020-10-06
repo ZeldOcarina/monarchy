@@ -29,15 +29,17 @@
 <section class="home-services">
     <h2 class="secondary-header">Things We Love</h2>
     <div class="home-services__container">
-        <%- include('components/card-grid'); %>
+    <% for(let { title, text, image } of homeGrid) { %>
+        <%- include('components/card-grid', { title, text, image }); %>
+    <% } %>
     </div>
 </section>
 <section class="customers-grid">
     <h2 class="customers-grid__title secondary-header">Businesses We Love</h2>
     <div class="customers-grid__container">
-        <% for(let { logo, sentence, image, white, logoHeight } of customers) { %>
+        <% for(let { logo, sentence, image, white, logoHeight, marginTop } of customers) { %>
         <div class="customer-box" style="background-image: url(<%- image %>)">
-            <div class="customer-box__content-box">
+            <div class="customer-box__content-box" <% if(marginTop) { %>style="margin-top:<%= marginTop %>"<% } %> >
                 <img class="customer-box__logo" src="<%= logo %>" <%- logoHeight && 'style=height:' %><%- logoHeight %> />
                 <p<%- white && ' class="white"' %>><%= sentence %></p>
             </div>
@@ -52,5 +54,5 @@
         <a class="main-button" href="/about">Learn More</a>
         <img class="team-section__image" src="/assets/home/team.png"/>
 </section>
-
+<%- include('partials/bottom-contacts') %>
 <%- include('partials/footer') %>

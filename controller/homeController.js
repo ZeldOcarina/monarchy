@@ -55,11 +55,14 @@ exports.postContact = async (req, res) => {
     for (let key of Object.keys(req.body))
       if (req.body[key] === "on") req.body[key] = true;
 
-    const lead = await Lead.create(req.body);
+    await Lead.create(req.body);
+
     res.locals.message = {
       type: "success",
       message: "Your message has been correctly received. Thank you!!!",
     };
+
+    //if(req.body.mini_form) res.status(201).redirect('back');
     res.status(201).render("contacts");
   } catch (err) {
     const errors = Object.values(err.errors).map((el) => {

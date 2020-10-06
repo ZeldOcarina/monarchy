@@ -21,7 +21,7 @@ const leadSchema = new mongoose.Schema({
     required: true,
     message: "Please provide your last name",
   },
-  company: Boolean,
+  is_company: Boolean,
   needs_marketing: Boolean,
   needs_sales: Boolean,
   consulting: Boolean,
@@ -38,6 +38,7 @@ const leadSchema = new mongoose.Schema({
     enum: [true],
     message: "Please accept the privacy policy.",
   },
+  promotional_consent: Boolean,
 });
 
 leadSchema.pre("validate", function (next) {

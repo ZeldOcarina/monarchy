@@ -214,6 +214,10 @@ body {
     object-fit: cover;
     object-position: center; }
 
+.bottom-contacts {
+  width: 70%;
+  margin: 6rem auto; }
+
 .card-grid {
   width: 32rem;
   text-align: center; }
@@ -244,11 +248,13 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
-    width: 50%;
+    width: 55%;
     text-align: center; }
   .customer-box__logo {
     height: 5rem;
     margin-bottom: 2.5rem; }
+  .customer-box p {
+    font-size: 2rem; }
 
 .customer-card {
   position: relative;
@@ -405,6 +411,20 @@ body {
   padding: 3rem 10rem 3rem 10rem !important; }
   .form__submit:hover {
     cursor: pointer; }
+
+.form__promotion-label {
+  transform: translateY(-1rem); }
+
+.mini-form {
+  margin: 4rem 0; }
+  .mini-form .form__bottom-container {
+    width: 74rem; }
+  .mini-form .form__checkbox--span {
+    top: 0.5rem; }
+  .mini-form .form__privacy-label--text {
+    transform: translateY(1rem); }
+  .mini-form .form__privacy-label--promotion {
+    transform: translateY(0); }
 
 .header {
   position: relative;
@@ -685,16 +705,21 @@ body {
     margin: 0 auto; }
 
 .services {
-  width: 45%;
-  margin: 0 auto;
-  padding: 6rem 0; }
+  padding: 6rem 0;
+  width: 70%;
+  margin: 4rem auto 0 auto; }
   .services__title {
     margin-bottom: 2rem; }
   .services__paragraph {
     text-align: center; }
   .services__container {
-    display: grid;
-    grid-template-columns: repeat(2, 50%); }
+    margin: 6rem 0 4rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem; }
+  .services .card-grid__image {
+    width: 16rem; }
 
 .customers {
   width: 55%;

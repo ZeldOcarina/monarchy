@@ -15,6 +15,25 @@
   }
 }
 
+.intro {
+  width: 45%;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  &__image {
+    width: 60%;
+  }
+
+  &__paragraph {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
 .home-services {
   width: 80%;
   margin: 4rem auto 0 auto;

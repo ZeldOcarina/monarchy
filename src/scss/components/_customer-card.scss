@@ -1,7 +1,7 @@
 .customer-card {
   position: relative;
-  width: 50rem;
-  height: 35rem;
+  width: 40rem;
+  height: 30rem;
 
   &__image-container {
     width: 100%;
@@ -11,13 +11,15 @@
   }
 
   &__text {
-    width: 40rem;
+    width: 35rem;
     text-align: left;
     color: $white;
     position: absolute;
-    bottom: 3rem;
-    left: 3rem;
+    bottom: 2.5rem;
+    left: 2.5rem;
     z-index: 12;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
 
   &__name {

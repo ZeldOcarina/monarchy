@@ -2,6 +2,10 @@
   width: 32rem;
   text-align: center;
 
+  @include respond(laptop) {
+    width: 22rem;
+  }
+
   &__image-container {
     width: 20rem;
     height: 20rem;
@@ -9,6 +13,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include respond(laptop) {
+      width: 13rem;
+      height: 13rem;
+      gap: 2rem;
+    }
   }
 
   &__image {
@@ -17,5 +27,23 @@
     margin-bottom: 2rem;
     object-fit: cover;
     object-position: center;
+  }
+
+  &__title {
+    @include respond(laptop) {
+      font-size: 2rem;
+      height: 8rem;
+      margin-bottom: 0;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    @include respond(laptop) {
+      font-size: 1.4rem;
+    }
   }
 }

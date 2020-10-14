@@ -12,6 +12,10 @@
   &__title {
     margin-bottom: 5rem;
     font-weight: 600;
+
+    @include respond(laptop) {
+      font-size: 3.8rem !important;
+    }
   }
 
   &__paragraph {
@@ -113,6 +117,10 @@
       flex-wrap: wrap;
       width: $container-width;
       margin: 0 auto 6rem auto;
+
+      @include respond(laptop) {
+        width: 100%;
+      }
     }
   }
 

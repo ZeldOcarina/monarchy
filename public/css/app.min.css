@@ -136,6 +136,12 @@ body {
     text-fill-color: transparent;
     text-transform: uppercase;
     font-weight: 400; }
+    @media only screen and (max-width: 90.62em) {
+      .navigation__title {
+        line-height: 1.5;
+        font-size: 7rem;
+        width: 80%;
+        margin: 0 auto; } }
   .navigation__subtitle {
     color: #fff;
     font-weight: 200;
@@ -221,6 +227,9 @@ body {
 .card-grid {
   width: 32rem;
   text-align: center; }
+  @media only screen and (max-width: 90.62em) {
+    .card-grid {
+      width: 22rem; } }
   .card-grid__image-container {
     width: 20rem;
     height: 20rem;
@@ -228,12 +237,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 90.62em) {
+      .card-grid__image-container {
+        width: 13rem;
+        height: 13rem;
+        gap: 2rem; } }
   .card-grid__image {
     width: 18rem;
     height: auto;
     margin-bottom: 2rem;
     object-fit: cover;
     object-position: center; }
+  @media only screen and (max-width: 90.62em) {
+    .card-grid__title {
+      font-size: 2rem;
+      height: 8rem;
+      margin-bottom: 0;
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
+  @media only screen and (max-width: 90.62em) {
+    .card-grid__text {
+      font-size: 1.4rem; } }
 
 .customer-box {
   width: 100%;
@@ -374,6 +400,9 @@ body {
       display: flex; }
       .form__checkbox-label--privacy .form__checkbox--span {
         display: block; }
+        @media only screen and (max-width: 75em) {
+          .form__checkbox-label--privacy .form__checkbox--span {
+            margin-top: 1rem; } }
   .form__checkbox--span {
     height: 3rem;
     width: 3rem;
@@ -550,6 +579,9 @@ body {
   .founder__title {
     margin-bottom: 5rem;
     font-weight: 600; }
+    @media only screen and (max-width: 90.62em) {
+      .founder__title {
+        font-size: 3.8rem !important; } }
   .founder__paragraph {
     font-size: 1.8rem; }
     .founder__paragraph:not(:last-child) {
@@ -618,6 +650,9 @@ body {
     flex-wrap: wrap;
     width: 75%;
     margin: 0 auto 6rem auto; }
+    @media only screen and (max-width: 90.62em) {
+      .leadership__cards-container--team {
+        width: 100%; } }
 
 .leadership__title {
   margin: 4rem 0 3rem 0; }
@@ -633,6 +668,9 @@ body {
   width: 75%;
   margin: 0 auto;
   text-align: center; }
+  @media only screen and (max-width: 90.62em) {
+    .clients {
+      width: 100%; } }
   .clients__title {
     margin: 6rem 0 2rem 0; }
   .clients__paragraph {
@@ -644,6 +682,9 @@ body {
     gap: 3rem;
     justify-content: center;
     margin: 6rem 0; }
+    @media only screen and (max-width: 90.62em) {
+      .clients__cards-container {
+        gap: 2.5rem; } }
 
 .contacts {
   width: 75%;
@@ -671,20 +712,32 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5rem; }
+  @media only screen and (max-width: 90.62em) {
+    .intro {
+      width: 60%; } }
   .intro__image {
     width: 60%; }
+    @media only screen and (max-width: 90.62em) {
+      .intro__image {
+        width: 80%; } }
   .intro__paragraph:not(:last-child) {
     margin-bottom: 1.5rem; }
 
 .home-services {
   width: 80%;
   margin: 4rem auto 0 auto; }
+  @media only screen and (max-width: 90.62em) {
+    .home-services {
+      width: 75%; } }
   .home-services__container {
     margin: 6rem 0 4rem 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5rem; }
+    @media only screen and (max-width: 90.62em) {
+      .home-services__container {
+        gap: 3rem; } }
 
 .team-section {
   margin: 6rem auto 3rem auto;
@@ -727,6 +780,9 @@ body {
   width: 55%;
   margin: 0 auto;
   text-align: center; }
+  @media only screen and (max-width: 90.62em) {
+    .customers {
+      width: 70%; } }
   .customers__text-container {
     width: 80%;
     margin: 0 auto 2rem auto; }

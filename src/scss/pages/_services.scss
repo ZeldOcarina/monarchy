@@ -29,6 +29,10 @@
   margin: 0 auto;
   text-align: center;
 
+  @include respond(laptop) {
+    width: 70%;
+  }
+
   &__text-container {
     width: 80%;
     margin: 0 auto 2rem auto;

@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlays = document.querySelectorAll(".video-player");
   let closeIcons = document.querySelectorAll(".video-player__close");
 
+  if(!videoIcon) return;
+
   videoIcon.addEventListener("click", () => {
     for (let overlay of overlays) overlay.classList.remove("hidden");
   });

@@ -9,6 +9,10 @@
   flex-direction: column;
   padding: 0 15rem;
 
+  @include respond(tab-land) {
+    padding: 0 10rem;
+  }
+
   &__brand {
     text-decoration: none;
     margin-top: 5px;
@@ -84,12 +88,22 @@
       width: 80%;
       margin: 0 auto;
     }
+    @include respond(tab-land) {
+      line-height: 1.5;
+      font-size: 6rem;
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__subtitle {
     color: $white;
     font-weight: 200;
     font-size: 2.5rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
   }
 
   &__titles-container {

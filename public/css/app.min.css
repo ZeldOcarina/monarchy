@@ -61,6 +61,9 @@ body {
     width: 75%;
     margin: 0.5rem auto 0 auto;
     display: flex; }
+    @media only screen and (max-width: 75em) {
+      .footer__content {
+        width: 90%; } }
   .footer__divider {
     margin: 0 2rem; }
   .footer__left-container {
@@ -90,6 +93,9 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 0 15rem; }
+  @media only screen and (max-width: 75em) {
+    .navigation {
+      padding: 0 10rem; } }
   .navigation__brand {
     text-decoration: none;
     margin-top: 5px; }
@@ -142,10 +148,19 @@ body {
         font-size: 7rem;
         width: 80%;
         margin: 0 auto; } }
+    @media only screen and (max-width: 75em) {
+      .navigation__title {
+        line-height: 1.5;
+        font-size: 6rem;
+        width: 80%;
+        margin: 0 auto; } }
   .navigation__subtitle {
     color: #fff;
     font-weight: 200;
     font-size: 2.5rem; }
+    @media only screen and (max-width: 75em) {
+      .navigation__subtitle {
+        font-size: 2rem; } }
   .navigation__titles-container {
     width: 100%;
     text-align: center;
@@ -186,6 +201,9 @@ body {
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.3);
     transition: color 0.2s ease-in-out; }
+    @media only screen and (max-width: 75em) {
+      .overlay__item {
+        font-size: 4rem; } }
     .overlay__item:visited, .overlay__item:active {
       text-decoration: none;
       color: #fff; }
@@ -230,6 +248,9 @@ body {
   @media only screen and (max-width: 90.62em) {
     .card-grid {
       width: 22rem; } }
+  @media only screen and (max-width: 75em) {
+    .card-grid {
+      width: 20rem; } }
   .card-grid__image-container {
     width: 20rem;
     height: 20rem;
@@ -240,8 +261,7 @@ body {
     @media only screen and (max-width: 90.62em) {
       .card-grid__image-container {
         width: 13rem;
-        height: 13rem;
-        gap: 2rem; } }
+        height: 13rem; } }
   .card-grid__image {
     width: 18rem;
     height: auto;
@@ -260,6 +280,9 @@ body {
   @media only screen and (max-width: 90.62em) {
     .card-grid__text {
       font-size: 1.4rem; } }
+  @media only screen and (max-width: 90.62em) {
+    .card-grid__text {
+      font-size: 1.2rem; } }
 
 .customer-box {
   width: 100%;
@@ -276,11 +299,18 @@ body {
     margin-top: 10rem;
     width: 55%;
     text-align: center; }
+    @media only screen and (max-width: 75em) {
+      .customer-box__content-box {
+        width: 70%; } }
   .customer-box__logo {
     height: 5rem;
     margin-bottom: 2.5rem; }
   .customer-box p {
     font-size: 2rem; }
+    @media only screen and (max-width: 75em) {
+      .customer-box p {
+        font-size: 1.8rem;
+        line-height: 1.5; } }
 
 .customer-card {
   position: relative;
@@ -527,11 +557,13 @@ body {
 
 .team-card {
   background-color: #f8f8f8;
-  width: 100%;
   border-radius: 13px;
   transition: all 0.3s ease-in-out;
   width: 30rem;
   overflow: hidden; }
+  @media only screen and (max-width: 75em) {
+    .team-card {
+      width: 23rem; } }
   .team-card:hover {
     background-color: #fff;
     transform: translateY(-2rem);
@@ -541,6 +573,9 @@ body {
     height: 35rem;
     object-fit: cover;
     object-position: top; }
+    @media only screen and (max-width: 75em) {
+      .team-card__image {
+        height: 26rem; } }
   .team-card__bottom {
     padding: 1rem 0 2rem 3rem; }
   .team-card__name {
@@ -573,6 +608,9 @@ body {
   justify-content: center;
   width: 75%;
   margin: 10rem auto; }
+  @media only screen and (max-width: 75em) {
+    .founder {
+      width: 90%; } }
   .founder__text {
     width: 40%;
     margin-right: 5%; }
@@ -593,6 +631,9 @@ body {
     width: 35%;
     margin-top: 12rem;
     position: relative; }
+    @media only screen and (max-width: 75em) {
+      .founder__image-container {
+        margin-top: 18rem; } }
   .founder__image-caption {
     display: flex;
     flex-direction: column;
@@ -610,6 +651,9 @@ body {
 .about-video {
   width: 67%;
   margin: 0 auto; }
+  @media only screen and (max-width: 75em) {
+    .about-video {
+      width: 90%; } }
   .about-video__title {
     margin-bottom: 3rem;
     font-weight: 600; }
@@ -643,6 +687,9 @@ body {
   justify-content: center;
   gap: 4rem;
   margin-bottom: 4rem; }
+  @media only screen and (max-width: 75em) {
+    .leadership__cards-container {
+      gap: 2rem; } }
   .leadership__cards-container--bottom {
     grid-template-columns: repeat(3, max-content); }
   .leadership__cards-container--team {
@@ -653,6 +700,9 @@ body {
     @media only screen and (max-width: 90.62em) {
       .leadership__cards-container--team {
         width: 100%; } }
+    @media only screen and (max-width: 75em) {
+      .leadership__cards-container--team {
+        gap: 2rem; } }
 
 .leadership__title {
   margin: 4rem 0 3rem 0; }
@@ -704,6 +754,10 @@ body {
     justify-content: center;
     grid-auto-rows: 70rem;
     gap: 1.5rem; }
+    @media only screen and (max-width: 75em) {
+      .customers-grid__container {
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: 50rem; } }
 
 .intro {
   width: 45%;
@@ -715,6 +769,9 @@ body {
   @media only screen and (max-width: 90.62em) {
     .intro {
       width: 60%; } }
+  @media only screen and (max-width: 75em) {
+    .intro {
+      width: 80%; } }
   .intro__image {
     width: 60%; }
     @media only screen and (max-width: 90.62em) {
@@ -729,6 +786,9 @@ body {
   @media only screen and (max-width: 90.62em) {
     .home-services {
       width: 75%; } }
+  @media only screen and (max-width: 75em) {
+    .home-services {
+      width: 90%; } }
   .home-services__container {
     margin: 6rem 0 4rem 0;
     display: flex;
@@ -783,11 +843,15 @@ body {
   @media only screen and (max-width: 90.62em) {
     .customers {
       width: 70%; } }
+  @media only screen and (max-width: 75em) {
+    .customers {
+      width: 90%; } }
   .customers__text-container {
     width: 80%;
     margin: 0 auto 2rem auto; }
   .customers__title {
-    margin: 4rem 0 2rem 0; }
+    margin: 4rem 0 2rem 0;
+    font-size: 3.5rem !important; }
   .customers__paragraph {
     margin-bottom: 2rem; }
   .customers__logos-container {

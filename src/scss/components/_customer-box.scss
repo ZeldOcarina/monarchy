@@ -14,6 +14,10 @@
     margin-top: 10rem;
     width: 55%;
     text-align: center;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
   }
 
   &__logo {
@@ -23,5 +27,10 @@
 
   p {
     font-size: 2rem;
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+      line-height: 1.5;
+    }
   }
 }

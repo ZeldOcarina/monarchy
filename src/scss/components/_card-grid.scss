@@ -5,6 +5,9 @@
   @include respond(laptop) {
     width: 22rem;
   }
+  @include respond(tab-land) {
+    width: 20rem;
+  }
 
   &__image-container {
     width: 20rem;
@@ -17,7 +20,6 @@
     @include respond(laptop) {
       width: 13rem;
       height: 13rem;
-      gap: 2rem;
     }
   }
 
@@ -44,6 +46,9 @@
   &__text {
     @include respond(laptop) {
       font-size: 1.4rem;
+    }
+    @include respond(laptop) {
+      font-size: 1.2rem;
     }
   }
 }

@@ -11,6 +11,10 @@
     width: $container-width;
     margin: 0.5rem auto 0 auto;
     display: flex;
+
+    @include respond(tab-land) {
+      width: 90%;
+    }
   }
 
   &__divider {

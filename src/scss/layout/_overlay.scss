@@ -41,6 +41,10 @@
     color: rgba(255, 255, 255, 0.3);
     transition: color 0.2s ease-in-out;
 
+    @include respond(tab-land) {
+      font-size: 4rem;
+    }
+
     &:visited,
     &:active {
       text-decoration: none;

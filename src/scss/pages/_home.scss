@@ -12,6 +12,11 @@
     justify-content: center;
     grid-auto-rows: 70rem;
     gap: 1.5rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 50%);
+      grid-auto-rows: 50rem;
+    }
   }
 }
 
@@ -25,6 +30,9 @@
 
   @include respond(laptop) {
     width: 60%;
+  }
+  @include respond(tab-land) {
+    width: 80%;
   }
 
   &__image {
@@ -48,6 +56,9 @@
 
   @include respond(laptop) {
     width: 75%;
+  }
+  @include respond(tab-land) {
+    width: 90%;
   }
 
   &__container {

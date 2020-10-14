@@ -32,6 +32,9 @@
   @include respond(laptop) {
     width: 70%;
   }
+  @include respond(tab-land) {
+    width: $responsive-container;
+  }
 
   &__text-container {
     width: 80%;
@@ -40,6 +43,7 @@
 
   &__title {
     margin: 4rem 0 2rem 0;
+    font-size: 3.5rem !important;
   }
 
   &__paragraph {

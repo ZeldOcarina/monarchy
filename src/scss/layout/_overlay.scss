@@ -15,6 +15,12 @@
     transform: translateX(-50%);
     width: 4rem;
     transition: transform 0.3s ease;
+    z-index: 100;
+
+    @include respond(phone-land) {
+      top: 3.5rem;
+      width: 3rem;
+    }
 
     &:hover {
       cursor: pointer;
@@ -30,6 +36,12 @@
     flex-direction: column;
     gap: 0;
     margin-top: 4rem;
+
+    @include respond(phone-land) {
+      position: relative;
+      margin-top: 3rem;
+      z-index: 1;
+    }
   }
 
   &__item {
@@ -43,6 +55,13 @@
 
     @include respond(tab-land) {
       font-size: 4rem;
+    }
+    @include respond(tab-port) {
+      font-size: 5rem;
+    }
+    @include respond(phone-land) {
+      font-size: 5rem;
+      font-size: 3rem;
     }
 
     &:visited,
@@ -68,6 +87,13 @@
     position: absolute;
     bottom: 6rem;
     width: 100vw;
+
+    @include respond(phone-land) {
+      bottom: 0;
+      background-color: transparent !important;
+      padding: 0;
+      height: min-content;
+    }
   }
 
   &__social-icon {

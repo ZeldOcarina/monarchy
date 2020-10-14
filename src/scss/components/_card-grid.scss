@@ -8,6 +8,9 @@
   @include respond(tab-land) {
     width: 20rem;
   }
+  @include respond(tab-port) {
+    width: 25rem;
+  }
 
   &__image-container {
     width: 20rem;
@@ -20,6 +23,10 @@
     @include respond(laptop) {
       width: 13rem;
       height: 13rem;
+    }
+    @include respond(tab-port) {
+      width: 15rem;
+      height: 15rem;
     }
   }
 
@@ -40,6 +47,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    @include respond(tab-port) {
+      line-height: 1.5;
+      height: 6rem;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
   }
 

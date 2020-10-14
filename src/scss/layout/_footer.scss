@@ -15,14 +15,41 @@
     @include respond(tab-land) {
       width: 90%;
     }
+    @include respond(phone-land) {
+      width: 90%;
+      align-items: center;
+    }
+  }
+
+  &__span {
+    width: max-content;
   }
 
   &__divider {
     margin: 0 2rem;
+
+    @include respond(tab-port) {
+      margin: 0 1rem;
+    }
   }
 
   &__left-container {
     margin-top: 1rem;
+
+    @include respond(tab-port) {
+      margin-top: 0;
+    }
+    @include respond(phone-land) {
+      display: flex;
+      align-items: center;
+      margin-right: 2rem;
+    }
+  }
+
+  &__follow-us {
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__social-container {
@@ -33,11 +60,21 @@
     gap: 2rem;
     z-index: 0;
     margin-bottom: 1rem;
+
+    @include respond(phone-land) {
+      width: 15rem;
+      gap: 1rem;
+      margin-bottom: 0;
+    }
   }
 
   &__social-icon {
     width: 3rem;
     transition: transform 0.3s ease-in-out;
+
+    @include respond(tab-port) {
+      width: 2rem;
+    }
 
     &:hover {
       transform: scale(1.3);

@@ -3553,6 +3553,17 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 
 /***/ }),
 
+/***/ "./src/js/_css-help.js":
+/*!*****************************!*\
+  !*** ./src/js/_css-help.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var mediaQuery = window.matchMedia('(max-width: 812px)');\n\nif (window.location.pathname !== '/' && mediaQuery.matches) {\n  var navbar = document.querySelector('.navigation');\n  var navigationTop = document.querySelector('.navigation__top');\n  navbar.style.height = '100vh';\n  navigationTop.style.alignItems = \"flex-start\";\n}\n\n//# sourceURL=webpack:///./src/js/_css-help.js?");
+
+/***/ }),
+
 /***/ "./src/js/_form.js":
 /*!*************************!*\
   !*** ./src/js/_form.js ***!
@@ -3594,7 +3605,7 @@ eval("document.addEventListener(\"DOMContentLoaded\", function () {\n  var video
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_form */ \"./src/js/_form.js\");\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_form */ \"./src/js/_form.js\");\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _css_help__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_css-help */ \"./src/js/_css-help.js\");\n/* harmony import */ var _css_help__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_help__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 

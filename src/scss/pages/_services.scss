@@ -3,12 +3,21 @@
   width: 70%;
   margin: 4rem auto 0 auto;
 
+  @include respond(tab-port) {
+    width: 100%;
+  }
+
   &__title {
     margin-bottom: 2rem;
   }
 
   &__paragraph {
     text-align: center;
+
+    @include respond(tab-port) {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__container {
@@ -61,5 +70,9 @@
   &__image {
     width: 23rem;
     margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+      width: 25%;
+    }
   }
 }

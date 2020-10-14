@@ -8,6 +8,9 @@
   @include respond(tab-land) {
     width: 23rem;
   }
+  @include respond(phone-land) {
+    width: 20rem;
+  }
 
   &:hover {
     background-color: $white;
@@ -23,6 +26,9 @@
 
     @include respond(tab-land) {
       height: 26rem;
+    }
+    @include respond(phone-land) {
+      height: 23rem;
     }
   }
 

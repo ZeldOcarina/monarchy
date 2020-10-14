@@ -17,7 +17,7 @@ exports.getAboutPage = (req, res) => {
   res.status(200).render("about", {
     title: "We are Monarchy",
     subtitle:
-      "A full service marketing engine that generate attention, leads and sales.",
+      "A full service marketing engine that generates attention, leads and sales.",
     videoUrl: "https://player.vimeo.com/video/463782484",
     team,
   });

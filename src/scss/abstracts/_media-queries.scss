@@ -31,7 +31,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 
   @if $breakpoint == phone-land {
-    @media only screen and (max-width: 46.07em) {
+    @media only screen and (max-width: 50.75em) {
       @content;
     } // 700px
   }

@@ -17,6 +17,10 @@
       grid-template-columns: repeat(2, 50%);
       grid-auto-rows: 50rem;
     }
+    @include respond(tab-port) {
+      grid-auto-rows: 40rem;
+      gap: 1rem;
+    }
   }
 }
 
@@ -40,6 +44,9 @@
 
     @include respond(laptop) {
       width: 80%;
+    }
+    @include respond(tab-port) {
+      width: 100%;
     }
   }
 
@@ -102,5 +109,9 @@
     margin-bottom: 4.5rem;
     width: 33%;
     margin: 0 auto;
+
+    @include respond(phone-land) {
+      width: 60%;
+    }
   }
 }

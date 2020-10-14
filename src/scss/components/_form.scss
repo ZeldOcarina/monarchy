@@ -43,6 +43,10 @@
     display: grid;
     grid-template-columns: repeat(2, 35rem);
     gap: 4rem;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 50%);
+    }
   }
 
   &__subtitle {
@@ -80,7 +84,7 @@
           display: block;
 
           @include respond(tab-land) {
-            margin-top: 1rem;
+            margin-top: 0;
           }
         }
       }
@@ -115,6 +119,10 @@
   &__bottom-container {
     margin-top: 4rem;
     width: 60%;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
 
     &--input {
       display: flex;

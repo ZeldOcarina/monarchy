@@ -40,7 +40,7 @@
       display: none;
     }
 
-    &--responsive {
+    &--phone {
       display: none;
 
       @include respond(phone-port) {

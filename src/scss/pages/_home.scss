@@ -97,6 +97,16 @@
   }
 }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .home-services__container {
+      @include respond(phone-port) {
+        margin-right: 3rem;
+      }
+    }
+  }
+}
+
 .team-section {
   margin: 6rem auto 3rem auto;
   text-align: center;

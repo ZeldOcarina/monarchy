@@ -65,3 +65,13 @@
     }
   }
 }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .card-grid {
+      @include respond(phone-port) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

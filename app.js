@@ -24,7 +24,7 @@ const app = express();
 
 app.use(morgan(appState === "development" ? "dev" : "combined"));
 
-if (appState !== "production") app.use(reloadify);
+//if (appState !== "production") app.use(reloadify);
 app.use(favicon(path.join(__dirname, "public", "assets/favicon.svg")));
 if (appState === "production") app.use(helmet());
 if (appState === "production") app.use(limiter);

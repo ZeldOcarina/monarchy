@@ -423,6 +423,12 @@ body {
     .card-grid__text {
       font-size: 1.2rem; } }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    @media only screen and (max-width: 26.25em) {
+      .card-grid {
+        margin-bottom: 4rem; } } } }
+
 .customer-box {
   width: 100%;
   height: 100%;
@@ -696,6 +702,11 @@ body {
     transform: translateY(-0.5rem);
     box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.5); }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .main-button {
+      padding: 0 6rem !important; } } }
+
 .message {
   position: relative;
   right: 0;
@@ -827,6 +838,12 @@ body {
     color: #000;
     font-size: 1.5rem; }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    @media only screen and (max-width: 26.25em) {
+      .leadership__cards-container--team .team-card {
+        margin-bottom: 2rem; } } } }
+
 .video-player {
   position: fixed;
   top: 0;
@@ -897,10 +914,10 @@ body {
     @media only screen and (max-width: 26.25em) {
       .founder__title {
         display: none; } }
-    .founder__title--responsive {
+    .founder__title--phone {
       display: none; }
       @media only screen and (max-width: 26.25em) {
-        .founder__title--responsive {
+        .founder__title--phone {
           display: inline-block; } }
   .founder__paragraph {
     font-size: 1.8rem; }
@@ -1153,6 +1170,12 @@ body {
     @media only screen and (max-width: 90.62em) {
       .home-services__container {
         gap: 3rem; } }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    @media only screen and (max-width: 26.25em) {
+      .home-services__container {
+        margin-right: 3rem; } } } }
 
 .team-section {
   margin: 6rem auto 3rem auto;

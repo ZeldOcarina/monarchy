@@ -22,3 +22,11 @@
     box-shadow: 6px 6px 16px 0px rgba(0, 0, 0, 0.5);
   }
 }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .main-button {
+      padding: 0 6rem !important;
+    }
+  }
+}

@@ -47,6 +47,10 @@
     @include respond(tab-land) {
       grid-template-columns: repeat(2, 50%);
     }
+    @include respond(phone-port) {
+      grid-template-columns: 100%;
+      gap: 3rem;
+    }
   }
 
   &__subtitle {
@@ -59,6 +63,10 @@
   }
 
   &__checkbox-container {
+    @include respond(phone-port) {
+      display: flex;
+      align-items: center;
+    }
     &:not(:last-child) {
       margin-bottom: 2rem;
     }
@@ -100,6 +108,10 @@
       left: 0;
       top: -0.5rem;
 
+      @include respond(phone-port) {
+        top: 0;
+      }
+
       &--fill {
         display: block;
         height: 2rem;
@@ -123,14 +135,27 @@
     @include respond(tab-land) {
       width: 100%;
     }
+    @include respond(phone-port) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &--input {
       display: flex;
       gap: 3rem;
       margin-bottom: 3rem;
 
+      @include respond(phone-port) {
+        flex-wrap: wrap;
+      }
+
       .form__input-container {
         width: 50%;
+
+        @include respond(phone-port) {
+          width: 100%;
+          flex-wrap: wrap;
+        }
       }
     }
   }

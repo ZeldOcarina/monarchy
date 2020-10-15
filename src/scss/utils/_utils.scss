@@ -12,6 +12,11 @@
   text-transform: uppercase;
   font-size: $about-title;
   text-align: center;
+
+  @include respond(phone-port) {
+    font-size: $phone-about-title;
+    line-height: 1.5;
+  }
 }
 
 .text-left {

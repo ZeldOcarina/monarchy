@@ -6,6 +6,9 @@
   @include respond(laptop) {
     width: 100%;
   }
+  @include respond(phone-port) {
+    width: $responsive-container;
+  }
 
   &__title {
     margin: 6rem 0 2rem 0;
@@ -17,6 +20,9 @@
 
     @include respond(tab-port) {
       width: 70%;
+    }
+    @include respond(phone-port) {
+      width: 85%;
     }
   }
 

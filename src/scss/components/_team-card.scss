@@ -11,6 +11,9 @@
   @include respond(phone-land) {
     width: 20rem;
   }
+  @include respond(phone-port) {
+    width: 70%;
+  }
 
   &:hover {
     background-color: $white;
@@ -29,6 +32,9 @@
     }
     @include respond(phone-land) {
       height: 23rem;
+    }
+    @include respond(phone-port) {
+      height: 30rem;
     }
   }
 

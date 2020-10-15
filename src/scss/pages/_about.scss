@@ -10,10 +10,19 @@
   @include respond(tab-port) {
     width: 100%;
   }
+  @include respond(phone-port) {
+    flex-direction: column;
+    margin: 5rem auto;
+  }
 
   &__text {
     width: 40%;
     margin-right: 5%;
+
+    @include respond(phone-port) {
+      width: $responsive-container;
+      margin: 4rem auto;
+    }
   }
 
   &__title {
@@ -27,13 +36,33 @@
       width: 200%;
       display: inline-block;
     }
+    @include respond(phone-port) {
+      display: none;
+    }
+
+    &--responsive {
+      display: none;
+
+      @include respond(phone-port) {
+        display: inline-block;
+      }
+    }
   }
 
   &__paragraph {
     font-size: 1.8rem;
 
+    @include respond(phone-port) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
     &:not(:last-child) {
       margin-bottom: 3rem;
+
+      @include respond(phone-port) {
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -52,6 +81,18 @@
     }
     @include respond(tab-port) {
       margin-top: 12rem;
+    }
+    @include respond(phone-port) {
+      display: none;
+    }
+
+    &--responsive {
+      display: none;
+
+      @include respond(phone-port) {
+        display: block;
+        margin-bottom: 4rem;
+      }
     }
   }
 
@@ -82,6 +123,9 @@
   @include respond(tab-land) {
     width: $responsive-container;
   }
+  @include respond(phone-port) {
+    width: 100%;
+  }
 
   &__title {
     margin-bottom: 3rem;
@@ -94,6 +138,10 @@
     text-align: center;
     margin-bottom: 5rem;
     font-size: 1.8rem;
+
+    @include respond(phone-port) {
+      width: 80%;
+    }
   }
 
   &__thumb-container {
@@ -102,7 +150,6 @@
   }
 
   &__thumbnail {
-    background-color: burlywood;
     width: 100%;
   }
 
@@ -113,6 +160,10 @@
     top: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease-in-out;
+
+    @include respond(phone-port) {
+      width: 25%;
+    }
 
     &:hover {
       cursor: pointer;
@@ -130,12 +181,20 @@
     gap: 4rem;
     margin-bottom: 4rem;
 
+    @include respond(phone-port) {
+      grid-template-columns: 100%;
+    }
+
     @include respond(tab-land) {
       gap: 2rem;
     }
 
     &--bottom {
       grid-template-columns: repeat(3, max-content);
+
+      @include respond(phone-port) {
+        grid-template-columns: 100%;
+      }
     }
 
     &--team {
@@ -155,6 +214,10 @@
 
   &__title {
     margin: 4rem 0 3rem 0;
+
+    @include respond(phone-port) {
+      font-size: 3rem !important;
+    }
   }
 
   &__paragraph {

@@ -25,6 +25,11 @@
     z-index: 12;
     font-size: 1.5rem;
     line-height: 1.5;
+
+    @include respond(phone-port) {
+      font-size: 1.3rem;
+      width: 90%;
+    }
   }
 
   &__name {

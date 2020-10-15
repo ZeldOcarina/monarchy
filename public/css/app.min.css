@@ -167,6 +167,9 @@ body {
         position: absolute;
         top: 3rem;
         padding: 0 4rem; } }
+    @media only screen and (max-width: 21.875em) {
+      .navigation__top {
+        padding: 0 3rem; } }
   .navigation__button {
     margin-left: auto;
     display: flex;
@@ -225,6 +228,11 @@ body {
         width: 90%;
         min-width: min-content;
         font-size: 4rem; } }
+    @media only screen and (max-width: 21.875em) {
+      .navigation__title {
+        width: 90%;
+        min-width: min-content;
+        font-size: 3.5rem; } }
   .navigation__subtitle {
     color: #fff;
     font-weight: 200;
@@ -289,6 +297,9 @@ body {
         position: relative;
         margin-top: 3rem;
         z-index: 1; } }
+    @media only screen and (max-width: 26.25em) {
+      .overlay__link-container {
+        margin-top: 0; } }
   .overlay__item {
     color: #fff;
     font-size: 5.4rem;
@@ -1227,6 +1238,10 @@ body {
   @media only screen and (max-width: 26.25em) {
     .secondary-header {
       font-size: 3rem;
+      line-height: 1.5; } }
+  @media only screen and (max-width: 21.875em) {
+    .secondary-header {
+      font-size: 2.8rem;
       line-height: 1.5; } }
 
 .text-left {

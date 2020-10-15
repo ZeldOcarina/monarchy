@@ -37,6 +37,9 @@
       top: 3rem;
       padding: 0 4rem;
     }
+    @include respond(iphone-5) {
+      padding: 0 3rem;
+    }
   }
 
   &__button {
@@ -115,6 +118,11 @@
       width: 90%;
       min-width: min-content;
       font-size: 4rem;
+    }
+    @include respond(iphone-5) {
+      width: 90%;
+      min-width: min-content;
+      font-size: 3.5rem;
     }
   }
 

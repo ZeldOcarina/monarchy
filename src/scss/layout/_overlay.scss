@@ -42,6 +42,9 @@
       margin-top: 3rem;
       z-index: 1;
     }
+    @include respond(phone-port) {
+      margin-top: 0;
+    }
   }
 
   &__item {

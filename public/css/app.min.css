@@ -99,7 +99,8 @@ body {
     @media only screen and (max-width: 26.25em) {
       .footer__left-container {
         display: flex;
-        flex-direction: column; } }
+        flex-direction: column;
+        margin-right: 0; } }
   @media only screen and (max-width: 56.25em) {
     .footer__follow-us {
       display: none; } }
@@ -132,6 +133,11 @@ body {
     .footer__social-icon:hover {
       transform: scale(1.3);
       cursor: pointer; }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .footer__social-icon {
+      margin-right: 2rem; } } }
 
 .navigation {
   position: absolute;
@@ -493,6 +499,15 @@ body {
       overflow: hidden;
       border-radius: 10px; }
 
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .customer-card {
+      margin-bottom: 3rem; }
+      @media only screen and (max-width: 26.25em) {
+        .customer-card {
+          width: 35rem;
+          height: 28rem; } } } }
+
 .divider {
   display: flex;
   align-items: center;
@@ -722,7 +737,8 @@ body {
       text-align: center; } }
   @media only screen and (max-width: 26.25em) {
     .press {
-      width: 100%; } }
+      width: 100%;
+      margin-bottom: 8rem; } }
   @media only screen and (max-width: 75em) {
     .press__logos-container {
       margin: 3rem 0 2rem 0; } }
@@ -731,11 +747,13 @@ body {
       margin: 2rem 0 1rem 0; } }
   @media only screen and (max-width: 26.25em) {
     .press__logos-container {
-      gap: 2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center; } }
+      align-items: center; }
+      @supports (gap: 1rem) {
+        .press__logos-container {
+          gap: 2rem; } } }
   .press__logo {
     margin-right: 4rem;
     height: 3.3rem;
@@ -751,7 +769,7 @@ body {
         height: 2rem; } }
     @media only screen and (max-width: 26.25em) {
       .press__logo {
-        margin-right: 0; } }
+        margin-bottom: 2rem; } }
   .press__text {
     font-family: "Crimson Text", serif; }
     .press__text--1 {
@@ -1112,7 +1130,8 @@ body {
         width: 100%; } }
     @media only screen and (max-width: 26.25em) {
       .intro__image {
-        width: 80%; } }
+        width: 80%;
+        margin-bottom: 5rem; } }
   .intro__paragraph:not(:last-child) {
     margin-bottom: 1.5rem; }
 

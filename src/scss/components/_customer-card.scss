@@ -66,3 +66,16 @@
     }
   }
 }
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .customer-card {
+      margin-bottom: 3rem;
+
+      @include respond(phone-port) {
+        width: 35rem;
+        height: 28rem;
+      }
+    }
+  }
+}

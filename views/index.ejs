@@ -3,8 +3,9 @@
 <section class="header">
     <div class="bg-video">
         <video class="bg-video__content" autoplay muted loop>
-            <source src="/assets/video/top-bg-video.mp4" type="video/mp4">
-            <source src="/assets/video/top-bg-video.webm" type="video/webm">
+            <source src="/assets/video/top-bg-video.mp4" type="video/mp4" media="only screen and (min-width: 26.25em)">
+            <source src="/assets/video/top-bg-video.webm" type="video/webm" media="only screen and (min-width: 26.25em)">
+            <source src="/assets/video/mobile-video.mp4" type="video/mp4" media="only screen and (max-width: 26.25em)">
             Your browser is not supported! Please use Google Chrome or Firefox.
         </video>
     </div>
@@ -54,6 +55,6 @@
 <h2 class="secondary-header team-section__title">Meet Our Team</h2>
         <p class="team-section__paragraph">Get to know the members of #TeamMonarchy. We all bring something unique that helps us flourish at Monarchy.</p>
         <a class="main-button" href="/about">Learn More</a>
-        <img class="team-section__image" src="/assets/home/team.png"/>
+        <img class="team-section__image" src="/assets/home/team.jpg"/>
 </section>
 <%- include('partials/footer') %>

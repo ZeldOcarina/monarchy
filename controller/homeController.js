@@ -1,4 +1,9 @@
+const path = require('path');
+const ejs = require('ejs');
+
+const transporter = require("../config/nodemailer-setup");
 const Lead = require("../models/lead");
+
 const {
   customers,
   team,
@@ -55,16 +60,29 @@ exports.postContact = async (req, res) => {
     for (let key of Object.keys(req.body))
       if (req.body[key] === "on") req.body[key] = true;
 
-    await Lead.create(req.body);
+    //await Lead.create(req.body);
 
     res.locals.message = {
       type: "success",
       message: "Your message has been correctly received. Thank you!!!",
     };
 
+    const html = await ejs.renderFile(path.join(__dirname, "../views/emails/lead.ejs"), { req: req.body });
+
+    const message = {
+      from: 'info@monarchy.io',
+      //to: 'nicole@monarchy.io',
+      to: 'mattia@monarchy.io',
+      subject: 'We have a new Monarchy lead from the website! 📈',
+      html
+    }
+
+    await transporter.sendMail(message);
+
     //if(req.body.mini_form) res.status(201).redirect('back');
     res.status(201).render("contacts");
   } catch (err) {
+    console.error(err);
     const errors = Object.values(err.errors).map((el) => {
       if (el.message === "Path `privacy_consent` is required.")
         return "Please accept the privacy policy.";

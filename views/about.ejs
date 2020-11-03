@@ -42,7 +42,7 @@
     </div>
     <div class="leadership__cards-container leadership__cards-container--bottom">
         <% for(let { name, position, image } of team.leadership) { %>
-        <% if(name === 'Nicole D' || name === 'Fabio A') continue; %>
+        <% if(name === 'Nicole D') continue; %>
             <%- include('components/team-card', { name, position, image }); %>
         <% }; %> 
     </div>

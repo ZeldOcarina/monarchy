@@ -190,7 +190,9 @@
     }
 
     &--bottom {
-      grid-template-columns: repeat(3, max-content);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
       @include respond(phone-port) {
         grid-template-columns: 100%;

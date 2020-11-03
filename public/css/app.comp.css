@@ -1020,9 +1020,7 @@ body {
     .leadership__cards-container {
       gap: 2rem; } }
   .leadership__cards-container--bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
+    grid-template-columns: repeat(3, max-content); }
     @media only screen and (max-width: 26.25em) {
       .leadership__cards-container--bottom {
         grid-template-columns: 100%; } }

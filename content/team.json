@@ -6,11 +6,6 @@
       "image": "/assets/about/team/leadership/nicole.jpg"
     },
     {
-      "name": "Ivonne D",
-      "position": "Chief Creative Officer",
-      "image": "/assets/about/team/leadership/ivonne.jpg"
-    },
-    {
       "name": "Alessandro L",
       "position": "Chief Programs Officer",
       "image": "/assets/about/team/leadership/alessandro.jpg"
@@ -28,9 +23,9 @@
   ],
   "team": [
     {
-      "name": "Alberto E",
-      "position": "Video Director",
-      "image": "/assets/about/team/team/alberto.jpg"
+      "name": "Tatiana M",
+      "position": "Creative Media Director",
+      "image": "/assets/about/team/team/tatiana.jpg"
     },
     {
       "name": "Sven H",
@@ -38,9 +33,9 @@
       "image": "/assets/about/team/team/sven.jpg"
     },
     {
-      "name": "Emma L",
-      "position": "Social Media Director",
-      "image": "/assets/about/team/team/emma.jpg"
+      "name": "Anies C",
+      "position": "Social Media Officer",
+      "image": "/assets/about/team/team/anies.jpg"
     },
     {
       "name": "Bari G",
@@ -53,8 +48,13 @@
       "image": "/assets/about/team/team/roger.jpg"
     },
     {
+      "name": "May A",
+      "position": "English Copywriter",
+      "image": "/assets/about/team/team/may.jpg"
+    },
+    {
       "name": "Marco M",
-      "position": "Copywriter",
+      "position": "Italian Copywriter",
       "image": "/assets/about/team/team/marco.jpg"
     },
     {

@@ -1,5 +1,7 @@
-const path = require('path');
-const ejs = require('ejs');
+const path = require("path");
+const ejs = require("ejs");
+
+const axios = require("axios");
 
 const transporter = require("../config/nodemailer-setup");
 const Lead = require("../models/lead");
@@ -55,6 +57,33 @@ exports.getContactsPage = (req, res) => {
   });
 };
 
+exports.checkRecaptcha = async (req, res, next) => {
+  const googleEndpoint = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${req.body["g-recaptcha-response"]}`;
+
+  try {
+    const response = await axios.post(googleEndpoint);
+
+    if (!response.data.success)
+      throw new Error(
+        "Your Google verification has failed. Are you maybe a robot? 🤖"
+      );
+
+    return next();
+  } catch (err) {
+    if (
+      err.message !==
+      "Your Google verification has failed. Are you maybe a robot? 🤖"
+    ) {
+      console.error(err);
+    }
+    res.locals.message = {
+      type: "error",
+      message: err.message,
+    };
+    return res.status(403).render("contacts");
+  }
+};
+
 exports.postContact = async (req, res) => {
   try {
     for (let key of Object.keys(req.body))
@@ -67,15 +96,18 @@ exports.postContact = async (req, res) => {
       message: "Your message has been correctly received. Thank you!!!",
     };
 
-    const html = await ejs.renderFile(path.join(__dirname, "../views/emails/lead.ejs"), { req: req.body });
+    const html = await ejs.renderFile(
+      path.join(__dirname, "../views/emails/lead.ejs"),
+      { req: req.body }
+    );
 
     const message = {
-      from: 'info@monarchy.io',
+      from: "info@monarchy.io",
       //to: 'nicole@monarchy.io',
-      to: 'mattia@monarchy.io',
-      subject: 'We have a new Monarchy lead from the website! 📈',
-      html
-    }
+      to: "mattia@monarchy.io",
+      subject: "We have a new Monarchy lead from the website! 📈",
+      html,
+    };
 
     await transporter.sendMail(message);
 

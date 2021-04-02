@@ -5,10 +5,6 @@ const favicon = require("serve-favicon");
 const helmet = require("helmet");
 const bodyParser = require("body-parser");
 
-let reloadify;
-if (process.env.NODE_ENV !== "production")
-  reloadify = require("reloadify")(__dirname + "/public");
-
 const morgan = require("morgan");
 
 let appState =
@@ -19,12 +15,13 @@ const limiter = require("./config/security");
 
 //REQUIRING ROUTES
 const homeRoute = require("./routes/homeRoute");
+const blogRoute = require("./routes/blogRoute");
+const contactsRoute = require("./routes/contactsRoute");
 
 const app = express();
 
 app.use(morgan(appState === "development" ? "dev" : "combined"));
 
-//if (appState !== "production") app.use(reloadify);
 app.use(favicon(path.join(__dirname, "public", "assets/favicon.svg")));
 if (appState === "production") app.use(helmet());
 if (appState === "production") app.use(limiter);
@@ -51,6 +48,8 @@ app.use((req, res, next) => {
 
 //HOME PAGE
 app.use("/", homeRoute);
+app.use("/blog", blogRoute);
+app.use("/contacts", contactsRoute);
 
 //404
 app.all("*", (req, res, next) => {

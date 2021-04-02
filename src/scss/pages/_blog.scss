@@ -1,0 +1,17 @@
+.blog-home {
+  display: flex;
+  width: $container-width;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 3rem 0;
+
+  &__post-container {
+    flex-basis: 100%;
+    background-color: aquamarine;
+  }
+
+  .newsletter-form {
+    flex-basis: 35%;
+    margin-left: 3rem;
+  }
+}

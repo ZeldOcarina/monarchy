@@ -430,14 +430,19 @@ body {
         margin-bottom: 4rem; } } } }
 
 .customer-box {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  background-position: center; }
+  flex-direction: column; }
+  .customer-box__image {
+    width: 100%;
+    height: 100%;
+    object-size: cover;
+    object-position: center; }
   .customer-box__content-box {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -720,6 +725,45 @@ body {
     background-color: green; }
   .message--error {
     background-color: #ff6666; }
+
+.newsletter-form {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3rem 4rem; }
+  .newsletter-form__title {
+    color: #00bbc0;
+    text-transform: uppercase; }
+  .newsletter-form__text {
+    margin-bottom: 1rem; }
+  .newsletter-form__input {
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 3px; }
+    .newsletter-form__input:not(:last-child) {
+      margin-bottom: 1rem; }
+  .newsletter-form__button {
+    background-color: #ff5005;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    border-radius: 3px;
+    width: 70%;
+    margin: 1rem auto 0 auto;
+    text-transform: uppercase;
+    font-weight: 700; }
+    .newsletter-form__button:hover {
+      background-color: #d13f00;
+      cursor: pointer; }
+  .newsletter-form .form__checkbox-container {
+    text-align: left; }
+    .newsletter-form .form__checkbox-container--promotion {
+      margin-bottom: 0; }
+  .newsletter-form .form__privacy-label--text {
+    transform: translateY(-1rem); }
 
 .press {
   display: flex;
@@ -1054,6 +1098,19 @@ body {
     .leadership__paragraph {
       width: 60%; } }
 
+.blog-home {
+  display: flex;
+  width: 75%;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 3rem 0; }
+  .blog-home__post-container {
+    flex-basis: 100%;
+    background-color: aquamarine; }
+  .blog-home .newsletter-form {
+    flex-basis: 35%;
+    margin-left: 3rem; }
+
 .clients {
   width: 75%;
   margin: 0 auto;
@@ -1293,6 +1350,9 @@ body {
 
 .text-right {
   text-align: end; }
+
+.lazy-img {
+  filter: blur(10px); }
 
 .mt-1 {
   margin-top: 1rem !important; }

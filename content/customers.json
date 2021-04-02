@@ -1,7 +1,8 @@
 [
   {
     "logo": "/assets/home/customers/body-contourz/logo.png",
-    "image": "/assets/home/customers/body-contourz/background.png",
+    "image": "/assets/home/customers/body-contourz/background.jpg",
+    "lazyImage": "/assets/home/customers/body-contourz/background-lazy.jpg",
     "sentence": "7X the business in 6 months, now partnering to open the next 10 new locations",
     "logoHeight": "8rem",
     "marginTop": "6rem",
@@ -9,21 +10,24 @@
   },
   {
     "logo": "/assets/home/customers/serendipity/logo.png",
-    "image": "/assets/home/customers/serendipity/background.png",
+    "image": "/assets/home/customers/serendipity/background.jpg",
+    "lazyImage": "/assets/home/customers/serendipity/background-lazy.jpg",
     "sentence": "Co-producing the new ABC series WOTM, currently casting. Shooting starts Jan 2021.",
     "logoHeight": "4rem",
     "white": true
   },
   {
     "logo": "/assets/home/customers/galaxy/logo.png",
-    "image": "/assets/home/customers/galaxy/background.png",
+    "image": "/assets/home/customers/galaxy/background.jpg",
+    "lazyImage": "/assets/home/customers/galaxy/background-lazy.jpg",
     "sentence": "Launching the new era of home business with some of the brightest minds in the industry.",
     "logoHeight": "4rem",
     "white": true
   },
   {
     "logo": "/assets/home/customers/515/logo.png",
-    "image": "/assets/home/customers/515/background.png",
+    "image": "/assets/home/customers/515/background.jpg",
+    "lazyImage": "/assets/home/customers/515/background-lazy.jpg",
     "sentence": "Building the new frontier of Green Energy in Italy",
     "white": true
   }

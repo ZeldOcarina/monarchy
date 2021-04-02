@@ -16,11 +16,7 @@ const leadSchema = new mongoose.Schema({
     required: true,
     message: "Please provide your first name",
   },
-  last_name: {
-    type: String,
-    required: true,
-    message: "Please provide your last name",
-  },
+  last_name: String,
   is_company: Boolean,
   needs_marketing: Boolean,
   needs_sales: Boolean,

@@ -430,14 +430,19 @@ body {
         margin-bottom: 4rem; } } } }
 
 .customer-box {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  background-position: center; }
+  flex-direction: column; }
+  .customer-box__image {
+    width: 100%;
+    height: 100%;
+    object-size: cover;
+    object-position: center; }
   .customer-box__content-box {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1020,7 +1025,9 @@ body {
     .leadership__cards-container {
       gap: 2rem; } }
   .leadership__cards-container--bottom {
-    grid-template-columns: repeat(3, max-content); }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
     @media only screen and (max-width: 26.25em) {
       .leadership__cards-container--bottom {
         grid-template-columns: 100%; } }
@@ -1291,6 +1298,9 @@ body {
 
 .text-right {
   text-align: end; }
+
+.lazy-img {
+  filter: blur(10px); }
 
 .mt-1 {
   margin-top: 1rem !important; }

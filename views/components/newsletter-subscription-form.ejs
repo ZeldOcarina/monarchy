@@ -1,0 +1,20 @@
+<form class="newsletter-form" method="POST" action="/contacts/newsletter-subscription">
+    <h3 class="newsletter-form__title">Stay Updated!</h3>
+    <p class="newsletter-form__text">Sign up to receive our monthly newsletter.</p>
+    <input class="newsletter-form__input"type="text" name="first_name" id="first_name" placeholder="Name" required>
+    <input class="newsletter-form__input"type="email" name="email" id="email" placeholder="Email address" required>
+    <div class="form__checkbox-container form__checkbox-container--privacy">
+        <input class="form__checkbox" type="checkbox" name="privacy_consent" id="privacy_consent" />
+        <div class="">
+            <label class="form__checkbox-label form__checkbox-label--privacy" for="privacy_consent"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span><span class="form__privacy-label--text">I have read and agree to privacy policy and terms and conditions.<span class="red">*</span></span></label>
+        </div>
+    </div>
+    <div class="form__checkbox-container form__checkbox-container--promotion">
+        <input class="form__checkbox" type="checkbox" name="promotional_consent" id="promotional_consent" />
+        <div class="">
+            <label class="form__checkbox-label form__checkbox-label--privacy form__checkbox-label--promotion" for="promotional_consent"><span class="form__checkbox--span"><span class="form__checkbox--span--fill"></span></span><span class="form__privacy-label--text form__promotion-label">Yes! I want to subscribe to Monarchy newsletter and receive promotional informations about the company.<span class="red">*</span></label>
+        </div>
+    </div>
+    <div class="g-recaptcha" data-sitekey="<%= publicKey %>"></div>
+    <button class="newsletter-form__button">Sign up</button>
+</form>

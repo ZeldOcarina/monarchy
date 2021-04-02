@@ -40,13 +40,14 @@
 <section class="customers-grid">
     <h2 class="customers-grid__title secondary-header">Businesses We Love</h2>
     <div class="customers-grid__container">
-        <% for(let { logo, sentence, image, white, logoHeight, marginTop } of customers) { %>
-        <div class="customer-box" style="background-image: url(<%- image %>)">
+        <% for(let { logo, sentence, image, lazyImage, white, logoHeight, marginTop } of customers) { %>
+        <div class="customer-box">
+            <img src="<%- lazyImage %>" data-src="<%- image %>" alt="Background pic" class="customer-box__image lazy-img">
             <div class="customer-box__content-box" <% if(marginTop) { %>style="margin-top:<%= marginTop %>"<% } %> >
                 <img class="customer-box__logo" src="<%= logo %>" <%- logoHeight && 'style=height:' %><%- logoHeight %> />
                 <p<%- white && ' class="white"' %>><%= sentence %></p>
             </div>
-        </div>
+        </div> 
         <% } %>
     </div>
 </section>
@@ -55,6 +56,6 @@
 <h2 class="secondary-header team-section__title">Meet Our Team</h2>
         <p class="team-section__paragraph">Get to know the members of #TeamMonarchy. We all bring something unique that helps us flourish at Monarchy.</p>
         <a class="main-button" href="/about">Learn More</a>
-        <img class="team-section__image" src="/assets/home/team.jpg"/>
+        <img class="team-section__image lazy-img" src="/assets/home/team-lazy.jpg" data-src="/assets/home/team.jpg"/>
 </section>
 <%- include('partials/footer') %>

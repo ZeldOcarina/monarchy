@@ -51,6 +51,16 @@ eval("var checkboxes = document.querySelectorAll(\".form__checkbox\");\ncheckbox
 
 /***/ }),
 
+/***/ "./src/js/_lazy-images.js":
+/*!********************************!*\
+  !*** ./src/js/_lazy-images.js ***!
+  \********************************/
+/***/ (() => {
+
+eval("(function () {\n  var imgTargets = document.querySelectorAll(\"img[data-src]\");\n  if (imgTargets.length === 0) return;\n\n  var loadImg = function loadImg(entries, observer) {\n    entries.forEach(function (entry) {\n      if (!entry.isIntersecting) return;\n      console.log(entry.target); // Replace src with data-src\n\n      entry.target.src = entry.target.dataset.src;\n      entry.target.addEventListener(\"load\", function () {\n        entry.target.classList.remove(\"lazy-img\");\n      });\n      observer.unobserve(entry.target);\n    });\n  };\n\n  var imgObserver = new IntersectionObserver(loadImg, {\n    root: null,\n    threshold: 0 //rootMargin: \"-100px\",\n\n  });\n  imgTargets.forEach(function (img) {\n    return imgObserver.observe(img);\n  });\n})();\n\n//# sourceURL=webpack://monarchy-website/./src/js/_lazy-images.js?");
+
+/***/ }),
+
 /***/ "./src/js/_navigation.js":
 /*!*******************************!*\
   !*** ./src/js/_navigation.js ***!
@@ -78,7 +88,7 @@ eval("function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeo
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_form */ \"./src/js/_form.js\");\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _css_help__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_css-help */ \"./src/js/_css-help.js\");\n/* harmony import */ var _css_help__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_help__WEBPACK_IMPORTED_MODULE_3__);\n\n\n\n\n\n//# sourceURL=webpack://monarchy-website/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_form */ \"./src/js/_form.js\");\n/* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_form__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_navigation */ \"./src/js/_navigation.js\");\n/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_navigation__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_video-player */ \"./src/js/_video-player.js\");\n/* harmony import */ var _video_player__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_video_player__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _css_help__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_css-help */ \"./src/js/_css-help.js\");\n/* harmony import */ var _css_help__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_css_help__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _lazy_images__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_lazy-images */ \"./src/js/_lazy-images.js\");\n/* harmony import */ var _lazy_images__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_lazy_images__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack://monarchy-website/./src/js/index.js?");
 
 /***/ }),
 

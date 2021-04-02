@@ -1,0 +1,26 @@
+.admin-bar {
+  background-color: $color-tertiary;
+  padding: 2rem 15rem;
+  color: $white;
+  font-size: 2rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:first-child {
+      margin-right: 2rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.login {
+  padding: 8rem 0;
+  height: calc(100vh - 20.5rem);
+  display: flex;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  width: 20%;
+  //height: 50vh;
+  margin: 0 auto;
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 6rem 4rem;
+
+  &__logo {
+    width: 10rem;
+    margin: 0 auto 3rem auto;
+  }
+
+  &__button {
+    @include btn-secondary-styles;
+
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+      cursor: pointer;
+    }
+  }
+}

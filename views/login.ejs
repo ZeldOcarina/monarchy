@@ -1,0 +1,10 @@
+<%- include('partials/header'); %>
+<section class="login">
+    <form action="/authentication/login" method="post" class="login-form">
+        <img src="/assets/monarchy-butterfly.svg" alt="Monarchy Logo" class="login-form__logo">
+        <input type="text" class="newsletter-form__input" name="username" id="username" class="login-form__input" placeholder="Username" required>
+        <input type="password" class="newsletter-form__input" name="password" id="password" class="login-form__input" placeholder="Password" required>
+        <button class="login-form__button">Log In</button>
+    </form>
+</section>
+<%- include('partials/footer'); %>

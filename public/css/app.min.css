@@ -350,6 +350,24 @@ body {
     color: white;
     margin-left: 4rem; }
 
+.admin-bar {
+  background-color: #00bbc0;
+  padding: 2rem 15rem;
+  color: #fff;
+  font-size: 2rem; }
+  .admin-bar__container {
+    display: flex;
+    justify-content: space-between; }
+  .admin-bar__button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out; }
+    .admin-bar__button:hover {
+      opacity: 0.6; }
+    .admin-bar__button:first-child {
+      margin-right: 2rem; }
+
 .bg-video {
   position: absolute;
   top: 0;
@@ -1262,6 +1280,38 @@ body {
     @media only screen and (max-width: 50.75em) {
       .team-section__paragraph {
         width: 60%; } }
+
+.login {
+  padding: 8rem 0;
+  height: calc(100vh - 20.5rem);
+  display: flex;
+  align-items: center; }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0 auto;
+  background-color: #efefef;
+  border-radius: 5px;
+  padding: 6rem 4rem; }
+  .login-form__logo {
+    width: 10rem;
+    margin: 0 auto 3rem auto; }
+  .login-form__button {
+    background-color: #ff5005;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    border-radius: 3px;
+    width: 70%;
+    margin: 1rem auto 0 auto;
+    text-transform: uppercase;
+    font-weight: 700; }
+    .login-form__button:hover {
+      background-color: #d13f00;
+      cursor: pointer; }
 
 .services {
   padding: 6rem 0;

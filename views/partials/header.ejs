@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monarchy | The Marketing Engine</title>
-    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="/css/app.min.css">
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -21,13 +21,25 @@
         <%- include('footer'); %>
     </div>
 </nav>
+<% if(user) { %>
+    <% console.log(user) %>
+    <div class="admin-bar">
+        <div class="admin-bar__container">
+            <p class="admin-bar__message">Welcome back, <%= user.username %></p>
+            <div class="admin-bar__right-container">
+                <a href="/blog/new-post" class="admin-bar__button">Add New Post</a>
+                <a href="/authentication/logout" class="admin-bar__button">Logout</a>
+            </div>
+        </div>
+    </div>
+<% } %>
 <header class="navigation">
     <div class="navigation__top">
         <a href="/" class="navigation__brand">
-            <img class="navigation__icon" src="assets/monarchy-word-logo.svg" />
+            <img class="navigation__icon" src="/assets/monarchy-word-logo.svg" />
         </a>
         <div class="navigation__button">
-            <img class="navigation__icon navigation__icon--butterfly" src="assets/monarchy-butterfly.svg" />
+            <img class="navigation__icon navigation__icon--butterfly" src="/assets/monarchy-butterfly.svg" />
             <span class="navigation__button-text">MENU</span>
         </div>
     </div>
@@ -38,6 +50,12 @@
         </div>
     <% } %>
 </header>
+<% if(error && error.length > 0) { %>
+<div class="message message--error"><%= error %></div>
+<% } %>
+<% if(success && success.length > 0) { %>
+<div class="message message--success"><%= success %></div>
+<% } %>
 <% if(message && message.message) { %>
 <div class="message message--<%= message.type %>"><%= message.message %></div>
 <% } %>

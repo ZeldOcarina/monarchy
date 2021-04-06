@@ -6,12 +6,14 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const favicon = require("serve-favicon");
 const morgan = require("morgan");
-const helmet = require("helmet");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
+const helmet = require("helmet");
+const expressSanitizer = require("express-sanitizer");
+const cors = require("cors");
 
 const User = require("./models/users");
 
@@ -30,6 +32,11 @@ const contactsRoute = require("./routes/contactsRoute");
 const app = express();
 
 app.use(morgan(appState === "development" ? "dev" : "combined"));
+
+// SECURITY
+app.use(cors());
+app.use(helmet());
+app.use(expressSanitizer());
 
 app.use(favicon(path.join(__dirname, "public", "assets/favicon.svg")));
 if (appState === "production") app.use(helmet());

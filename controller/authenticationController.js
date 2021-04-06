@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const User = require("../models/users");
 
 exports.registerUser = async (req, res) => {
   const user = new User({ email: "mattia@monarchy.io", username: "Mattia" });

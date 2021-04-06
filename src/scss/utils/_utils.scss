@@ -3,8 +3,8 @@
 }
 
 .hidden {
-  transform: translateY(-100vw);
   opacity: 0;
+  transform: translateY(-100vw);
 }
 
 .secondary-header {
@@ -33,4 +33,12 @@
 
 .lazy-img {
   filter: blur(10px);
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
 }

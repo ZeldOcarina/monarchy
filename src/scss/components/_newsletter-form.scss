@@ -3,7 +3,11 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 3rem 4rem;
+  padding: 3rem 4rem 4rem 4rem;
+
+  @include respond(phone-port) {
+    padding: 3rem 2rem 4rem 2rem;
+  }
 
   &__title {
     color: $color-tertiary;
@@ -22,6 +26,10 @@
 
     &:not(:last-child) {
       margin-bottom: 1rem;
+
+      @include respond(tab-port) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 
@@ -39,6 +47,10 @@
 
     &--promotion {
       margin-bottom: 0;
+
+      @include respond(tab-land) {
+        margin-bottom: 2rem;
+      }
     }
   }
 

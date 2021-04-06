@@ -13,7 +13,7 @@ const LocalStrategy = require("passport-local");
 const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo")(session);
 
-const User = require("./models/user");
+const User = require("./models/users");
 
 let appState =
   process.env.NODE_ENV === "production" ? "production" : "development";
@@ -72,6 +72,8 @@ app.locals = {
   subtitle: "",
   videoUrl: "",
   message: {},
+  tinyMCEKey: "",
+  isBlogShowPage: false,
 };
 
 app.use((req, res, next) => {

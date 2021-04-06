@@ -70,7 +70,8 @@
     "request": "^2.88.0",
     "sanitize-filename": "^1.6.2",
     "serve-favicon": "^2.5.0",
-    "slugify": "^1.4.0",
+    "sharp": "^0.28.0",
+    "slugify": "^1.5.0",
     "validator": "^11.1.0",
     "waypoints": "^4.0.1"
   },

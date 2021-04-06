@@ -7,16 +7,41 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__button {
     display: inline-block;
     color: white;
     text-decoration: none;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+
+    &--edit,
+    &--delete {
+      padding: 1rem 3rem;
+      transition: all 0.3s ease-in-out;
+      border-radius: 5px;
+    }
+
+    &--edit {
+      background-color: #cece00;
+
+      &:hover {
+        background-color: darken(#cece00, 10%);
+      }
+    }
+
+    &--delete {
+      background-color: #7e0000;
+      margin: 0 1rem 0 1rem;
+
+      &:hover {
+        background-color: darken(#7e0000, 10%);
+      }
+    }
 
     &:hover {
-      opacity: 0.6;
+      cursor: pointer;
     }
 
     &:first-child {

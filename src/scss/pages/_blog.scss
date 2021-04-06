@@ -5,13 +5,46 @@
   justify-content: center;
   padding: 3rem 0;
 
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
+  @include respond(phone-port) {
+    width: 100%;
+  }
+
   &__post-container {
-    flex-basis: 100%;
-    background-color: aquamarine;
+    //flex-basis: 100%;
+    .post-scheda {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__meta {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
   }
 
   .newsletter-form {
     flex-basis: 35%;
-    margin-left: 3rem;
+    margin-left: 5rem;
+    height: min-content;
+
+    @include respond(tab-land) {
+      flex-basis: 60%;
+      width: 60%;
+      margin: 5rem auto 0 auto;
+    }
+    @include respond(tab-port) {
+      flex-basis: 80%;
+      width: 80%;
+      margin: 5rem auto 0 auto;
+    }
+    @include respond(phone-port) {
+      flex-basis: 100%;
+      width: 100%;
+      margin: 5rem auto 0 auto;
+    }
   }
 }

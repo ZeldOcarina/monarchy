@@ -1,0 +1,33 @@
+<% if(post) { %>
+    <%- include("../partials/header", { title: post.title, description: post.seoDescription, keywords: post.keywords, author: post.author.name }); -%>
+<% } else { %>
+    <%- include("../partials/header") -%>
+<% } %>
+<section class="blog-home">
+    <div class="blog-home__post-container">
+        <% if(post) { %>
+            <% const { slug, image, imageAltText, title, content, author: { username: authorName }, createdAt } = post; %>
+            <div class="post-scheda">
+                <img src="<%= image %>" alt="<%= imageAltText %>" class="post-scheda__image">
+                <h2 class="post-scheda__title"><%= title %></h2>
+                <div class="post-scheda__meta">
+                    By <%= authorName %> | <%= createdAt.toLocaleString("en-US", { 
+                        day: "2-digit", 
+                        year: "numeric", 
+                        month: "long",
+                        hour: "2-digit",
+                        hourCicle: "h12",
+                        minute: "2-digit"
+                    }) %>
+                </div>
+                <div class="post-scheda__content">
+                    <%- content %>
+                </div>
+                
+            </div>
+        <% } %>
+    </div>
+    <%- include('../components/newsletter-subscription-form'); %>
+</section>
+
+<%- include('../partials/footer') %>

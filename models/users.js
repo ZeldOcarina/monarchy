@@ -7,6 +7,12 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
+  postsMade: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: "Post",
+    },
+  ],
 });
 
 UserSchema.plugin(passportLocalMongoose);

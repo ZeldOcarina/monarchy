@@ -9,7 +9,7 @@
             <% const { slug, image, imageAltText, title, content, author: { username: authorName }, createdAt } = post; %>
             <div class="post-scheda">
                 <img src="<%= image %>" alt="<%= imageAltText %>" class="post-scheda__image">
-                <h2 class="post-scheda__title"><%= title %></h2>
+                <h1 class="post-scheda__title"><%= title %></h1>
                 <div class="post-scheda__meta">
                     By <%= authorName %> | <%= createdAt.toLocaleString("en-US", { 
                         day: "2-digit", 

@@ -24,6 +24,7 @@ let appState =
 const limiter = require("./config/security");
 
 //REQUIRING ROUTES
+const apiRoute = require("./routes/apiRoute");
 const authenticationRoute = require("./routes/authenticationRoute");
 const homeRoute = require("./routes/homeRoute");
 const blogRoute = require("./routes/blogRoute");
@@ -97,6 +98,7 @@ app.use((req, res, next) => {
 
 //HOME PAGE
 app.use("/", homeRoute);
+app.use("/api/v1", apiRoute);
 app.use("/authentication", authenticationRoute);
 app.use("/blog", blogRoute);
 app.use("/contacts", contactsRoute);

@@ -99,8 +99,6 @@ exports.updatePost = async (req, res, next) => {
 
     const editedPost = { ...req.body };
 
-    console.log(req.file);
-
     if (req.file) editedPost.image = "/uploads/" + req.file.filename;
 
     const post = await Post.findOneAndUpdate(

@@ -1,8 +1,8 @@
 const User = require("../models/users");
 
 exports.registerUser = async (req, res) => {
-  const user = new User({ email: "mattia@monarchy.io", username: "Mattia" });
-  const newUser = await User.register(user, "%iddJYFh&d9UkSZM");
+  const user = new User({ email: "micaela@monarchy.io", username: "Micaela" });
+  const newUser = await User.register(user, "5YGrH5937ej@CMTF");
   res.status(201).send(newUser);
 };
 

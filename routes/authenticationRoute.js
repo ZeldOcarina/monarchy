@@ -21,7 +21,8 @@ router
     }),
     authenticateUser
   );
-router.get("/register", registerUser);
+
+//router.get("/register", registerUser);
 router.get("/logout", logoutUser);
 
 module.exports = router;

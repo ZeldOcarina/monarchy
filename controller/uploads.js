@@ -1,4 +1,4 @@
-const { unlink } = require("fs/promises");
+const { unlink } = require("fs").promises;
 const path = require("path");
 const slugify = require("slugify");
 const sharp = require("sharp");

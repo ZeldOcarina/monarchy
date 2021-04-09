@@ -36,3 +36,35 @@ exports.upliffsNewCustomer = async (req, res) => {
     });
   }
 };
+
+exports.calendlyNewEvent = async (req, res) => {
+  try {
+    console.log(req.body);
+    const {
+      payload: { email },
+    } = req.body;
+
+    await axios({
+      url: "https://sj-api.com/externalapp/track",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: process.env.SALESJET_BC_API_KEY,
+      },
+      data: {
+        event_name: "calendly_creation",
+        contact: { email },
+      },
+    });
+
+    return res
+      .status(201)
+      .json({ status: "success", message: "Appointment successfully created" });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({
+      status: "error",
+      message: "An error has occured while processing this request.",
+    });
+  }
+};

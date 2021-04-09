@@ -30,8 +30,6 @@
     "npm": "7.7.6"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
-    "apiai": "^4.0.3",
     "aws-sdk": "^2.515.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
@@ -60,7 +58,6 @@
     "mongoose-slug-updater": "^3.1.4",
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
-    "multer-s3": "^2.9.0",
     "nodemailer": "^6.4.14",
     "owl.carousel": "^2.3.4",
     "owl.carousel2": "^2.2.1",
@@ -77,6 +74,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "autoprefixer": "^9.6.0",
     "babel-loader": "^8.0.6",

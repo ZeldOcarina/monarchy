@@ -44,6 +44,12 @@ exports.calendlyNewEvent = async (req, res) => {
       payload: { email },
     } = req.body;
 
+    if (email === "info@bodycontourz.com")
+      return res.status(200).json({
+        status: "success",
+        data: "Sales Jet connection not necessary",
+      });
+
     await axios({
       url: "https://sj-api.com/externalapp/track",
       method: "POST",

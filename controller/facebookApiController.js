@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const replaceAll = require("string.prototype.replaceall");
 const axios = require("axios");
 const transporter = require("../config/nodemailer-setup");
 
@@ -47,10 +48,20 @@ exports.facebookPageVisit = async (req, res) => {
 
 exports.facebookLeadEvent = async (req, res) => {
   const current_timestamp = Math.floor(new Date() / 1000);
-  const hashedEmail = crypto
-    .createHash("sha256")
-    .update(req.body.email)
-    .digest("hex");
+
+  function hashData(datum) {
+    return crypto.createHash("sha256").update(datum).digest("hex");
+  }
+  function setupPhone(str) {
+    const firstStep = str.trim().replace("+", "");
+
+    const secondStep = replaceAll(firstStep, "-", "");
+    const cleanPhoneNumber = replaceAll(secondStep, " ", "");
+    return hashData(cleanPhoneNumber);
+  }
+
+  const hashedEmail = hashData(req.body.email);
+  const hashedPhone = setupPhone(req.body.phone);
 
   try {
     const response = await axios({
@@ -62,23 +73,32 @@ exports.facebookLeadEvent = async (req, res) => {
             event_name: "Lead",
             event_time: current_timestamp,
             action_source: "website",
-            event_source_url: "https://my.ultraslimbybodycontourz.com/general",
+            event_source_url: req.body.url,
             user_data: {
               em: hashedEmail,
-              client_ip_address: "192.19.19.4",
-              client_user_agent:
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36",
+              ph: hashedPhone,
+              client_ip_address: req.body.ip,
+              client_user_agent: req.body.userAgent,
             },
           },
         ],
-        test_event_code: "TEST67144",
+        // test_event_code: "TEST76951",
       },
     });
 
-    console.log(response);
-
-    res.json(response);
+    res.status(200).json("Lead Connected");
   } catch (err) {
-    res.json(err);
+    const message = {
+      from: "info@monarchy.io",
+      //to: 'nicole@monarchy.io',
+      to: "mattia@monarchy.io",
+      subject:
+        "We have an error on the Body Contourz LEAD FB API Conversions setup.",
+      html: `<p>Here is the error we are having:</p><p>${err.stack}</p>`,
+    };
+
+    await transporter.sendMail(message);
+    console.log(err);
+    res.status(500).json(err);
   }
 };

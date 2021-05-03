@@ -1,8 +1,8 @@
 #!/bin/bash
 #/home/Mattia/.nvm/versions/node/v12.18.2/bin/
 npm run build
-tar czfv monarchy.io.tar.gz config/ content/ controller/ helpers/ middleware/ models/ public/ routes/ src/ utils/ views/ .babelrc .env .gitignore app.js ecosystem.config.js package.json package-lock.json postcss.config.js server.js webpack.common.js webpack.dev.js webpack.prod.js
-#tar czfv monarchy.io.tar.gz config/ content/ controller/ helpers/ middleware/ models/ routes/ src/ utils/ views/ .babelrc .env .gitignore app.js ecosystem.config.js package.json postcss.config.js server.js webpack.common.js webpack.dev.js webpack.prod.js
+#tar czfv monarchy.io.tar.gz config/ content/ controller/ helpers/ middleware/ models/ public/ routes/ src/ utils/ views/ .babelrc .env .gitignore app.js ecosystem.config.js package.json package-lock.json postcss.config.js server.js webpack.common.js webpack.dev.js webpack.prod.js
+tar czfv monarchy.io.tar.gz config/ content/ controller/ helpers/ middleware/ models/ routes/ src/ utils/ views/ .babelrc .env .gitignore app.js ecosystem.config.js package.json postcss.config.js server.js webpack.common.js webpack.dev.js webpack.prod.js
 scp monarchy.io.tar.gz ubuntu@monarchy.io:~
 rm monarchy.io.tar.gz
 

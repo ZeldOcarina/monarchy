@@ -17,6 +17,7 @@ exports.facebookPageVisit = async (req, res) => {
         data: [
           {
             event_name: "PageView",
+            event_id: "BC_VIEW",
             event_time: current_timestamp,
             action_source: "website",
             event_source_url: req.body.url,

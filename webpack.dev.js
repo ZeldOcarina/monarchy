@@ -16,5 +16,15 @@ module.exports = merge(common, {
       jQuery: "jquery",
       "window.jQuery": "jquery",
     }),
+    new webpack.NoEmitOnErrorsPlugin(),
+    // after compile global will defined `process.env` this Object
+    new webpack.DefinePlugin({
+      BUILD_AT : Date.now().toString(32),
+      DEBUG: process.env.NODE_ENV !== 'production',
+          'process.env': {
+              'NODE_ENV': JSON.stringify(process.env.NODE_ENV || "development"),
+              'VARIABLE_NAME': JSON.stringify(process.env.VARIABLE_NAME)
+     }
+   })
   ],
 });

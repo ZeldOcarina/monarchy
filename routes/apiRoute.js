@@ -8,6 +8,8 @@ const {
 const {
   facebookPageVisit,
   facebookLeadEvent,
+  facebookShopVisitEvent,
+  facebookPurchaseEvent
 } = require("../controller/facebookApiController");
 
 const router = express.Router();

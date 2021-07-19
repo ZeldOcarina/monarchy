@@ -1,7 +1,16 @@
 const axios = require("axios");
-const transporter = require("../config/nodemailer-setup");
 
 const { getTimestamp, hashData, setupPhone } = require("../utils/utils");
+const transporter = require("../config/nodemailer-setup");
+
+const {
+  hashData,
+  setupPhone,
+  handleConversionAPIError,
+} = require("../utils/utils");
+
+const access_token = process.env.BC_FACEBOOK_CONVERSION_API_TOKEN;
+const pixel_id = process.env.BC_PIXEL_ID;
 
 exports.facebookPageVisit = async (req, res) => {
   const isAngel = req.body.entity === "Angel";
@@ -27,6 +36,7 @@ exports.facebookPageVisit = async (req, res) => {
             event_id: eventID,
             event_time: current_timestamp,
             action_source: "website",
+            event_id: "BC_VISIT",
             event_source_url: req.body.url,
             user_data: {
               client_ip_address: req.body.ip,
@@ -40,17 +50,7 @@ exports.facebookPageVisit = async (req, res) => {
 
     res.status(200).json(response.data);
   } catch (err) {
-    const message = {
-      from: "info@monarchy.io",
-      //to: 'nicole@monarchy.io',
-      to: "mattia@monarchy.io",
-      subject:
-        "We have an error on the Body Contourz FB API Conversions setup.",
-      html: `<p>Here is the error we are having:</p><p>${err.stack}</p>`,
-    };
-
-    await transporter.sendMail(message);
-    console.log(err);
+    handleConversionAPIError(err);
     res.status(500).json(err);
   }
 };
@@ -79,12 +79,13 @@ exports.facebookLeadEvent = async (req, res) => {
           {
             event_name: "Lead",
             event_time: current_timestamp,
+            event_id: "BC_LEAD",
             action_source: "website",
             event_source_url: req.body.url,
             event_id: eventID,
             user_data: {
-              em: hashedEmail,
-              ph: hashedPhone,
+              em: hashData(req.body.email),
+              ph: setupPhone(req.body.phone),
               client_ip_address: req.body.ip,
               client_user_agent: req.body.userAgent,
             },
@@ -96,17 +97,7 @@ exports.facebookLeadEvent = async (req, res) => {
 
     res.status(200).json("Lead Connected");
   } catch (err) {
-    const message = {
-      from: "info@monarchy.io",
-      //to: 'nicole@monarchy.io',
-      to: "mattia@monarchy.io",
-      subject:
-        "We have an error on the Body Contourz LEAD FB API Conversions setup.",
-      html: `<p>Here is the error we are having:</p><p>${err.stack}</p>`,
-    };
-
-    await transporter.sendMail(message);
-    console.log(err);
+    handleConversionAPIError(err);
     res.status(500).json(err);
   }
 };

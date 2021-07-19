@@ -1,9 +1,9 @@
 const axios = require("axios");
 
-const { getTimestamp, hashData, setupPhone } = require("../utils/utils");
 const transporter = require("../config/nodemailer-setup");
 
 const {
+  getTimestamp,
   hashData,
   setupPhone,
   handleConversionAPIError,

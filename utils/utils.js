@@ -31,3 +31,5 @@ exports.handleConversionAPIError = async function (err) {
   await transporter.sendMail(message);
   console.log(err);
 };
+
+exports.getTimestamp = () => Math.floor(new Date() / 1000);

@@ -1,7 +1,5 @@
 const axios = require("axios");
 
-const transporter = require("../config/nodemailer-setup");
-
 const {
   getTimestamp,
   hashData,
@@ -103,7 +101,7 @@ exports.facebookLeadEvent = async (req, res) => {
 };
 
 exports.facebookShopVisitEvent = async (req, res) => {
-  const current_timestamp = Math.floor(new Date() / 1000);
+  const current_timestamp = getTimestamp();
 
   try {
     const response = await axios({
@@ -136,7 +134,7 @@ exports.facebookShopVisitEvent = async (req, res) => {
 };
 
 exports.facebookPurchaseEvent = async (req, res) => {
-  const current_timestamp = Math.floor(new Date() / 1000);
+  const current_timestamp = getTimestamp();
 
   try {
     console.log(req.body);

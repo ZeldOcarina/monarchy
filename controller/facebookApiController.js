@@ -65,11 +65,8 @@ exports.facebookLeadEvent = async (req, res) => {
   const eventID = isAngel ? "ANGEL_LEAD" : "BC_LEAD";
   const current_timestamp = getTimestamp();
 
-  const hashedEmail = hashData(req.body.email);
-  const hashedPhone = setupPhone(req.body.phone);
-
   try {
-    const response = await axios({
+    /*const response = await axios({
       url: `https://graph.facebook.com/v10.0/${pixel_id}/events?access_token=${access_token}`,
       method: "POST",
       data: {
@@ -89,9 +86,9 @@ exports.facebookLeadEvent = async (req, res) => {
             },
           },
         ],
-        //test_event_code: "TEST62031",
+        //test_event_code: "TEST84298",
       },
-    });
+    });*/
 
     res.status(200).json("Lead Connected");
   } catch (err) {
@@ -137,7 +134,6 @@ exports.facebookPurchaseEvent = async (req, res) => {
   const current_timestamp = getTimestamp();
 
   try {
-    console.log(req.body);
     const response = await axios({
       url: `https://graph.facebook.com/v10.0/${process.env.BC_PIXEL_ID}/events?access_token=${process.env.BC_FACEBOOK_CONVERSION_API_TOKEN}`,
       method: "POST",

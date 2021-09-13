@@ -1885,14 +1885,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_model */ "./src/js/_model.js");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
   if (!_model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionCharacterCounter) return;
-  var seoDescriptionCurrentCharactersText = _model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionCharacterCounter.querySelector(".new-post__current-characters");
-  var pageTitleCharacterCounterText = _model__WEBPACK_IMPORTED_MODULE_0__.pageTitleCharacterCounter.querySelector(".new-post__page-title-current-characters");
-  var postTitleCharacterCounterText = _model__WEBPACK_IMPORTED_MODULE_0__.postTitleCharacterCounter.querySelector(".new-post__post-title-current-characters");
+  const seoDescriptionCurrentCharactersText = _model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionCharacterCounter.querySelector(".new-post__current-characters");
+  const pageTitleCharacterCounterText = _model__WEBPACK_IMPORTED_MODULE_0__.pageTitleCharacterCounter.querySelector(".new-post__page-title-current-characters");
+  const postTitleCharacterCounterText = _model__WEBPACK_IMPORTED_MODULE_0__.postTitleCharacterCounter.querySelector(".new-post__post-title-current-characters");
 
   function setCharacterCounter(element, counter, currentCharactersElement, min, max) {
-    var inputTextLength = element.value.length;
+    const inputTextLength = element.value.length;
     currentCharactersElement.textContent = inputTextLength;
 
     if (Number(currentCharactersElement.textContent) >= min && Number(currentCharactersElement.textContent) <= max) {
@@ -1907,13 +1907,13 @@ __webpack_require__.r(__webpack_exports__);
   setCharacterCounter(_model__WEBPACK_IMPORTED_MODULE_0__.pageTitleInput, _model__WEBPACK_IMPORTED_MODULE_0__.pageTitleCharacterCounter, pageTitleCharacterCounterText, 0, 60);
   setCharacterCounter(_model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionInput, _model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionCharacterCounter, seoDescriptionCurrentCharactersText, 120, 320);
   setCharacterCounter(_model__WEBPACK_IMPORTED_MODULE_0__.postTitleInput, _model__WEBPACK_IMPORTED_MODULE_0__.postTitleCharacterCounter, postTitleCharacterCounterText, 0, 60);
-  _model__WEBPACK_IMPORTED_MODULE_0__.pageTitleInput.addEventListener("input", function () {
+  _model__WEBPACK_IMPORTED_MODULE_0__.pageTitleInput.addEventListener("input", () => {
     setCharacterCounter(_model__WEBPACK_IMPORTED_MODULE_0__.pageTitleInput, _model__WEBPACK_IMPORTED_MODULE_0__.pageTitleCharacterCounter, pageTitleCharacterCounterText, 0, 60);
   });
-  _model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionInput.addEventListener("input", function () {
+  _model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionInput.addEventListener("input", () => {
     setCharacterCounter(_model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionInput, _model__WEBPACK_IMPORTED_MODULE_0__.seoDescriptionCharacterCounter, seoDescriptionCurrentCharactersText, 120, 320);
   });
-  _model__WEBPACK_IMPORTED_MODULE_0__.postTitleInput.addEventListener("input", function () {
+  _model__WEBPACK_IMPORTED_MODULE_0__.postTitleInput.addEventListener("input", () => {
     setCharacterCounter(_model__WEBPACK_IMPORTED_MODULE_0__.postTitleInput, _model__WEBPACK_IMPORTED_MODULE_0__.postTitleCharacterCounter, postTitleCharacterCounterText, 0, 60);
   });
 });
@@ -1926,11 +1926,11 @@ __webpack_require__.r(__webpack_exports__);
   \*****************************/
 /***/ (() => {
 
-var mediaQuery = window.matchMedia('(max-width: 812px)');
+const mediaQuery = window.matchMedia('(max-width: 812px)');
 
 if (window.location.pathname !== '/' && mediaQuery.matches) {
-  var navbar = document.querySelector('.navigation');
-  var navigationTop = document.querySelector('.navigation__top');
+  const navbar = document.querySelector('.navigation');
+  const navigationTop = document.querySelector('.navigation__top');
   if (navbar) navbar.style.height = '100vh';
   if (navigationTop) navigationTop.style.alignItems = "flex-start";
 }
@@ -1952,69 +1952,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_model */ "./src/js/_model.js");
 /* harmony import */ var _display_alert__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_display-alert */ "./src/js/_display-alert.js");
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
 
 
-
-var deletePost = function deletePost() {
+const deletePost = () => {
   if (_model__WEBPACK_IMPORTED_MODULE_1__.deleteBtns.length === 0 && _model__WEBPACK_IMPORTED_MODULE_1__.showPageDeleteBtns.length === 0) return;
 
   function deletePost(deleteBtn) {
-    deleteBtn.addEventListener("click", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-      var _id, response;
+    deleteBtn.addEventListener("click", async () => {
+      try {
+        const _id = deleteBtn.dataset._id;
+        console.log(_id);
+        const response = await axios__WEBPACK_IMPORTED_MODULE_0___default()({
+          method: "DELETE",
+          url: `/blog/delete/${_id}`
+        });
+        console.log(response);
 
-      return regeneratorRuntime.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _context.prev = 0;
-              _id = deleteBtn.dataset._id;
-              console.log(_id);
-              _context.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default()({
-                method: "DELETE",
-                url: "/blog/delete/".concat(_id)
-              });
-
-            case 5:
-              response = _context.sent;
-              console.log(response);
-
-              if (!(response.status === 204)) {
-                _context.next = 12;
-                break;
-              }
-
-              (0,_display_alert__WEBPACK_IMPORTED_MODULE_2__.displayFlash)("success", "Post rimosso con successo");
-              setTimeout(function () {
-                window.location.href = "/blog";
-              }, 3000);
-              _context.next = 13;
-              break;
-
-            case 12:
-              throw new Error("Qualcosa è andato storto nell'eliminazione del post!");
-
-            case 13:
-              _context.next = 18;
-              break;
-
-            case 15:
-              _context.prev = 15;
-              _context.t0 = _context["catch"](0);
-              (0,_display_alert__WEBPACK_IMPORTED_MODULE_2__.displayFlash)("error", _context.t0.message);
-
-            case 18:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, _callee, null, [[0, 15]]);
-    })));
+        if (response.status === 204) {
+          (0,_display_alert__WEBPACK_IMPORTED_MODULE_2__.displayFlash)("success", "Post rimosso con successo");
+          setTimeout(() => {
+            window.location.href = "/blog";
+          }, 3000);
+        } else throw new Error("Qualcosa è andato storto nell'eliminazione del post!");
+      } catch (err) {
+        (0,_display_alert__WEBPACK_IMPORTED_MODULE_2__.displayFlash)("error", err.message);
+      }
+    });
   }
 
   if (_model__WEBPACK_IMPORTED_MODULE_1__.deleteBtns.length !== 0) _model__WEBPACK_IMPORTED_MODULE_1__.deleteBtns.forEach(deletePost);else _model__WEBPACK_IMPORTED_MODULE_1__.showPageDeleteBtns.forEach(deletePost);
@@ -2038,21 +2003,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _model__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_model */ "./src/js/_model.js");
 
 function displayFlash(type, message) {
-  var removeMessage = function removeMessage() {
+  const removeMessage = () => {
     _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.remove("translate-x");
   };
 
-  setTimeout(function () {
+  setTimeout(() => {
     removeMessage();
   }, 5000);
   if (_model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.contains("flash-message--error")) _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.remove("flash-message--error");
   if (_model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.contains("flash-message--success")) _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.remove("flash-message--success");
   if (_model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.contains("translate-x")) removeMessage();
-  _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.add("flash-message--".concat(type));
+  _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.add(`flash-message--${type}`);
   _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.classList.add("translate-x");
-  _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.innerHTML = "<div class=\"flash-message__inner-container\">".concat(message, "<span class=\"flash-message__close-button\">&times;</span></div>");
-  var span = document.querySelector(".flash-message__close-button");
-  span.addEventListener("click", function (e) {
+  _model__WEBPACK_IMPORTED_MODULE_0__.flashMessage.innerHTML = `<div class="flash-message__inner-container">${message}<span class="flash-message__close-button">&times;</span></div>`;
+  const span = document.querySelector(".flash-message__close-button");
+  span.addEventListener("click", e => {
     removeMessage();
   });
 }
@@ -2065,9 +2030,9 @@ function displayFlash(type, message) {
   \*************************/
 /***/ (() => {
 
-var checkboxes = document.querySelectorAll(".form__checkbox");
-checkboxes.forEach(function (checkbox) {
-  checkbox.addEventListener("change", function () {
+const checkboxes = document.querySelectorAll(".form__checkbox");
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
       checkbox.parentElement.querySelector(".form__checkbox--span--fill").style.opacity = 1;
     } else {
@@ -2089,13 +2054,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var input = document.querySelector(".form__input--file");
-var label = document.querySelector(".form__input--label");
+const input = document.querySelector(".form__input--file");
+const label = document.querySelector(".form__input--label");
 
-var inputFile = function inputFile() {
+const inputFile = () => {
   if (!input) return;
   input.addEventListener("change", function (e) {
-    var fileName = "";
+    let fileName = "";
     if (this.files && this.files.length > 1) fileName = (this.getAttribute("data-multiple-caption") || "").replace("{count}", this.files.length);else fileName = e.target.value.split("\\").pop();
     if (fileName) label.textContent = fileName;
   });
@@ -2116,9 +2081,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var lastURLWord = function lastURLWord() {
-  var currentURL = window.location.pathname;
-  var splittedURL = currentURL.split("/");
+const lastURLWord = () => {
+  const currentURL = window.location.pathname;
+  const splittedURL = currentURL.split("/");
   return splittedURL[splittedURL.length - 1];
 };
 
@@ -2133,11 +2098,11 @@ var lastURLWord = function lastURLWord() {
 /***/ (() => {
 
 (function () {
-  var imgTargets = document.querySelectorAll("img[data-src]");
+  const imgTargets = document.querySelectorAll("img[data-src]");
   if (imgTargets.length === 0) return;
 
-  var loadImg = function loadImg(entries, observer) {
-    entries.forEach(function (entry) {
+  const loadImg = function (entries, observer) {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       console.log(entry.target); // Replace src with data-src
 
@@ -2149,14 +2114,12 @@ var lastURLWord = function lastURLWord() {
     });
   };
 
-  var imgObserver = new IntersectionObserver(loadImg, {
+  const imgObserver = new IntersectionObserver(loadImg, {
     root: null,
     threshold: 0 //rootMargin: "-100px",
 
   });
-  imgTargets.forEach(function (img) {
-    return imgObserver.observe(img);
-  });
+  imgTargets.forEach(img => imgObserver.observe(img));
 })();
 
 /***/ }),
@@ -2180,15 +2143,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "deleteBtns": () => (/* binding */ deleteBtns),
 /* harmony export */   "showPageDeleteBtns": () => (/* binding */ showPageDeleteBtns)
 /* harmony export */ });
-var seoDescriptionCharacterCounter = document.querySelector(".new-post__character-counter");
-var pageTitleCharacterCounter = document.querySelector(".new-post__page-title-character-counter");
-var postTitleCharacterCounter = document.querySelector(".new-post__post-title-character-counter");
-var seoDescriptionInput = document.getElementById("post-seo-description");
-var postTitleInput = document.getElementById("post-title");
-var pageTitleInput = document.getElementById("page-title");
-var flashMessage = document.querySelector(".flash-message");
-var deleteBtns = document.querySelectorAll(".post-scheda__icon--delete");
-var showPageDeleteBtns = document.querySelectorAll(".admin-bar__button--delete");
+const seoDescriptionCharacterCounter = document.querySelector(".new-post__character-counter");
+const pageTitleCharacterCounter = document.querySelector(".new-post__page-title-character-counter");
+const postTitleCharacterCounter = document.querySelector(".new-post__post-title-character-counter");
+const seoDescriptionInput = document.getElementById("post-seo-description");
+const postTitleInput = document.getElementById("post-title");
+const pageTitleInput = document.getElementById("page-title");
+const flashMessage = document.querySelector(".flash-message");
+const deleteBtns = document.querySelectorAll(".post-scheda__icon--delete");
+const showPageDeleteBtns = document.querySelectorAll(".admin-bar__button--delete");
 
 /***/ }),
 
@@ -2198,10 +2161,10 @@ var showPageDeleteBtns = document.querySelectorAll(".admin-bar__button--delete")
   \*******************************/
 /***/ (() => {
 
-var overlay = document.querySelector(".overlay");
-var closeButton = document.querySelector(".overlay__close");
-var openButton = document.querySelector(".navigation__button");
-var navbar = document.querySelector(".navigation");
+const overlay = document.querySelector(".overlay");
+const closeButton = document.querySelector(".overlay__close");
+const openButton = document.querySelector(".navigation__button");
+const navbar = document.querySelector(".navigation");
 
 if (window.location.pathname !== "/") {
   if (navbar) {
@@ -2210,11 +2173,11 @@ if (window.location.pathname !== "/") {
   }
 }
 
-if (openButton) openButton.addEventListener("click", function () {
+if (openButton) openButton.addEventListener("click", () => {
   overlay.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 });
-if (closeButton) closeButton.addEventListener("click", function () {
+if (closeButton) closeButton.addEventListener("click", () => {
   overlay.classList.add("hidden");
   document.body.style.overflow = "auto";
 });
@@ -2236,209 +2199,150 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _display_alert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_display-alert */ "./src/js/_display-alert.js");
 /* harmony import */ var _last_url_word__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_last-url-word */ "./src/js/_last-url-word.js");
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 
 
 
+const newPost = () => {
+  document.addEventListener("DOMContentLoaded", async () => {
+    if (window.location.pathname !== "/blog/new-post" && (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() !== "edit") return;
+    const newPostForm = document.querySelector(".new-post__form");
+    const fileInputLabel = document.querySelector(".form__input--label");
+    const editPostImage = document.querySelector(".new-post__edit-image");
+    const pageTitleInput = document.getElementById("page-title");
+    const seoDescriptionInput = document.getElementById("post-seo-description");
+    const postTitleInput = document.getElementById("post-title");
+    let fileInput = document.querySelector("#post-image");
+    const originalPostId = newPostForm.querySelector("#post-id")?.value;
+    const originalSlug = newPostForm.querySelector("#slug").value;
+    const originalPageTitle = newPostForm.querySelector("#page-title").value;
+    const originalTitle = newPostForm.querySelector("#post-title").value;
+    const originalSubtitle = newPostForm.querySelector("#post-subtitle").value;
+    const originalPostContent = newPostForm.querySelector("#post-textarea").value;
+    const originalSeoDescription = newPostForm.querySelector("#post-seo-description").value;
+    const originalKeywords = newPostForm.querySelector("#keywords").value;
+    const originalImageAltText = newPostForm.querySelector("#image-alt-text").value;
+    const originalContent = {
+      _id: originalPostId,
+      slug: originalSlug,
+      pageTitle: originalPageTitle,
+      title: originalTitle,
+      subtitle: originalSubtitle,
+      content: originalPostContent,
+      seoDescription: originalSeoDescription,
+      keywords: originalKeywords,
+      imageAltText: originalImageAltText
+    };
+    const formContent = (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() === "edit" ? originalContent : {}; // console.log(formContent);
 
-var newPost = function newPost() {
-  document.addEventListener("DOMContentLoaded", /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-    var _newPostForm$querySel;
-
-    var newPostForm, fileInputLabel, editPostImage, pageTitleInput, seoDescriptionInput, postTitleInput, fileInput, originalPostId, originalSlug, originalPageTitle, originalTitle, originalSubtitle, originalPostContent, originalSeoDescription, originalKeywords, originalImageAltText, originalContent, formContent;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            if (!(window.location.pathname !== "/blog/new-post" && (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() !== "edit")) {
-              _context2.next = 2;
-              break;
-            }
-
-            return _context2.abrupt("return");
-
-          case 2:
-            newPostForm = document.querySelector(".new-post__form");
-            fileInputLabel = document.querySelector(".form__input--label");
-            editPostImage = document.querySelector(".new-post__edit-image");
-            pageTitleInput = document.getElementById("page-title");
-            seoDescriptionInput = document.getElementById("post-seo-description");
-            postTitleInput = document.getElementById("post-title");
-            fileInput = document.querySelector("#post-image");
-            originalPostId = (_newPostForm$querySel = newPostForm.querySelector("#post-id")) === null || _newPostForm$querySel === void 0 ? void 0 : _newPostForm$querySel.value;
-            originalSlug = newPostForm.querySelector("#slug").value;
-            originalPageTitle = newPostForm.querySelector("#page-title").value;
-            originalTitle = newPostForm.querySelector("#post-title").value;
-            originalSubtitle = newPostForm.querySelector("#post-subtitle").value;
-            originalPostContent = newPostForm.querySelector("#post-textarea").value;
-            originalSeoDescription = newPostForm.querySelector("#post-seo-description").value;
-            originalKeywords = newPostForm.querySelector("#keywords").value;
-            originalImageAltText = newPostForm.querySelector("#image-alt-text").value;
-            originalContent = {
-              _id: originalPostId,
-              slug: originalSlug,
-              pageTitle: originalPageTitle,
-              title: originalTitle,
-              subtitle: originalSubtitle,
-              content: originalPostContent,
-              seoDescription: originalSeoDescription,
-              keywords: originalKeywords,
-              imageAltText: originalImageAltText
-            };
-            formContent = (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() === "edit" ? originalContent : {}; // console.log(formContent);
-
-            tinymce.init({
-              selector: ".new-post__textarea",
-              height: "50rem",
-              plugins: "code emoticons table",
-              toolbar: "undo redo | bold italic underline strikethrough removeformat | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code | table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow tableinsertcolbefore tableinsertcolafter tabledeletecol",
-              init_instance_callback: function init_instance_callback(editor) {
-                editor.on("input", function () {
-                  formContent.content = tinymce.activeEditor.getContent();
-                });
-              }
-            });
-            newPostForm.addEventListener("input", function (e) {
-              var _e$target = e.target,
-                  name = _e$target.name,
-                  value = _e$target.value;
-              formContent[name] = value;
-
-              if (document.querySelector(".form__input--label") && e.target.files && e.target.files > 0) {
-                document.querySelector(".form__input--label").innerHTML = "<img class=\"form__input--file-icon\" src=\"/assets/icons/upload.png\">".concat(e.target.files[0].name);
-              }
-            });
-            fileInput.addEventListener("change", function (e) {
-              var files = e.target.files;
-              if (files.length > 0 && (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() !== "edit") fileInputLabel.textContent = files[0].name;
-
-              if (files.length > 0 && (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() === "edit") {
-                editPostImage.remove();
-                var container = document.querySelector(".new-post__input-container--edit-file-container");
-                container.innerHTML = "\n                        <input type=\"file\" class=\"form__input form__input--file\" id=\"post-image\"\n                        name=\"post-image\" accept=\"image/*\">\n                        <label class=\"form__input--label\" for=\"post-image\"><img class=\"form__input--file-icon\" src=\"/assets/icons/upload.png\">".concat(files[0].name, "</label>\n                    ");
-              }
-            });
-
-            if ((0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() === "edit") {
-              editPostImage.addEventListener("click", function () {
-                fileInput.click();
-              });
-            }
-
-            newPostForm.addEventListener("submit", /*#__PURE__*/function () {
-              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(e) {
-                var sendToBlogPost, form, result, slug, message;
-                return regeneratorRuntime.wrap(function _callee$(_context) {
-                  while (1) {
-                    switch (_context.prev = _context.next) {
-                      case 0:
-                        _context.prev = 0;
-
-                        sendToBlogPost = function sendToBlogPost(message) {
-                          (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("success", message);
-                          setTimeout(function () {
-                            window.location.pathname = "/blog/";
-                          }, 3000);
-                        };
-
-                        e.preventDefault();
-
-                        if (!(seoDescriptionInput.value.length < 120 || seoDescriptionInput.value.length > 320)) {
-                          _context.next = 6;
-                          break;
-                        }
-
-                        (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", "La descrizione SEO non è della lunghezza accettata");
-                        return _context.abrupt("return");
-
-                      case 6:
-                        if (postTitleInput.value.length > 60) (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", "Il titolo del post è troppo lungo");
-                        if (pageTitleInput.value.length > 60) (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", "Il titolo della pagina è troppo lungo");
-                        form = new FormData();
-                        if (formContent._id) form.append("_id", formContent._id);
-                        form.append("slug", formContent.slug);
-                        form.append("pageTitle", formContent.pageTitle);
-                        form.append("title", formContent.title);
-                        form.append("subtitle", formContent.subtitle);
-                        form.append("content", formContent.content || tinymce.activeEditor.getContent());
-                        form.append("seoDescription", formContent.seoDescription);
-                        form.append("keywords", formContent.keywords);
-                        form.append("imageAltText", formContent.imageAltText);
-                        if (fileInput.files && fileInput.files.length > 0) form.append("post-image", fileInput.files[0] ? fileInput.files[0] : editPostImage.getAttribute("src")); // for (var [key, value] of form.entries()) {
-                        //   console.log(key, value);
-                        // }
-
-                        if (!((0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() !== "edit")) {
-                          _context.next = 26;
-                          break;
-                        }
-
-                        _context.next = 22;
-                        return axios__WEBPACK_IMPORTED_MODULE_0___default()({
-                          method: "POST",
-                          url: "/blog/new-post",
-                          data: form
-                        });
-
-                      case 22:
-                        result = _context.sent;
-                        console.log(result);
-                        _context.next = 30;
-                        break;
-
-                      case 26:
-                        slug = window.location.pathname.split("/")[2];
-                        _context.next = 29;
-                        return axios__WEBPACK_IMPORTED_MODULE_0___default()({
-                          method: "PATCH",
-                          url: "/blog/".concat(slug, "/edit"),
-                          data: form
-                        });
-
-                      case 29:
-                        result = _context.sent;
-
-                      case 30:
-                        if (result.status === 201) {
-                          sendToBlogPost("Post creato con successo");
-                        } else if (result.status === 200) {
-                          sendToBlogPost("Post modificato con successo");
-                        }
-
-                        _context.next = 39;
-                        break;
-
-                      case 33:
-                        _context.prev = 33;
-                        _context.t0 = _context["catch"](0);
-                        message = _context.t0.message;
-                        if (message.startsWith("E11000")) message = "Sembra che ci sia già un post con questo titolo.";
-                        (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", message);
-                        console.dir(_context.t0);
-
-                      case 39:
-                      case "end":
-                        return _context.stop();
-                    }
-                  }
-                }, _callee, null, [[0, 33]]);
-              }));
-
-              return function (_x) {
-                return _ref2.apply(this, arguments);
-              };
-            }());
-
-          case 25:
-          case "end":
-            return _context2.stop();
-        }
+    tinymce.init({
+      selector: ".new-post__textarea",
+      height: "50rem",
+      plugins: "code emoticons table",
+      toolbar: "undo redo | bold italic underline strikethrough removeformat | forecolor backcolor | alignleft aligncenter alignright alignjustify | outdent indent | emoticons code | table tabledelete | tableprops tablerowprops tablecellprops | tableinsertrowbefore tableinsertrowafter tabledeleterow tableinsertcolbefore tableinsertcolafter tabledeletecol",
+      init_instance_callback: function (editor) {
+        editor.on("input", function () {
+          formContent.content = tinymce.activeEditor.getContent();
+        });
       }
-    }, _callee2);
-  })));
+    });
+    newPostForm.addEventListener("input", e => {
+      let {
+        name,
+        value
+      } = e.target;
+      formContent[name] = value;
+
+      if (document.querySelector(".form__input--label") && e.target.files && e.target.files > 0) {
+        document.querySelector(".form__input--label").innerHTML = `<img class="form__input--file-icon" src="/assets/icons/upload.png">${e.target.files[0].name}`;
+      }
+    });
+    fileInput.addEventListener("change", e => {
+      const {
+        files
+      } = e.target;
+      if (files.length > 0 && (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() !== "edit") fileInputLabel.textContent = files[0].name;
+
+      if (files.length > 0 && (0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() === "edit") {
+        editPostImage.remove();
+        const container = document.querySelector(".new-post__input-container--edit-file-container");
+        container.innerHTML = `
+                        <input type="file" class="form__input form__input--file" id="post-image"
+                        name="post-image" accept="image/*">
+                        <label class="form__input--label" for="post-image"><img class="form__input--file-icon" src="/assets/icons/upload.png">${files[0].name}</label>
+                    `;
+      }
+    });
+
+    if ((0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() === "edit") {
+      editPostImage.addEventListener("click", () => {
+        fileInput.click();
+      });
+    }
+
+    newPostForm.addEventListener("submit", async e => {
+      try {
+        e.preventDefault();
+
+        if (seoDescriptionInput.value.length < 120 || seoDescriptionInput.value.length > 320) {
+          (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", "La descrizione SEO non è della lunghezza accettata");
+          return;
+        }
+
+        if (postTitleInput.value.length > 60) (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", "Il titolo del post è troppo lungo");
+        if (pageTitleInput.value.length > 60) (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", "Il titolo della pagina è troppo lungo");
+        const form = new FormData();
+        if (formContent._id) form.append("_id", formContent._id);
+        form.append("slug", formContent.slug);
+        form.append("pageTitle", formContent.pageTitle);
+        form.append("title", formContent.title);
+        form.append("subtitle", formContent.subtitle);
+        form.append("content", formContent.content || tinymce.activeEditor.getContent());
+        form.append("seoDescription", formContent.seoDescription);
+        form.append("keywords", formContent.keywords);
+        form.append("imageAltText", formContent.imageAltText);
+        if (fileInput.files && fileInput.files.length > 0) form.append("post-image", fileInput.files[0] ? fileInput.files[0] : editPostImage.getAttribute("src")); // for (var [key, value] of form.entries()) {
+        //   console.log(key, value);
+        // }
+
+        let result;
+
+        if ((0,_last_url_word__WEBPACK_IMPORTED_MODULE_2__.default)() !== "edit") {
+          result = await axios__WEBPACK_IMPORTED_MODULE_0___default()({
+            method: "POST",
+            url: "/blog/new-post",
+            data: form
+          });
+          console.log(result);
+        } else {
+          const slug = window.location.pathname.split("/")[2];
+          result = await axios__WEBPACK_IMPORTED_MODULE_0___default()({
+            method: "PATCH",
+            url: `/blog/${slug}/edit`,
+            data: form
+          });
+        }
+
+        function sendToBlogPost(message) {
+          (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("success", message);
+          setTimeout(() => {
+            window.location.pathname = `/blog/`;
+          }, 3000);
+        }
+
+        if (result.status === 201) {
+          sendToBlogPost("Post creato con successo");
+        } else if (result.status === 200) {
+          sendToBlogPost("Post modificato con successo");
+        }
+      } catch (err) {
+        let message = err.message;
+        if (message.startsWith("E11000")) message = "Sembra che ci sia già un post con questo titolo.";
+        (0,_display_alert__WEBPACK_IMPORTED_MODULE_1__.displayFlash)("error", message);
+        console.dir(err);
+      }
+    });
+  });
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newPost);
@@ -2451,60 +2355,18 @@ var newPost = function newPost() {
   \*********************************/
 /***/ (() => {
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var videoIcon = document.querySelector(".about-video__play-icon");
-  var overlays = document.querySelectorAll(".video-player");
-  var closeIcons = document.querySelectorAll(".video-player__close");
+document.addEventListener("DOMContentLoaded", () => {
+  const videoIcon = document.querySelector(".about-video__play-icon");
+  const overlays = document.querySelectorAll(".video-player");
+  let closeIcons = document.querySelectorAll(".video-player__close");
   if (!videoIcon) return;
-  videoIcon.addEventListener("click", function () {
-    var _iterator = _createForOfIteratorHelper(overlays),
-        _step;
-
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var overlay = _step.value;
-        overlay.classList.remove("hidden");
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
+  videoIcon.addEventListener("click", () => {
+    for (let overlay of overlays) overlay.classList.remove("hidden");
   });
 
-  var _iterator2 = _createForOfIteratorHelper(closeIcons),
-      _step2;
-
-  try {
-    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-      var closeIcon = _step2.value;
-      closeIcon.addEventListener("click", function () {
-        var _iterator3 = _createForOfIteratorHelper(overlays),
-            _step3;
-
-        try {
-          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-            var overlay = _step3.value;
-            overlay.classList.add("hidden");
-          }
-        } catch (err) {
-          _iterator3.e(err);
-        } finally {
-          _iterator3.f();
-        }
-      });
-    }
-  } catch (err) {
-    _iterator2.e(err);
-  } finally {
-    _iterator2.f();
-  }
+  for (let closeIcon of closeIcons) closeIcon.addEventListener("click", () => {
+    for (let overlay of overlays) overlay.classList.add("hidden");
+  });
 });
 
 /***/ }),

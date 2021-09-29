@@ -82,8 +82,10 @@ exports.calendlyAccountEvent = async (req, res) => {
     // console.log(account);
 
     const {
-      payload: { email },
+      payload: { email, name },
     } = req.body;
+
+    const [first_name, last_name] = name.split(" ");
 
     await axios({
       url: "https://sj-api.com/externalapp/track",
@@ -94,7 +96,7 @@ exports.calendlyAccountEvent = async (req, res) => {
       },
       data: {
         event_name: "calendly_creation",
-        contact: { email },
+        contact: { email, first_name, last_name },
       },
     });
 

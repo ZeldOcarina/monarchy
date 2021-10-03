@@ -75,39 +75,39 @@ exports.calendlyNewEvent = async (req, res) => {
   }
 };
 
-exports.calendlyAccountEvent = async (req, res) => {
-  const account = req.params.account;
-  try {
-    // console.log(req.body);
-    // console.log(account);
+// exports.calendlyAccountEvent = async (req, res) => {
+//   const account = req.params.account;
+//   try {
+//     // console.log(req.body);
+//     // console.log(account);
 
-    const {
-      payload: { email, name },
-    } = req.body;
+//     const {
+//       payload: { email, name },
+//     } = req.body;
 
-    const [first_name, last_name] = name.split(" ");
+//     const [first_name, last_name] = name.split(" ");
 
-    await axios({
-      url: "https://sj-api.com/externalapp/track",
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: process.env.SALESJET_VIVA_API_KEY,
-      },
-      data: {
-        event_name: "calendly_creation",
-        contact: { email, first_name, last_name },
-      },
-    });
+//     await axios({
+//       url: "https://sj-api.com/externalapp/track",
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//         Authorization: process.env.SALESJET_VIVA_API_KEY,
+//       },
+//       data: {
+//         event_name: "calendly_creation",
+//         contact: { email, first_name, last_name },
+//       },
+//     });
 
-    return res
-      .status(201)
-      .json({ status: "success", message: "Appointment successfully created" });
-  } catch (err) {
-    console.error(err);
-    return res.status(500).json({
-      status: "error",
-      message: "An error has occured while processing this request.",
-    });
-  }
-};
+//     return res
+//       .status(201)
+//       .json({ status: "success", message: "Appointment successfully created" });
+//   } catch (err) {
+//     console.error(err);
+//     return res.status(500).json({
+//       status: "error",
+//       message: "An error has occured while processing this request.",
+//     });
+//   }
+// };

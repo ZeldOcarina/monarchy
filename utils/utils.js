@@ -28,7 +28,7 @@ exports.handleConversionAPIError = async function (err) {
     html: `<p>Here is the error we are having:</p><p>${err.stack}</p>`,
   };
 
-  //await transporter.sendMail(message);
+  await transporter.sendMail(message);
   console.log(err);
 };
 

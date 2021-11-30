@@ -30,6 +30,7 @@
     "npm": "7.7.6"
   },
   "dependencies": {
+    "@adobe/pdfservices-node-sdk": "^2.1.0",
     "aws-sdk": "^2.515.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",

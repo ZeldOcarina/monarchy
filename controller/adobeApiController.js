@@ -95,6 +95,32 @@ exports.handleGiftCardGeneration = async (req, res) => {
 
     await transporter.sendMail(message);
 
+    if (req.body.recipientEmail) {
+      const recipientHtml = await ejs.renderFile(
+        path.join(__dirname, "../views/emails/bc-recipient-gift-card.ejs"),
+        {
+          donatorName: req.body.giftCardData.donatorName,
+        }
+      );
+
+      const message2 = {
+        from: "info@bodycontourz.com",
+        to: req.body.recipientEmail,
+        subject: "Here's your gift card!",
+        html: recipientHtml,
+        attachments: [
+          {
+            filename: "gift-card.pdf",
+            content: base64String,
+            contentType: "application/pdf",
+            encoding: "base64",
+          },
+        ],
+      };
+
+      await transporter.sendMail(message2);
+    }
+
     res.status(201).json({
       status: "success",
       data: base64String,

@@ -25,9 +25,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   }
 
   @if $breakpoint == phone-port {
-    @media only screen and (max-width: 26.25em) {
+    @media only screen and (max-width: 28.125em) {
       @content;
-    } // 420px
+    } // 450px
   }
 
   @if $breakpoint == phone-land {

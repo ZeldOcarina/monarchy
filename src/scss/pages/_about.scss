@@ -1,8 +1,42 @@
 .founder {
-  display: flex;
-  justify-content: center;
   width: $container-width;
-  margin: 10rem auto;
+  margin: 6rem auto 10rem auto;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    &:last-child {
+      flex-direction: row-reverse;
+      margin-top: 6rem;
+
+      .founder__text {
+        margin-right: 0;
+        margin-left: 5%;
+      }
+    }
+  }
+  //flex-direction: column;
+
+  &__title {
+    margin-bottom: 5rem;
+
+    @include respond(phone-port) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 2rem;
+
+    @include respond(phone-port) {
+      display: none;
+    }
+  }
 
   @include respond(tab-land) {
     width: $responsive-container;
@@ -26,18 +60,15 @@
   }
 
   &__title {
-    margin-bottom: 5rem;
+    //margin-bottom: 5rem;
     font-weight: 600;
 
     @include respond(laptop) {
       font-size: 3.8rem !important;
     }
     @include respond(tab-port) {
-      width: 200%;
+      width: 100%;
       display: inline-block;
-    }
-    @include respond(phone-port) {
-      display: none;
     }
 
     &--phone {
@@ -73,7 +104,7 @@
 
   &__image-container {
     width: 35%;
-    margin-top: 12rem;
+    //margin-top: 12rem;
     position: relative;
 
     @include respond(tab-land) {

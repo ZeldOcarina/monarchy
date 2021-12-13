@@ -1,60 +1,81 @@
 <%- include('partials/header'); %>
 <section class="founder">
-    <h2 class="founder__title--phone secondary-header">Meet Our Founder</h2>
-    <div class="founder__text">
-        <h2 class="founder__title secondary-header">Meet Our Founder</h2>
-        <div class="founder__image-container--responsive">
-        <img class="founder__image" src="assets/about/founder.jpg" />
-        <div class="founder__image-caption">
-            <span class="founder__image-caption--title">Nicole Tabs</span>
-            <span class="founder__image-caption--subtitle">CEO and Co-founder</span>
-        </div>
+  <h2 class="founder__title--phone secondary-header">Meet Our Founder</h2>
+  <div class="founder__text">
+    <h2 class="founder__title secondary-header">Meet Our Founder</h2>
+    <div class="founder__image-container--responsive">
+      <img class="founder__image" src="assets/about/founder.jpg" />
+      <div class="founder__image-caption">
+        <span class="founder__image-caption--title">Nicole Tabs</span>
+        <span class="founder__image-caption--subtitle">CEO and Co-founder</span>
+      </div>
     </div>
-        <p class="founder__paragraph">Nicole is a serial entrepreneur and Humanitarian.</p>
-        <p class="founder__paragraph">She is currently the CEO of Monarchy Media, Co-Founder of Upliffs, a modern fitness brand, and Co-Founder of Serendipity</p>
-        <p class="founder__paragraph">Film Group, a film production company that just announced its first TV series with ABC.</p>
+    <p class="founder__paragraph">
+      Nicole is a serial entrepreneur and Humanitarian.
+    </p>
+    <p class="founder__paragraph">
+      She is currently the CEO of Monarchy Media, Co-Founder of Upliffs, a
+      modern fitness brand, and Co-Founder of Serendipity
+    </p>
+    <p class="founder__paragraph">
+      Film Group, a film production company that just announced its first TV
+      series with ABC.
+    </p>
+  </div>
+  <div class="founder__image-container">
+    <img class="founder__image" src="assets/about/founder.jpg" />
+    <div class="founder__image-caption">
+      <span class="founder__image-caption--title">Nicole Tabs</span>
+      <span class="founder__image-caption--subtitle">CEO and Co-founder</span>
     </div>
-    <div class="founder__image-container">
-        <img class="founder__image" src="assets/about/founder.jpg" />
-        <div class="founder__image-caption">
-            <span class="founder__image-caption--title">Nicole Tabs</span>
-            <span class="founder__image-caption--subtitle">CEO and Co-founder</span>
-        </div>
-    </div>
+  </div>
 </section>
 <section class="about-video">
-    <h2 class="about-video__title secondary-header">MONARCHY TEAM / OUR VALUES</h2>
-    <p class="about-video__paragraph">In less than 2 years Monarchy has developed unique business strategies and is growing in the market with a very different approach than regular agencies. Meet some of our leaders and get in touch to learn more about us. #WeAreMonarchy</p>
-    <div class="about-video__thumb-container">
-        <img class="about-video__thumbnail" src="/assets/about/video/video-background.jpg"/>
-        <img class="about-video__play-icon" src="/assets/about/video/play-icon.svg"/>
-    </div>
+  <h2 class="about-video__title secondary-header">
+    MONARCHY TEAM / OUR VALUES
+  </h2>
+  <p class="about-video__paragraph">
+    In less than 2 years Monarchy has developed unique business strategies and
+    is growing in the market with a very different approach than regular
+    agencies. Meet some of our leaders and get in touch to learn more about us.
+    #WeAreMonarchy
+  </p>
+  <div class="about-video__thumb-container">
+    <img
+      class="about-video__thumbnail"
+      src="/assets/about/video/video-background.jpg"
+    />
+    <img
+      class="about-video__play-icon"
+      src="/assets/about/video/play-icon.svg"
+    />
+  </div>
 </section>
-    <%- include('components/divider') %>
+<%- include('components/divider') %>
 <section class="leadership">
-    <h2 class="leadership__title secondary-header">Leadership</h2>
-    <p class="leadership__paragraph">With a wealth of skills and experience between them, meet the leaders who have made Monarchy the powerhouse it is today.</p>
-    <div class="leadership__cards-container">
-        <% for(let i = 0; i < 1; i++) { %>
-        <% const { name, position, image } = team.leadership[i]; %>
-            <%- include('components/team-card', { name, position, image }); %>
-        <% }; %>        
-    </div>
-    <div class="leadership__cards-container leadership__cards-container--bottom">
-        <% for(let { name, position, image } of team.leadership) { %>
-        <% if(name === 'Nicole T') continue; %>
-            <%- include('components/team-card', { name, position, image }); %>
-        <% }; %> 
-    </div>
-    <%- include('components/divider') %>
+  <h2 class="leadership__title secondary-header">Leadership</h2>
+  <p class="leadership__paragraph">
+    With a wealth of skills and experience between them, meet the leaders who
+    have made Monarchy the powerhouse it is today.
+  </p>
+  <div class="leadership__cards-container">
+    <% for(let {name, position, image} of team.leadership) { %> <%-
+    include('components/team-card', { name, position,image }); %> <% }; %>
+  </div>
+  <div class="leadership__cards-container leadership__cards-container--bottom">
+    <% for(let { name, position, image } of team.executives) { %><%-
+    include('components/team-card', { name, position, image }); %> <% }; %>
+  </div>
+  <%- include('components/divider') %>
 </section>
 <section class="leadership">
-    <h2 class="leadership__title secondary-header">#TEAMMONARCHY</h2>
-    <p class="leadership__paragraph">Here are some of our teammates, we love them and what they do.</p>
-    <div class="leadership__cards-container leadership__cards-container--team">
-        <% for(let { name, position, image } of team.team) { %>
-            <%- include('components/team-card', { name, position, image }); %>
-        <% }; %> 
-    </div>
+  <h2 class="leadership__title secondary-header">#TEAMMONARCHY</h2>
+  <p class="leadership__paragraph">
+    Here are some of our teammates, we love them and what they do.
+  </p>
+  <div class="leadership__cards-container leadership__cards-container--team">
+    <% for(let { name, position, image } of team.team) { %> <%-
+    include('components/team-card', { name, position, image }); %> <% }; %>
+  </div>
 </section>
 <%- include('partials/footer'); %>

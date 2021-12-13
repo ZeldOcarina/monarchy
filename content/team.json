@@ -6,32 +6,24 @@
       "image": "/assets/about/team/leadership/nicole.jpg"
     },
     {
-      "name": "Alessandro L",
-      "position": "Chief Programs Officer",
-      "image": "/assets/about/team/leadership/alessandro.jpg"
+      "name": "Andrea D",
+      "position": "Co-Founder",
+      "image": "/assets/about/team/leadership/co-founder.jpg"
+    }
+  ],
+  "executives": [
+    {
+      "name": "Micaela Rudari",
+      "position": "Chief Operations Officer",
+      "image": "/assets/about/team/leadership/micaela.jpg"
     },
     {
       "name": "Mattia R",
       "position": "Chief Technical Officer",
       "image": "/assets/about/team/leadership/mattia.jpg"
-    },
-    {
-      "name": "Fabio A",
-      "position": "President - Monarchy Media Italia",
-      "image": "/assets/about/team/leadership/fabio.jpg"
     }
   ],
   "team": [
-    {
-      "name": "Tatiana M",
-      "position": "Creative Media Director",
-      "image": "/assets/about/team/team/tatiana.jpg"
-    },
-    {
-      "name": "Sven H",
-      "position": "Video Director",
-      "image": "/assets/about/team/team/sven.jpg"
-    },
     {
       "name": "Anies C",
       "position": "Social Media Officer",
@@ -43,54 +35,34 @@
       "image": "/assets/about/team/team/bari.jpg"
     },
     {
-      "name": "Roger T",
-      "position": "Products Director",
-      "image": "/assets/about/team/team/roger.jpg"
-    },
-    {
       "name": "May A",
       "position": "English Copywriter",
       "image": "/assets/about/team/team/may.jpg"
     },
     {
-      "name": "Marco M",
-      "position": "Italian Copywriter",
-      "image": "/assets/about/team/team/marco.jpg"
+      "name": "Jenna M",
+      "position": "Creativity Director",
+      "image": "/assets/about/team/team/jenna.png"
     },
     {
-      "name": "Erika S",
-      "position": "Content Creator",
-      "image": "/assets/about/team/team/erika.jpg"
+      "name": "Pablo B",
+      "position": "Social Media Manager",
+      "image": "/assets/about/team/team/pablo.png"
     },
     {
-      "name": "Valentina D",
-      "position": "Content Creator",
-      "image": "/assets/about/team/team/valentina.jpg"
+      "name": "Sven H",
+      "position": "Video Editor",
+      "image": "/assets/about/team/team/sven.jpg"
     },
     {
-      "name": "Laura A",
-      "position": "Projects Manager",
-      "image": "/assets/about/team/team/laura.jpg"
+      "name": "Avgustina M",
+      "position": "Media Buyer",
+      "image": "/assets/about/team/team/avgustina.jpeg"
     },
     {
-      "name": "Eunice A",
-      "position": "Executive Assistant",
-      "image": "/assets/about/team/team/eunice.jpg"
-    },
-    {
-      "name": "Randy P",
-      "position": "Graphic Designer",
-      "image": "/assets/about/team/team/randy.jpg"
-    },
-    {
-      "name": "Henry P",
-      "position": "Web Developer",
-      "image": "/assets/about/team/team/henry.jpg"
-    },
-    {
-      "name": "Yamir S",
-      "position": "Graphic Designer",
-      "image": "/assets/about/team/team/yamir.jpg"
+      "name": "Eros R",
+      "position": "Marketing Interne",
+      "image": "/assets/about/team/team/eros.png"
     }
   ]
 }

@@ -1,19 +1,19 @@
 {
   "leadership": [
     {
-      "name": "Nicole T",
-      "position": "Founder and CEO",
-      "image": "/assets/about/team/leadership/nicole.jpg"
+      "name": "Andrea D",
+      "position": "CEO & Co-Founder",
+      "image": "/assets/about/team/leadership/co-founder.jpg"
     },
     {
-      "name": "Andrea D",
-      "position": "Co-Founder",
-      "image": "/assets/about/team/leadership/co-founder.jpg"
+      "name": "Nicole T",
+      "position": "Co-Founder & Creative Director",
+      "image": "/assets/about/team/leadership/nicole.jpg"
     }
   ],
   "executives": [
     {
-      "name": "Micaela Rudari",
+      "name": "Micaela R",
       "position": "Chief Operations Officer",
       "image": "/assets/about/team/leadership/micaela.jpg"
     },

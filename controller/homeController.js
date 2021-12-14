@@ -17,7 +17,7 @@ exports.getAboutPage = (req, res) => {
     title: "We are Monarchy",
     subtitle:
       "A full service marketing engine that generates attention, leads and sales.",
-    videoUrl: "https://player.vimeo.com/video/463782484",
+    videoUrl: "https://player.vimeo.com/video/656611333",
     team,
   });
 };

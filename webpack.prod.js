@@ -3,7 +3,7 @@ const common = require("./webpack.common");
 const merge = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
@@ -15,7 +15,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, "public/js"),
   },
   optimization: {
-    minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].css" }),

@@ -15,6 +15,7 @@ const {
 
 const {
   handleGiftCardGeneration,
+  handleMinaMellanoCertGeneration,
 } = require("../controller/adobeApiController");
 
 const router = express.Router();
@@ -27,5 +28,6 @@ router.post("/facebook/lead", facebookLeadEvent);
 router.post("/facebook/shop-visit", facebookShopVisitEvent);
 router.post("/facebook/purchase", facebookPurchaseEvent);
 router.post("/adobe/gift-card/", handleGiftCardGeneration);
+router.post("/adobe/mina-cert/", handleMinaMellanoCertGeneration);
 
 module.exports = router;

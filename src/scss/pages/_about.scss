@@ -1,3 +1,15 @@
+.top-video {
+  width: 45%;
+  margin: 4rem auto;
+
+  @include respond(tab-land) {
+    width: $container-width;
+  }
+  @include respond(phone-port) {
+    width: 100%;
+  }
+}
+
 .founder {
   width: $container-width;
   margin: 6rem auto 10rem auto;
@@ -35,6 +47,10 @@
 
     @include respond(phone-port) {
       display: none;
+    }
+
+    a {
+      color: $color-secondary;
     }
   }
 

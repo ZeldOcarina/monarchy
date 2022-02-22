@@ -39,16 +39,20 @@ exports.upliffsNewCustomer = async (req, res) => {
 
 exports.calendlyNewEvent = async (req, res) => {
   try {
-    console.log(req.body);
-    const {
-      payload: { email },
-    } = req.body;
-
     if (email === "info@bodycontourz.com")
-      return res.status(200).json({
+      return res.status(202).json({
         status: "success",
         data: "Sales Jet connection not necessary",
       });
+
+    return res.status(202).json({
+      status: "success",
+      data: "Service temporarily suspended",
+    });
+
+    const {
+      payload: { email },
+    } = req.body;
 
     await axios({
       url: "https://sj-api.com/externalapp/track",

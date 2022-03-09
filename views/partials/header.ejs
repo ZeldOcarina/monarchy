@@ -1,77 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="/css/app.min.css">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/app.min.css" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <% if(tinyMCEKey) { %>
-        <script src="https://cdn.tiny.cloud/1/<%= tinyMCEKey %>/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <% } %>
-    <% if(isBlogShowPage && post) { %>
-        <title><%= title %></title> 
-        <meta name="description" content="<%= post.seoDescription %>">
-        <meta name="author" content="<%= post.author.username %>">
-        <meta name="keywords" content="<%= post.keywords %>">
+    <script
+      src="https://cdn.tiny.cloud/1/<%= tinyMCEKey %>/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <% } %> <% if(isBlogShowPage && post) { %>
+    <title><%= tabTitle || title %></title>
+    <meta name="description" content="<%= post && post.seoDescription %>" />
+    <meta
+      name="author"
+      content="<%= post && post.author && post.author.username %>"
+    />
+    <meta name="keywords" content="<%= post && post.keywords %>" />
     <% } else { %>
-        <title>Monarchy | The Marketing Engine</title>
+    <title>Monarchy | The Marketing Engine</title>
     <% } %>
-</head>
-<body>
-<div class="flash-message"></div>
-<nav class="overlay hidden">
-    <img class="overlay__close" src="/assets/navigation-icons/close.svg" alt="close the menu button">
-    <div class="overlay__link-container">
+  </head>
+  <body>
+    <div class="flash-message"></div>
+    <nav class="overlay hidden">
+      <img
+        class="overlay__close"
+        src="/assets/navigation-icons/close.svg"
+        alt="close the menu button"
+      />
+      <div class="overlay__link-container">
         <a class="overlay__item" href="/about">Who We Are</a>
+        <a class="overlay__item" href="/manifesto">Our Manifesto</a>
         <a class="overlay__item" href="/service">What We Do</a>
         <a class="overlay__item" href="/clients">Our Clients</a>
         <a class="overlay__item" href="/contacts">Contact Us</a>
-    </div>
-    <div class="overlay__footer">
-        <%- include('footer'); %>
-    </div>
-</nav>
-<% if(user) { %>
+      </div>
+      <div class="overlay__footer"><%- include('footer'); %></div>
+    </nav>
+    <% if(user) { %>
     <div class="admin-bar">
-        <div class="admin-bar__container">
-            <p class="admin-bar__message">Welcome back, <%= user.username %></p>
-            <div class="admin-bar__right-container">
-                <a href="/blog/new-post" class="admin-bar__button">Add New Post</a>
-                <% if(isBlogShowPage && post) { %>
-                    <a href="/blog/<%= post.slug %>/edit" class="admin-bar__button admin-bar__button--edit">Edit Post</a>
-                    <a class="admin-bar__button admin-bar__button--delete" data-_id="<%= post._id %>">Delete Post</a>
-                <% } %>
-                <a href="/authentication/logout" class="admin-bar__button">Logout</a>
-            </div>
+      <div class="admin-bar__container">
+        <p class="admin-bar__message">Welcome back, <%= user.username %></p>
+        <div class="admin-bar__right-container">
+          <a href="/blog/new-post" class="admin-bar__button">Add New Post</a>
+          <% if(isBlogShowPage && post) { %>
+          <a
+            href="/blog/<%= post.slug %>/edit"
+            class="admin-bar__button admin-bar__button--edit"
+            >Edit Post</a
+          >
+          <a
+            class="admin-bar__button admin-bar__button--delete"
+            data-_id="<%= post._id %>"
+            >Delete Post</a
+          >
+          <% } %>
+          <a href="/authentication/logout" class="admin-bar__button">Logout</a>
         </div>
+      </div>
     </div>
-<% } %>
-<header class="navigation">
-    <div class="navigation__top">
+    <% } %>
+    <header class="navigation">
+      <div class="navigation__top">
         <a href="/" class="navigation__brand">
-            <img class="navigation__icon" src="/assets/monarchy-word-logo.svg" />
+          <img class="navigation__icon" src="/assets/monarchy-word-logo.svg" />
         </a>
         <div class="navigation__button">
-            <img class="navigation__icon navigation__icon--butterfly" src="/assets/monarchy-butterfly.svg" />
-            <span class="navigation__button-text">MENU</span>
+          <img
+            class="navigation__icon navigation__icon--butterfly"
+            src="/assets/monarchy-butterfly.svg"
+          />
+          <span class="navigation__button-text">MENU</span>
         </div>
+      </div>
+      <% if(title && subtitle) { %>
+      <div class="navigation__titles-container">
+        <h1 class="navigation__title"><%= title %></h1>
+        <h2 class="navigation__subtitle"><%= subtitle %></h2>
+      </div>
+      <% } %>
+    </header>
+    <% if(error && error.length > 0) { %>
+    <div class="message message--error"><%= error %></div>
+    <% } %> <% if(success && success.length > 0) { %>
+    <div class="message message--success"><%= success %></div>
+    <% } %> <% if(message && message.message) { %>
+    <div class="message message--<%= message.type %>">
+      <%= message.message %>
     </div>
-    <% if(title && subtitle) { %>
-        <div class="navigation__titles-container">
-            <h1 class="navigation__title"><%= title %></h1>
-            <h2 class="navigation__subtitle"><%= subtitle %></h2>
-        </div>
     <% } %>
-</header>
-<% if(error && error.length > 0) { %>
-<div class="message message--error"><%= error %></div>
-<% } %>
-<% if(success && success.length > 0) { %>
-<div class="message message--success"><%= success %></div>
-<% } %>
-<% if(message && message.message) { %>
-<div class="message message--<%= message.type %>"><%= message.message %></div>
-<% } %>
-
+  </body>
+</html>

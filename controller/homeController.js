@@ -41,3 +41,15 @@ exports.getClientsPage = (req, res) => {
     clientsPageCustomers,
   });
 };
+
+exports.getManifestoPage = (req, res) => {
+  res.status(200).render("manifesto", {
+    tabTitle: "Monarchy | Manifesto",
+    title: "Manifesto",
+    subtitle: "Building companies that build society",
+    description:
+      "Monarchy has a precise manifesto we abide to. Find out what it is on our website monarchy.io",
+    keywords: "Monarchy, manifesto, site manifesto, purpose",
+    author: "Anies Castillo and Andrea d'Agostini",
+  });
+};

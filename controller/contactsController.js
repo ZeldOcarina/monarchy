@@ -53,11 +53,7 @@ exports.organizeFormData = (req, res, next) => {
     req.originalUrl === "/contacts/newsletter-subscription" &&
     !req.body.promotional_consent
   )
-    return res
-      .status(400)
-      .redirect(
-        "/blog?message=fail&reason=You must accept to receive our newsletter!"
-      );
+    return res.status(400).redirect("/contacts");
 
   next();
 };
@@ -117,18 +113,13 @@ exports.postContact = async (req, res, next) => {
       message: message,
     };
 
-    if (req.originalUrl === "/contacts") res.status(400).render("contacts");
-    else res.status(400).redirect(`/blog?message=fail&reason=${message}`);
+    res.status(400).render("contacts");
   }
 };
 
 exports.redirectToPage = (req, res) => {
   console.log(req.originalUrl);
-  if (req.originalUrl === "/contacts") {
-    res.status(201).render("contacts");
-  } else {
-    res.status(201).redirect("/blog?message=success");
-  }
+  res.status(201).render("contacts");
 };
 
 exports.postToSalesJet = async (req, res, next) => {
@@ -149,15 +140,12 @@ exports.postToSalesJet = async (req, res, next) => {
   } catch (err) {
     console.error(err);
 
-    if (req.originalUrl === "/contacts") {
-      res.locals.message = {
-        type: "error",
-        message:
-          "We had a problem subscribing you to our newsletter. Please write info@monarchy.io",
-      };
+    res.locals.message = {
+      type: "error",
+      message:
+        "We had a problem subscribing you to our newsletter. Please write info@monarchy.io",
+    };
 
-      res.status(500).render("contacts");
-    }
-    res.status(500).redirect("/blog?message=fail");
+    res.status(500).render("contacts");
   }
 };

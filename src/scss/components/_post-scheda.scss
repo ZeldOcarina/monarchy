@@ -119,4 +119,8 @@
       background-color: darken($color-tertiary, 10%);
     }
   }
+
+  &__image {
+    width: 100%;
+  }
 }

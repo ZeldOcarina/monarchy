@@ -1171,6 +1171,9 @@ body h6 {
 .post-scheda__button:hover {
   background-color: #00898d;
 }
+.post-scheda__image {
+  width: 100%;
+}
 
 .press {
   display: flex;
@@ -1693,6 +1696,9 @@ body h6 {
     width: 100%;
   }
 }
+.blog-home__post-container {
+  max-width: 100%;
+}
 .blog-home__post-container .post-scheda:not(:last-child) {
   margin-bottom: 4rem;
 }
@@ -2155,6 +2161,21 @@ body h6 {
 .login-form__button:hover {
   background-color: #d13f00;
   cursor: pointer;
+}
+
+.manifesto {
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+}
+.manifesto__subtitle {
+  color: #ff5005;
+  margin-bottom: 1rem;
+}
+.manifesto__content p {
+  margin-bottom: 1.5rem;
+}
+.manifesto__image {
+  margin-bottom: 2rem;
 }
 
 .services {

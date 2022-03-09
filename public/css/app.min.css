@@ -2174,6 +2174,14 @@ body h6 {
 .manifesto__content p {
   margin-bottom: 1.5rem;
 }
+@media only screen and (max-width: 28.125em) {
+  .manifesto__content h3,
+.manifesto__content p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 .manifesto__image {
   margin-bottom: 2rem;
 }

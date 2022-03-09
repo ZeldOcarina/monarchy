@@ -67,7 +67,6 @@ exports.sendEmail = async (req, res, next) => {
 
     const message = {
       from: "info@monarchy.io",
-      //to: 'nicole@monarchy.io',
       to: "mattia@monarchy.io",
       subject: "We have a new Monarchy lead from the website! 📈",
       html,

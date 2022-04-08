@@ -115,3 +115,23 @@ exports.calendlyNewEvent = async (req, res) => {
 //     });
 //   }
 // };
+
+exports.getLatestOriginClearPost = async (req, res) => {
+  const response = await axios.get(
+    "https://api.hubapi.com/cms/v3/blogs/posts",
+    {
+      params: {
+        hapikey: process.env.ORIGINCLEAR_HUBSPOT_API_KEY,
+        limit: 1,
+        sort: "-publishDate",
+        state: "published",
+        categoryId: "3",
+      },
+    }
+  );
+
+  return res.status(200).json({
+    status: "success",
+    data: response.data,
+  });
+};

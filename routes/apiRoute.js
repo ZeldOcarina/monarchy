@@ -4,6 +4,7 @@ const {
   upliffsNewCustomer,
   calendlyNewEvent,
   calendlyAccountEvent,
+  getLatestOriginClearPost,
 } = require("../controller/apiController");
 
 const {
@@ -29,5 +30,7 @@ router.post("/facebook/shop-visit", facebookShopVisitEvent);
 router.post("/facebook/purchase", facebookPurchaseEvent);
 router.post("/adobe/gift-card/", handleGiftCardGeneration);
 router.post("/adobe/mina-cert/", handleMinaMellanoCertGeneration);
+
+router.get("/origin-clear/get-latest-post", getLatestOriginClearPost);
 
 module.exports = router;

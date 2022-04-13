@@ -14,28 +14,53 @@
   width: $container-width;
   margin: 6rem auto 10rem auto;
 
-  &__container {
-    display: flex;
-    justify-content: center;
+  .divider {
+    margin: 5rem 0;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 4rem;
+  &__bottom-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 42% 35rem;
+    column-gap: 6rem;
+    row-gap: 2rem;
+    justify-content: center;
+    margin-top: 4rem;
+
+    @include respond(768) {
+      gap: 2rem;
+    }
+    @include respond(736) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    @include respond(phone-port) {
+      margin-top: 0;
     }
 
-    &:last-child {
-      flex-direction: row-reverse;
-      margin-top: 6rem;
+    .founder__text {
+      margin-right: 0;
+      margin-left: 0;
+    }
 
-      .founder__text {
-        margin-right: 0;
-        margin-left: 5%;
+    &--nicole {
+      grid-template-columns: 35rem 42%;
+
+      @include respond(736) {
+        display: grid;
+        grid-template-columns: 1fr;
       }
+    }
+
+    .founder__text {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   //flex-direction: column;
 
   &__title {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 
     @include respond(phone-port) {
       margin-bottom: 0;
@@ -44,6 +69,7 @@
 
   &__subtitle {
     margin-bottom: 2rem;
+    grid-column: 1 / -1;
 
     @include respond(phone-port) {
       display: none;
@@ -66,11 +92,10 @@
   }
 
   &__text {
-    width: 40%;
+    width: 100%;
     margin-right: 5%;
 
     @include respond(phone-port) {
-      width: $responsive-container;
       margin: 4rem auto;
     }
   }
@@ -116,18 +141,20 @@
   &__image {
     border-radius: 10px;
     width: 100%;
+    margin: 0 auto;
+
+    @include respond(phone-port) {
+      border-radius: 0;
+    }
   }
 
   &__image-container {
-    width: 35%;
-    //margin-top: 12rem;
+    width: 100%;
     position: relative;
 
-    @include respond(tab-land) {
-      margin-top: 18rem;
-    }
-    @include respond(tab-port) {
-      margin-top: 12rem;
+    @include respond(736) {
+      width: 50%;
+      margin: 0 auto;
     }
     @include respond(phone-port) {
       display: none;
@@ -151,6 +178,10 @@
     top: 18%;
     right: 3rem;
     font-size: 1.8rem;
+
+    @include respond(phone-port) {
+      margin-left: 5%;
+    }
 
     &--title {
       font-style: italic;
@@ -228,12 +259,11 @@
     gap: 4rem;
     margin-bottom: 4rem;
 
-    @include respond(phone-port) {
-      grid-template-columns: 100%;
-    }
-
     @include respond(tab-land) {
       gap: 2rem;
+    }
+    @include respond(phone-port) {
+      grid-template-columns: 100%;
     }
 
     &--bottom {

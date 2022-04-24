@@ -140,7 +140,7 @@ exports.getRealForRealProducts = async (req, res) => {
   console.log(process.env.REAL_FOR_REAL_USERNAME);
   try {
     const response = await axios.get(
-      "https://real-for-real.monarchy.io/wp-json/wc/v3/products",
+      "https://real-for-real.monarchy.io/wp-json/wc/v3/products?per_page=100",
       {
         auth: {
           username: process.env.REAL_FOR_REAL_USERNAME,

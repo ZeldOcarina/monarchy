@@ -5,6 +5,7 @@ const {
   calendlyNewEvent,
   calendlyAccountEvent,
   getLatestOriginClearPost,
+  getRealForRealProducts,
 } = require("../controller/apiController");
 
 const {
@@ -32,5 +33,6 @@ router.post("/adobe/gift-card/", handleGiftCardGeneration);
 router.post("/adobe/mina-cert/", handleMinaMellanoCertGeneration);
 
 router.get("/origin-clear/get-latest-post", getLatestOriginClearPost);
+router.get("/real-for-real/get-all-products", getRealForRealProducts);
 
 module.exports = router;

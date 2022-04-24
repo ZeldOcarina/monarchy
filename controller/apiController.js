@@ -135,3 +135,25 @@ exports.getLatestOriginClearPost = async (req, res) => {
     data: response.data,
   });
 };
+
+exports.getRealForRealProducts = async (req, res) => {
+  console.log(process.env.REAL_FOR_REAL_USERNAME);
+  try {
+    const response = await axios.get(
+      "https://real-for-real.monarchy.io/wp-json/wc/v3/products",
+      {
+        auth: {
+          username: process.env.REAL_FOR_REAL_USERNAME,
+          password: process.env.REAL_FOR_REAL_PASSWORD,
+        },
+      }
+    );
+    res.send(response.data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      status: "error",
+      data: "An error has occured. Please try again later.",
+    });
+  }
+};

@@ -137,10 +137,9 @@ exports.getLatestOriginClearPost = async (req, res) => {
 };
 
 exports.getRealForRealProducts = async (req, res) => {
-  console.log(process.env.REAL_FOR_REAL_USERNAME);
   try {
     const response = await axios.get(
-      "https://real-for-real.monarchy.io/wp-json/wc/v3/products?per_page=100",
+      "https://real-for-real.monarchy.io/wp-json/wc/v3/products?per_page=100&status=publish",
       {
         auth: {
           username: process.env.REAL_FOR_REAL_USERNAME,

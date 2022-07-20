@@ -1171,6 +1171,9 @@ body h6 {
 .post-scheda__button:hover {
   background-color: #00898d;
 }
+.post-scheda__image {
+  width: 100%;
+}
 
 .press {
   display: flex;
@@ -1304,7 +1307,7 @@ body h6 {
 .team-card:hover {
   background-color: #fff;
   transform: translateY(-2rem);
-  box-shadow: 10px 10px 12px -6px #b8b8b8;
+  box-shadow: 10px 10px 12px -6px rgb(184, 184, 184);
 }
 .team-card__image {
   width: 100%;
@@ -1389,27 +1392,72 @@ body h6 {
   border: 0;
 }
 
+.top-video {
+  width: 45%;
+  margin: 4rem auto;
+}
+@media only screen and (max-width: 75em) {
+  .top-video {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .top-video {
+    width: 100%;
+  }
+}
+
 .founder {
   width: 75%;
   margin: 6rem auto 10rem auto;
 }
-.founder__container {
-  display: flex;
+.founder .divider {
+  margin: 5rem 0;
+}
+.founder__bottom-container {
+  display: grid;
   justify-content: center;
+  grid-template-columns: 42% 35rem;
+  column-gap: 6rem;
+  row-gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
 }
-.founder__container:not(:last-child) {
-  margin-bottom: 4rem;
+@media only screen and (max-width: 48em) {
+  .founder__bottom-container {
+    gap: 2rem;
+  }
 }
-.founder__container:last-child {
-  flex-direction: row-reverse;
-  margin-top: 6rem;
+@media only screen and (max-width: 46em) {
+  .founder__bottom-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
-.founder__container:last-child .founder__text {
+@media only screen and (max-width: 28.125em) {
+  .founder__bottom-container {
+    margin-top: 0;
+  }
+}
+.founder__bottom-container .founder__text {
   margin-right: 0;
-  margin-left: 5%;
+  margin-left: 0;
+}
+.founder__bottom-container--nicole {
+  grid-template-columns: 35rem 42%;
+}
+@media only screen and (max-width: 46em) {
+  .founder__bottom-container--nicole {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+.founder__bottom-container .founder__text {
+  margin-left: 0;
+  margin-right: 0;
 }
 .founder__title {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 @media only screen and (max-width: 28.125em) {
   .founder__title {
@@ -1418,11 +1466,15 @@ body h6 {
 }
 .founder__subtitle {
   margin-bottom: 2rem;
+  grid-column: 1/-1;
 }
 @media only screen and (max-width: 28.125em) {
   .founder__subtitle {
     display: none;
   }
+}
+.founder__subtitle a {
+  color: #ff5005;
 }
 @media only screen and (max-width: 75em) {
   .founder {
@@ -1441,12 +1493,11 @@ body h6 {
   }
 }
 .founder__text {
-  width: 40%;
+  width: 100%;
   margin-right: 5%;
 }
 @media only screen and (max-width: 28.125em) {
   .founder__text {
-    width: 90%;
     margin: 4rem auto;
   }
 }
@@ -1492,19 +1543,21 @@ body h6 {
 .founder__image {
   border-radius: 10px;
   width: 100%;
+  margin: 0 auto;
 }
-.founder__image-container {
-  width: 35%;
-  position: relative;
-}
-@media only screen and (max-width: 75em) {
-  .founder__image-container {
-    margin-top: 18rem;
+@media only screen and (max-width: 28.125em) {
+  .founder__image {
+    border-radius: 0;
   }
 }
-@media only screen and (max-width: 56.25em) {
+.founder__image-container {
+  width: 100%;
+  position: relative;
+}
+@media only screen and (max-width: 46em) {
   .founder__image-container {
-    margin-top: 12rem;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 28.125em) {
@@ -1529,6 +1582,11 @@ body h6 {
   top: 18%;
   right: 3rem;
   font-size: 1.8rem;
+}
+@media only screen and (max-width: 28.125em) {
+  .founder__image-caption {
+    margin-left: 5%;
+  }
 }
 .founder__image-caption--title {
   font-style: italic;
@@ -1601,14 +1659,14 @@ body h6 {
   gap: 4rem;
   margin-bottom: 4rem;
 }
-@media only screen and (max-width: 28.125em) {
-  .leadership__cards-container {
-    grid-template-columns: 100%;
-  }
-}
 @media only screen and (max-width: 75em) {
   .leadership__cards-container {
     gap: 2rem;
+  }
+}
+@media only screen and (max-width: 28.125em) {
+  .leadership__cards-container {
+    grid-template-columns: 100%;
   }
 }
 .leadership__cards-container--bottom {
@@ -1674,6 +1732,9 @@ body h6 {
   .blog-home {
     width: 100%;
   }
+}
+.blog-home__post-container {
+  max-width: 100%;
 }
 .blog-home__post-container .post-scheda:not(:last-child) {
   margin-bottom: 4rem;
@@ -2137,6 +2198,29 @@ body h6 {
 .login-form__button:hover {
   background-color: #d13f00;
   cursor: pointer;
+}
+
+.manifesto {
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+}
+.manifesto__subtitle {
+  color: #ff5005;
+  margin-bottom: 1rem;
+}
+.manifesto__content p {
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 28.125em) {
+  .manifesto__content h3,
+.manifesto__content p {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.manifesto__image {
+  margin-bottom: 2rem;
 }
 
 .services {
